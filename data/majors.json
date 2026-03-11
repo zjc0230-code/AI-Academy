@@ -691,6 +691,365 @@
           ]
         }
       ]
+    },
+    {
+      "code": "AC",
+      "name": {
+        "zh": "AIGC内容生产",
+        "en": "AI Generated Content"
+      },
+      "description": {
+        "zh": "涵盖AI文案创作、图像生成、视频生成、音乐创作等前沿AIGC能力",
+        "en": "Covering AI copywriting, image generation, video generation, music creation, and other cutting-edge AIGC capabilities"
+      },
+      "categories": [
+        {
+          "code": "AC-1",
+          "name": {
+            "zh": "文本创作类",
+            "en": "Text Creation"
+          },
+          "majors": [
+            {
+              "code": "AC-1-1",
+              "name": {
+                "zh": "AI文案创作专业",
+                "en": "AI Copywriting Creation Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行各类文案创作能力的专业人才",
+                "en": "Cultivate professionals with AI-powered copywriting creation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 2,
+              "learning_duration": {
+                "min_hours": 100,
+                "avg_hours": 200
+              },
+              "job_roles": [
+                {
+                  "zh": "AI文案策划",
+                  "en": "AI Copywriter"
+                },
+                {
+                  "zh": "内容创作者",
+                  "en": "Content Creator"
+                }
+              ],
+              "skills": [
+                "SK-AC-001",
+                "SK-AC-002",
+                "SK-AC-003",
+                "SK-AC-004",
+                "SK-AC-005",
+                "SK-AC-006",
+                "SK-AC-007"
+              ],
+              "learning_path": [
+                {
+                  "phase": 1,
+                  "name": {
+                    "zh": "基础阶段",
+                    "en": "Basic Phase"
+                  },
+                  "skills": ["SK-AC-001", "SK-AC-002", "SK-AC-003"],
+                  "duration": 50
+                },
+                {
+                  "phase": 2,
+                  "name": {
+                    "zh": "进阶阶段",
+                    "en": "Advanced Phase"
+                  },
+                  "skills": ["SK-AC-004", "SK-AC-005", "SK-AC-006"],
+                  "duration": 80
+                },
+                {
+                  "phase": 3,
+                  "name": {
+                    "zh": "高级阶段",
+                    "en": "Expert Phase"
+                  },
+                  "skills": ["SK-AC-007"],
+                  "duration": 70
+                }
+              ]
+            },
+            {
+              "code": "AC-1-2",
+              "name": {
+                "zh": "AI小说创作专业",
+                "en": "AI Novel Creation Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行小说、故事创作能力的专业人才",
+                "en": "Cultivate professionals with AI-powered novel and story creation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 150,
+                "avg_hours": 250
+              },
+              "job_roles": [
+                {
+                  "zh": "AI小说创作者",
+                  "en": "AI Novelist"
+                },
+                {
+                  "zh": "网文作者",
+                  "en": "Online Fiction Writer"
+                }
+              ],
+              "skills": [
+                "SK-AC-008",
+                "SK-AC-009",
+                "SK-AC-010",
+                "SK-AC-011",
+                "SK-AC-012",
+                "SK-AC-013"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "AC-2",
+          "name": {
+            "zh": "视觉创作类",
+            "en": "Visual Creation"
+          },
+          "majors": [
+            {
+              "code": "AC-2-1",
+              "name": {
+                "zh": "AI图像生成专业",
+                "en": "AI Image Generation Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行图像生成和编辑能力的专业人才",
+                "en": "Cultivate professionals with AI-powered image generation and editing capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 150,
+                "avg_hours": 250
+              },
+              "job_roles": [
+                {
+                  "zh": "AI图像设计师",
+                  "en": "AI Image Designer"
+                },
+                {
+                  "zh": "视觉设计师",
+                  "en": "Visual Designer"
+                }
+              ],
+              "skills": [
+                "SK-AC-014",
+                "SK-AC-015",
+                "SK-AC-016",
+                "SK-AC-017",
+                "SK-AC-018",
+                "SK-AC-019",
+                "SK-AC-020"
+              ]
+            },
+            {
+              "code": "AC-2-2",
+              "name": {
+                "zh": "AI视频生成专业",
+                "en": "AI Video Generation Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行视频生成和编辑能力的专业人才",
+                "en": "Cultivate professionals with AI-powered video generation and editing capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 4,
+              "learning_duration": {
+                "min_hours": 200,
+                "avg_hours": 350
+              },
+              "job_roles": [
+                {
+                  "zh": "AI视频创作者",
+                  "en": "AI Video Creator"
+                },
+                {
+                  "zh": "视频制作人",
+                  "en": "Video Producer"
+                }
+              ],
+              "skills": [
+                "SK-AC-021",
+                "SK-AC-022",
+                "SK-AC-023",
+                "SK-AC-024",
+                "SK-AC-025",
+                "SK-AC-026",
+                "SK-AC-027"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "AC-3",
+          "name": {
+            "zh": "音频创作类",
+            "en": "Audio Creation"
+          },
+          "majors": [
+            {
+              "code": "AC-3-1",
+              "name": {
+                "zh": "AI音乐创作专业",
+                "en": "AI Music Creation Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行音乐创作和编曲能力的专业人才",
+                "en": "Cultivate professionals with AI-powered music creation and arrangement capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 150,
+                "avg_hours": 250
+              },
+              "job_roles": [
+                {
+                  "zh": "AI音乐创作者",
+                  "en": "AI Music Creator"
+                },
+                {
+                  "zh": "音乐制作人",
+                  "en": "Music Producer"
+                }
+              ],
+              "skills": [
+                "SK-AC-028",
+                "SK-AC-029",
+                "SK-AC-030",
+                "SK-AC-031",
+                "SK-AC-032",
+                "SK-AC-033"
+              ]
+            },
+            {
+              "code": "AC-3-2",
+              "name": {
+                "zh": "AI语音合成专业",
+                "en": "AI Voice Synthesis Major"
+              },
+              "description": {
+                "zh": "培养具备利用AI工具进行语音合成和克隆能力的专业人才",
+                "en": "Cultivate professionals with AI-powered voice synthesis and cloning capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 100,
+                "avg_hours": 200
+              },
+              "job_roles": [
+                {
+                  "zh": "AI语音设计师",
+                  "en": "AI Voice Designer"
+                },
+                {
+                  "zh": "配音师",
+                  "en": "Voice Actor"
+                }
+              ],
+              "skills": [
+                "SK-AC-034",
+                "SK-AC-035",
+                "SK-AC-036",
+                "SK-AC-037",
+                "SK-AC-038"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "AC-4",
+          "name": {
+            "zh": "综合创作类",
+            "en": "Comprehensive Creation"
+          },
+          "majors": [
+            {
+              "code": "AC-4-1",
+              "name": {
+                "zh": "AI多媒体创作专业",
+                "en": "AI Multimedia Creation Major"
+              },
+              "description": {
+                "zh": "培养具备综合运用多种AI工具进行多媒体内容创作能力的专业人才",
+                "en": "Cultivate professionals with comprehensive AI-powered multimedia content creation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 4,
+              "learning_duration": {
+                "min_hours": 250,
+                "avg_hours": 400
+              },
+              "job_roles": [
+                {
+                  "zh": "AI内容创作者",
+                  "en": "AI Content Creator"
+                },
+                {
+                  "zh": "多媒体制作人",
+                  "en": "Multimedia Producer"
+                }
+              ],
+              "skills": [
+                "SK-AC-039",
+                "SK-AC-040",
+                "SK-AC-041",
+                "SK-AC-042",
+                "SK-AC-043"
+              ]
+            },
+            {
+              "code": "AC-4-2",
+              "name": {
+                "zh": "AI内容生产自动化专业",
+                "en": "AI Content Production Automation Major"
+              },
+              "description": {
+                "zh": "培养具备构建AI内容生产自动化流水线能力的专业人才",
+                "en": "Cultivate professionals with AI content production automation pipeline building capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 5,
+              "learning_duration": {
+                "min_hours": 300,
+                "avg_hours": 500
+              },
+              "job_roles": [
+                {
+                  "zh": "AI自动化工程师",
+                  "en": "AI Automation Engineer"
+                },
+                {
+                  "zh": "内容技术专家",
+                  "en": "Content Technology Expert"
+                }
+              ],
+              "skills": [
+                "SK-AC-044",
+                "SK-AC-045",
+                "SK-AC-046",
+                "SK-AC-047",
+                "SK-AC-048",
+                "SK-AC-049"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
