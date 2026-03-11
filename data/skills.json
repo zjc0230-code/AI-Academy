@@ -3,6 +3,550 @@
   "last_updated": "2025-03-11",
   "skills": [
     {
+      "code": "SK-SM-001",
+      "name": {
+        "zh": "小红书笔记创作",
+        "en": "Xiaohongshu Note Creation"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握小红书平台笔记创作技巧，包括内容策划、图文排版、话题标签等",
+        "en": "Master Xiaohongshu note creation techniques, including content planning, graphic layout, and hashtags"
+      },
+      "belongs_to_majors": [
+        "SM-1-1"
+      ],
+      "difficulty": 2,
+      "learning_duration": 40,
+      "ai_tools": [
+        {
+          "zh": "ChatGPT 内容生成",
+          "en": "ChatGPT Content Generation"
+        },
+        {
+          "zh": "Midjourney 图像生成",
+          "en": "Midjourney Image Generation"
+        }
+      ],
+      "subskills": [
+        {
+          "zh": "内容选题策划",
+          "en": "Content Topic Planning"
+        },
+        {
+          "zh": "图文排版设计",
+          "en": "Graphic Layout Design"
+        },
+        {
+          "zh": "话题标签优化",
+          "en": "Hashtag Optimization"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-002",
+      "name": {
+        "zh": "爆款选题挖掘",
+        "en": "Viral Topic Mining"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "能够挖掘小红书平台爆款选题，分析热门内容趋势",
+        "en": "Able to mine viral topics on Xiaohongshu platform and analyze popular content trends"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 数据分析工具",
+          "en": "AI Data Analysis Tools"
+        },
+        {
+          "zh": "AI 趋势预测",
+          "en": "AI Trend Prediction"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-003",
+      "name": {
+        "zh": "封面设计优化",
+        "en": "Cover Design Optimization"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握小红书封面设计技巧，提升点击率",
+        "en": "Master Xiaohongshu cover design techniques to improve click-through rate"
+      },
+      "belongs_to_majors": [
+        "SM-1-1"
+      ],
+      "difficulty": 2,
+      "learning_duration": 30,
+      "ai_tools": [
+        {
+          "zh": "Canva AI",
+          "en": "Canva AI"
+        },
+        {
+          "zh": "Midjourney",
+          "en": "Midjourney"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-004",
+      "name": {
+        "zh": "标题优化技巧",
+        "en": "Title Optimization Techniques"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握吸引人的标题写作技巧，提高内容曝光",
+        "en": "Master attractive title writing techniques to improve content exposure"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-3"
+      ],
+      "difficulty": 2,
+      "learning_duration": 30,
+      "ai_tools": [
+        {
+          "zh": "ChatGPT 标题生成",
+          "en": "ChatGPT Title Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-005",
+      "name": {
+        "zh": "数据分析与优化",
+        "en": "Data Analysis and Optimization"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "能够分析平台数据，优化内容策略",
+        "en": "Able to analyze platform data and optimize content strategies"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 数据可视化",
+          "en": "AI Data Visualization"
+        },
+        {
+          "zh": "Tableau AI",
+          "en": "Tableau AI"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-006",
+      "name": {
+        "zh": "用户互动管理",
+        "en": "User Interaction Management"
+      },
+      "version": "1.0.0",
+      "type": "soft_skill",
+      "description": {
+        "zh": "掌握与用户互动的技巧，提升粉丝活跃度",
+        "en": "Master user interaction techniques to improve fan engagement"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 2,
+      "learning_duration": 30
+    },
+    {
+      "code": "SK-SM-007",
+      "name": {
+        "zh": "违规规避与合规",
+        "en": "Violation Avoidance and Compliance"
+      },
+      "version": "1.0.0",
+      "type": "business_skill",
+      "description": {
+        "zh": "了解平台规则，规避违规风险",
+        "en": "Understand platform rules and avoid violation risks"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 2,
+      "learning_duration": 20
+    },
+    {
+      "code": "SK-SM-008",
+      "name": {
+        "zh": "短视频脚本创作",
+        "en": "Short Video Script Creation"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握短视频脚本创作技巧，包括结构设计、对话编写等",
+        "en": "Master short video script creation techniques, including structure design and dialogue writing"
+      },
+      "belongs_to_majors": [
+        "SM-1-2"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "ChatGPT 脚本生成",
+          "en": "ChatGPT Script Generation"
+        },
+        {
+          "zh": "AI 剧本优化",
+          "en": "AI Script Optimization"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-009",
+      "name": {
+        "zh": "视频拍摄技巧",
+        "en": "Video Shooting Techniques"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握视频拍摄基础技巧，包括构图、光线、运镜等",
+        "en": "Master basic video shooting techniques, including composition, lighting, and camera movement"
+      },
+      "belongs_to_majors": [
+        "SM-1-2"
+      ],
+      "difficulty": 3,
+      "learning_duration": 60
+    },
+    {
+      "code": "SK-SM-010",
+      "name": {
+        "zh": "视频剪辑与特效",
+        "en": "Video Editing and Effects"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握视频剪辑和特效制作技巧",
+        "en": "Master video editing and special effects production techniques"
+      },
+      "belongs_to_majors": [
+        "SM-1-2"
+      ],
+      "difficulty": 3,
+      "learning_duration": 60,
+      "ai_tools": [
+        {
+          "zh": "CapCut AI",
+          "en": "CapCut AI"
+        },
+        {
+          "zh": "Runway ML",
+          "en": "Runway ML"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-011",
+      "name": {
+        "zh": "BGM与音效运用",
+        "en": "BGM and Sound Effects Application"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握背景音乐和音效的运用技巧",
+        "en": "Master background music and sound effects application techniques"
+      },
+      "belongs_to_majors": [
+        "SM-1-2"
+      ],
+      "difficulty": 2,
+      "learning_duration": 30,
+      "ai_tools": [
+        {
+          "zh": "AI 音乐生成",
+          "en": "AI Music Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-012",
+      "name": {
+        "zh": "流量运营策略",
+        "en": "Traffic Operation Strategies"
+      },
+      "version": "1.0.0",
+      "type": "business_skill",
+      "description": {
+        "zh": "掌握流量获取和运营策略",
+        "en": "Master traffic acquisition and operation strategies"
+      },
+      "belongs_to_majors": [
+        "SM-1-2"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50
+    },
+    {
+      "code": "SK-SM-013",
+      "name": {
+        "zh": "热点追踪与借势",
+        "en": "Hot Topic Tracking and Trending"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "能够追踪热点并借势创作内容",
+        "en": "Able to track hot topics and create content leveraging trends"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 3,
+      "learning_duration": 40,
+      "ai_tools": [
+        {
+          "zh": "AI 热点监测",
+          "en": "AI Hot Topic Monitoring"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-014",
+      "name": {
+        "zh": "直播话术设计",
+        "en": "Live Streaming Script Design"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握直播话术设计和节奏把控",
+        "en": "Master live streaming script design and pacing control"
+      },
+      "belongs_to_majors": [
+        "SM-1-2",
+        "SM-3-1"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 话术生成",
+          "en": "AI Script Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-015",
+      "name": {
+        "zh": "粉丝增长与留存",
+        "en": "Fan Growth and Retention"
+      },
+      "version": "1.0.0",
+      "type": "business_skill",
+      "description": {
+        "zh": "掌握粉丝增长和留存策略",
+        "en": "Master fan growth and retention strategies"
+      },
+      "belongs_to_majors": [
+        "SM-1-1",
+        "SM-1-2",
+        "SM-1-3"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50
+    },
+    {
+      "code": "SK-SM-023",
+      "name": {
+        "zh": "人设定位与包装",
+        "en": "Persona Positioning and Packaging"
+      },
+      "version": "1.0.0",
+      "type": "business_skill",
+      "description": {
+        "zh": "能够定位和包装个人人设",
+        "en": "Able to position and package personal persona"
+      },
+      "belongs_to_majors": [
+        "SM-2-1"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 人设分析",
+          "en": "AI Persona Analysis"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-024",
+      "name": {
+        "zh": "人格化内容创作",
+        "en": "Personalized Content Creation"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "创作符合人设的人格化内容",
+        "en": "Create personalized content that matches the persona"
+      },
+      "belongs_to_majors": [
+        "SM-2-1"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "ChatGPT 内容生成",
+          "en": "ChatGPT Content Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-037",
+      "name": {
+        "zh": "直播带货话术",
+        "en": "Live Streaming E-commerce Script"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握直播带货的话术技巧",
+        "en": "Master live streaming e-commerce script techniques"
+      },
+      "belongs_to_majors": [
+        "SM-3-1"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 话术生成",
+          "en": "AI Script Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-038",
+      "name": {
+        "zh": "产品讲解技巧",
+        "en": "Product Presentation Techniques"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "掌握产品讲解的核心技巧",
+        "en": "Master core product presentation techniques"
+      },
+      "belongs_to_majors": [
+        "SM-3-1"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50
+    },
+    {
+      "code": "SK-SM-041",
+      "name": {
+        "zh": "转化漏斗优化",
+        "en": "Conversion Funnel Optimization"
+      },
+      "version": "1.0.0",
+      "type": "business_skill",
+      "description": {
+        "zh": "优化直播带货转化漏斗",
+        "en": "Optimize live streaming e-commerce conversion funnel"
+      },
+      "belongs_to_majors": [
+        "SM-3-1"
+      ],
+      "difficulty": 4,
+      "learning_duration": 60,
+      "ai_tools": [
+        {
+          "zh": "AI 漏斗分析",
+          "en": "AI Funnel Analysis"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-045",
+      "name": {
+        "zh": "课程体系设计",
+        "en": "Course System Design"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "设计完整的知识付费课程体系",
+        "en": "Design complete knowledge payment course system"
+      },
+      "belongs_to_majors": [
+        "SM-3-2"
+      ],
+      "difficulty": 4,
+      "learning_duration": 60,
+      "ai_tools": [
+        {
+          "zh": "AI 课程大纲生成",
+          "en": "AI Course Outline Generation"
+        }
+      ]
+    },
+    {
+      "code": "SK-SM-048",
+      "name": {
+        "zh": "营销文案撰写",
+        "en": "Marketing Copywriting"
+      },
+      "version": "1.0.0",
+      "type": "hard_skill",
+      "description": {
+        "zh": "撰写有效的营销文案",
+        "en": "Write effective marketing copy"
+      },
+      "belongs_to_majors": [
+        "SM-3-2"
+      ],
+      "difficulty": 3,
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "ChatGPT 文案生成",
+          "en": "ChatGPT Copywriting Generation"
+        }
+      ]
+    },
+    {
       "code": "SK-IT-001",
       "name": {
         "zh": "需求分析与设计",
@@ -21,6 +565,12 @@
       ],
       "difficulty": 3,
       "learning_duration": 40,
+      "ai_tools": [
+        {
+          "zh": "AI 需求分析",
+          "en": "AI Requirements Analysis"
+        }
+      ],
       "subskills": [
         {
           "zh": "需求调研",
@@ -37,30 +587,6 @@
         {
           "zh": "文档撰写",
           "en": "Document Writing"
-        }
-      ],
-      "assessment": [
-        {
-          "name": {
-            "zh": "需求文档质量",
-            "en": "Requirement Document Quality"
-          },
-          "criteria": {
-            "zh": "文档完整性、清晰度、可执行性",
-            "en": "Document completeness, clarity, executability"
-          },
-          "pass_threshold": ">=80%"
-        },
-        {
-          "name": {
-            "zh": "设计合理性",
-            "en": "Design Rationality"
-          },
-          "criteria": {
-            "zh": "系统架构合理性、可扩展性",
-            "en": "System architecture rationality, scalability"
-          },
-          "pass_threshold": ">=85%"
         }
       ]
     },
@@ -104,66 +630,17 @@
         "IT-A-2-3"
       ],
       "difficulty": 3,
-      "learning_duration": 80
-    },
-    {
-      "code": "SK-IT-004",
-      "name": {
-        "zh": "软件工程实践",
-        "en": "Software Engineering Practice"
-      },
-      "version": "1.0.0",
-      "type": "hard_skill",
-      "description": {
-        "zh": "掌握版本控制、CI/CD、代码审查等软件工程实践",
-        "en": "Master version control, CI/CD, code review and other software engineering practices"
-      },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-1-2",
-        "IT-A-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50
-    },
-    {
-      "code": "SK-IT-005",
-      "name": {
-        "zh": "测试与调试",
-        "en": "Testing and Debugging"
-      },
-      "version": "1.0.0",
-      "type": "hard_skill",
-      "description": {
-        "zh": "掌握单元测试、集成测试、调试技巧",
-        "en": "Master unit testing, integration testing, debugging techniques"
-      },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-1-2",
-        "IT-A-1-3"
-      ],
-      "difficulty": 2,
-      "learning_duration": 40
-    },
-    {
-      "code": "SK-IT-006",
-      "name": {
-        "zh": "系统架构设计",
-        "en": "System Architecture Design"
-      },
-      "version": "1.0.0",
-      "type": "hard_skill",
-      "description": {
-        "zh": "能够设计可扩展、高可用的系统架构",
-        "en": "Able to design scalable and highly available system architecture"
-      },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-1-3"
-      ],
-      "difficulty": 4,
-      "learning_duration": 60
+      "learning_duration": 80,
+      "ai_tools": [
+        {
+          "zh": "GitHub Copilot",
+          "en": "GitHub Copilot"
+        },
+        {
+          "zh": "AI 代码生成",
+          "en": "AI Code Generation"
+        }
+      ]
     },
     {
       "code": "SK-BM-001",
@@ -181,7 +658,13 @@
         "BM-B-1-1"
       ],
       "difficulty": 3,
-      "learning_duration": 50
+      "learning_duration": 50,
+      "ai_tools": [
+        {
+          "zh": "AI 财务分析",
+          "en": "AI Financial Analysis"
+        }
+      ]
     },
     {
       "code": "SK-BM-002",
@@ -200,25 +683,13 @@
         "BM-B-1-2"
       ],
       "difficulty": 3,
-      "learning_duration": 40
-    },
-    {
-      "code": "SK-BM-003",
-      "name": {
-        "zh": "税务处理",
-        "en": "Tax Processing"
-      },
-      "version": "1.0.0",
-      "type": "hard_skill",
-      "description": {
-        "zh": "掌握税务申报和税务筹划",
-        "en": "Master tax filing and tax planning"
-      },
-      "belongs_to_majors": [
-        "BM-B-1-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 40
+      "learning_duration": 40,
+      "ai_tools": [
+        {
+          "zh": "AI 报表生成",
+          "en": "AI Report Generation"
+        }
+      ]
     }
   ]
 }

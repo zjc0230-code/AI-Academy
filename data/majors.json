@@ -3,6 +3,330 @@
   "last_updated": "2025-03-11",
   "disciplines": [
     {
+      "code": "SM",
+      "name": {
+        "zh": "自媒体运营",
+        "en": "Social Media"
+      },
+      "description": {
+        "zh": "涵盖内容创作、IP打造、商业变现等热门AI落地场景",
+        "en": "Covering content creation, IP building, and commercial monetization scenarios"
+      },
+      "categories": [
+        {
+          "code": "SM-1",
+          "name": {
+            "zh": "内容创作类",
+            "en": "Content Creation"
+          },
+          "majors": [
+            {
+              "code": "SM-1-1",
+              "name": {
+                "zh": "小红书运营专业",
+                "en": "Xiaohongshu Operation Major"
+              },
+              "description": {
+                "zh": "培养具备小红书平台全流程运营能力的专业人才",
+                "en": "Cultivate professionals with complete Xiaohongshu platform operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 2,
+              "learning_duration": {
+                "min_hours": 150,
+                "avg_hours": 250
+              },
+              "job_roles": [
+                {
+                  "zh": "小红书运营专员",
+                  "en": "Xiaohongshu Operation Specialist"
+                },
+                {
+                  "zh": "内容运营师",
+                  "en": "Content Operation Specialist"
+                }
+              ],
+              "skills": [
+                "SK-SM-001",
+                "SK-SM-002",
+                "SK-SM-003",
+                "SK-SM-004",
+                "SK-SM-005",
+                "SK-SM-006",
+                "SK-SM-007"
+              ],
+              "learning_path": [
+                {
+                  "phase": 1,
+                  "name": {
+                    "zh": "基础阶段",
+                    "en": "Basic Phase"
+                  },
+                  "skills": ["SK-SM-001", "SK-SM-003", "SK-SM-004"],
+                  "duration": 50
+                },
+                {
+                  "phase": 2,
+                  "name": {
+                    "zh": "进阶阶段",
+                    "en": "Advanced Phase"
+                  },
+                  "skills": ["SK-SM-002", "SK-SM-005", "SK-SM-006"],
+                  "duration": 100
+                },
+                {
+                  "phase": 3,
+                  "name": {
+                    "zh": "高级阶段",
+                    "en": "Expert Phase"
+                  },
+                  "skills": ["SK-SM-007"],
+                  "duration": 100
+                }
+              ]
+            },
+            {
+              "code": "SM-1-2",
+              "name": {
+                "zh": "抖音创作专业",
+                "en": "Douyin Creation Major"
+              },
+              "description": {
+                "zh": "培养具备抖音短视频创作和运营能力的专业人才",
+                "en": "Cultivate professionals with Douyin short video creation and operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 200,
+                "avg_hours": 350
+              },
+              "job_roles": [
+                {
+                  "zh": "抖音创作者",
+                  "en": "Douyin Creator"
+                },
+                {
+                  "zh": "短视频运营",
+                  "en": "Short Video Operator"
+                }
+              ],
+              "skills": [
+                "SK-SM-008",
+                "SK-SM-009",
+                "SK-SM-010",
+                "SK-SM-011",
+                "SK-SM-012",
+                "SK-SM-013",
+                "SK-SM-014",
+                "SK-SM-015"
+              ]
+            },
+            {
+              "code": "SM-1-3",
+              "name": {
+                "zh": "公众号运营专业",
+                "en": "WeChat Official Account Operation Major"
+              },
+              "description": {
+                "zh": "培养具备微信公众号运营能力的专业人才",
+                "en": "Cultivate professionals with WeChat Official Account operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 2,
+              "learning_duration": {
+                "min_hours": 150,
+                "avg_hours": 250
+              },
+              "job_roles": [
+                {
+                  "zh": "公众号运营",
+                  "en": "WeChat Official Account Operator"
+                },
+                {
+                  "zh": "内容编辑",
+                  "en": "Content Editor"
+                }
+              ],
+              "skills": [
+                "SK-SM-016",
+                "SK-SM-017",
+                "SK-SM-018",
+                "SK-SM-019",
+                "SK-SM-020",
+                "SK-SM-021",
+                "SK-SM-022"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SM-2",
+          "name": {
+            "zh": "IP打造类",
+            "en": "IP Building"
+          },
+          "majors": [
+            {
+              "code": "SM-2-1",
+              "name": {
+                "zh": "个人IP打造专业",
+                "en": "Personal IP Building Major"
+              },
+              "description": {
+                "zh": "培养具备个人IP打造和运营能力的专业人才",
+                "en": "Cultivate professionals with personal IP building and operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 200,
+                "avg_hours": 300
+              },
+              "job_roles": [
+                {
+                  "zh": "个人IP运营",
+                  "en": "Personal IP Operator"
+                },
+                {
+                  "zh": "网红运营",
+                  "en": "Influencer Operator"
+                }
+              ],
+              "skills": [
+                "SK-SM-023",
+                "SK-SM-024",
+                "SK-SM-025",
+                "SK-SM-026",
+                "SK-SM-027",
+                "SK-SM-028",
+                "SK-SM-029"
+              ]
+            },
+            {
+              "code": "SM-2-2",
+              "name": {
+                "zh": "品牌IP运营专业",
+                "en": "Brand IP Operation Major"
+              },
+              "description": {
+                "zh": "培养具备品牌IP运营能力的专业人才",
+                "en": "Cultivate professionals with brand IP operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 4,
+              "learning_duration": {
+                "min_hours": 250,
+                "avg_hours": 400
+              },
+              "job_roles": [
+                {
+                  "zh": "品牌IP运营",
+                  "en": "Brand IP Operator"
+                },
+                {
+                  "zh": "品牌营销经理",
+                  "en": "Brand Marketing Manager"
+                }
+              ],
+              "skills": [
+                "SK-SM-030",
+                "SK-SM-031",
+                "SK-SM-032",
+                "SK-SM-033",
+                "SK-SM-034",
+                "SK-SM-035",
+                "SK-SM-036"
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SM-3",
+          "name": {
+            "zh": "商业变现类",
+            "en": "Commercial Monetization"
+          },
+          "majors": [
+            {
+              "code": "SM-3-1",
+              "name": {
+                "zh": "直播带货专业",
+                "en": "Live Streaming E-commerce Major"
+              },
+              "description": {
+                "zh": "培养具备直播带货全流程能力的专业人才",
+                "en": "Cultivate professionals with complete live streaming e-commerce capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 3,
+              "learning_duration": {
+                "min_hours": 200,
+                "avg_hours": 350
+              },
+              "job_roles": [
+                {
+                  "zh": "直播带货主播",
+                  "en": "Live Streaming Host"
+                },
+                {
+                  "zh": "直播运营",
+                  "en": "Live Streaming Operator"
+                }
+              ],
+              "skills": [
+                "SK-SM-037",
+                "SK-SM-038",
+                "SK-SM-039",
+                "SK-SM-040",
+                "SK-SM-041",
+                "SK-SM-042",
+                "SK-SM-043",
+                "SK-SM-044"
+              ]
+            },
+            {
+              "code": "SM-3-2",
+              "name": {
+                "zh": "知识付费专业",
+                "en": "Knowledge Payment Major"
+              },
+              "description": {
+                "zh": "培养具备知识付费产品打造和运营能力的专业人才",
+                "en": "Cultivate professionals with knowledge payment product creation and operation capabilities"
+              },
+              "version": "1.0.0",
+              "difficulty": 4,
+              "learning_duration": {
+                "min_hours": 250,
+                "avg_hours": 400
+              },
+              "job_roles": [
+                {
+                  "zh": "知识付费运营",
+                  "en": "Knowledge Payment Operator"
+                },
+                {
+                  "zh": "课程运营",
+                  "en": "Course Operator"
+                }
+              ],
+              "skills": [
+                "SK-SM-045",
+                "SK-SM-046",
+                "SK-SM-047",
+                "SK-SM-048",
+                "SK-SM-049",
+                "SK-SM-050",
+                "SK-SM-051",
+                "SK-SM-052"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "code": "IT",
       "name": {
         "zh": "信息技术",
