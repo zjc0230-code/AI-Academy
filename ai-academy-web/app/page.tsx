@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import SearchBar from '@/components/SearchBar'
+import StatsSection from '@/components/StatsSection'
 
 export default function Home() {
   return (
@@ -35,6 +37,9 @@ export default function Home() {
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           专业的AI技术在线教育平台，提供系统化的AI课程学习，从基础到进阶，助你成为AI领域专家
         </p>
+        <div className="flex flex-col items-center gap-4 mb-8">
+          <SearchBar />
+        </div>
         <div className="flex gap-4 justify-center">
           <button className="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-primary/90 transition-colors">
             免费开始
@@ -44,6 +49,9 @@ export default function Home() {
           </button>
         </div>
       </section>
+
+      {/* Stats */}
+      <StatsSection />
 
       {/* Features */}
       <section className="container mx-auto px-4 py-16">
