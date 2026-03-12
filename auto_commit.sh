@@ -1,23 +1,22 @@
 #!/bin/bash
-# AI Academy 30分钟自动提交监控脚本
+# AI Academy 项目活跃度监控（仅记录，不自动提交）
+# 改为手动提交有意义的变更
 
 PROJECT_DIR="/data/workspace/AI-Academy"
-LOG_FILE="$PROJECT_DIR/auto_commit.log"
+LOG_FILE="$PROJECT_DIR/monitor.log"
 
 cd "$PROJECT_DIR" || exit 1
 
-# 检查是否有未提交的变更
+# 记录项目状态
 if git diff --quiet && git diff --cached --quiet; then
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - 无变更，跳过提交" >> "$LOG_FILE"
+    STATUS="无变更"
 else
-    # 添加所有变更
-    git add -A
-    
-    # 提交变更
-    git commit -m "auto: 30分钟活跃检查 - $(date '+%Y-%m-%d %H:%M') - 保持项目活跃度"
-    
-    # 推送到远程
-    git push origin main
-    
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - 已提交并推送变更" >> "$LOG_FILE"
+    STATUS="有待提交的变更"
+fi
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') - 项目状态: $STATUS" >> "$LOG_FILE"
+
+# 仅在有实质性变更时提醒（不自动提交）
+if [ "$STATUS" = "有待提交的变更" ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - ⚠️  检测到变更，请确认是否有意义后再手动提交" >> "$LOG_FILE"
 fi
