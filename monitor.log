@@ -407,3 +407,10 @@ To https://github.com/zjc0230-code/AI-Academy.git
  create mode 100644 DEVELOPMENT_PLAN.md
 To https://github.com/zjc0230-code/AI-Academy.git
    a31a398..eb4fff0  main -> main
+[main 053ef1c] auto: 30分钟活跃检查 - 2026-03-12 11:23 - 保持项目活跃度
+ 4 files changed, 2239 insertions(+)
+ create mode 100644 courses/SM-1-1-xiaohongshu-operation/lesson-02-account-setup.md
+ create mode 100644 courses/SM-1-1-xiaohongshu-operation/lesson-03-content-creation.md
+ create mode 100644 courses/SM-1-1-xiaohongshu-operation/lesson-04-image-note-making.md
+To https://github.com/zjc0230-code/AI-Academy.git
+   eb4fff0..053ef1c  main -> main
