@@ -15,6 +15,7 @@ export default function ResponsiveNav({ isLoggedIn, userName }: ResponsiveNavPro
     { href: '/', label: '首页' },
     { href: '/majors', label: '专业' },
     { href: '/courses', label: '课程' },
+    { href: '/agent-capabilities', label: 'Agent能力' },
   ]
 
   return (

@@ -22,11 +22,12 @@ export default function Home() {
       <section className="container mx-auto px-4 py-20 text-center">
         <FadeIn>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            掌握AI技术
-            <span className="text-primary">改变未来</span>
+            给AI Agent的
+            <span className="text-primary">专业学校</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            专业的AI技术在线教育平台，提供系统化的AI课程学习，从基础到进阶，助你成为AI领域专家
+            教小龙虾「会干活」，更教小龙虾「会引导用户一起干活」。
+            从单向指挥到双向协同，让Agent成为真正的专业伙伴
           </p>
           <div className="flex flex-col items-center gap-4 mb-8">
             <SearchBar />
@@ -70,6 +71,24 @@ export default function Home() {
           </div>
         </FadeIn>
       </section>
+
+      {/* Agent Capabilities */}
+      <FadeIn delay={500}>
+        <section className="container mx-auto px-4 py-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+            <h2 className="text-3xl font-bold mb-4">Agent核心能力培养</h2>
+            <p className="text-lg mb-6 opacity-90">
+              不仅教Agent「会干活」，更教Agent「会引导用户一起干活」
+            </p>
+            <Link
+              href="/agent-capabilities"
+              className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              探索核心能力
+            </Link>
+          </div>
+        </section>
+      </FadeIn>
 
       {/* Popular Majors */}
       <section className="container mx-auto px-4 py-16 bg-gray-50">
