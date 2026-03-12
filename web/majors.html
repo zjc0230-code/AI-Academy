@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>所有专业 — AI Academy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f4ff; color: #1a1a2e; }
+    .header { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); color: white; padding: 40px 24px; text-align: center; }
+    .header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .header p { opacity: 0.8; }
+    .nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; display: flex; justify-content: center; gap: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .nav a { display: inline-block; padding: 14px 20px; color: #6b7280; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #e94560; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+    .disc-section { margin-bottom: 48px; }
+    .disc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--disc-color, #0f3460); }
+    .disc-header .disc-icon { font-size: 2rem; }
+    .disc-header h2 { font-size: 1.4rem; font-weight: 800; color: var(--disc-color, #0f3460); }
+    .disc-header .desc { font-size: 0.875rem; color: #6b7280; margin-top: 2px; }
+    .major-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .major-card { background: white; border-radius: 14px; padding: 20px; border: 1px solid #e5e7eb; transition: all 0.2s; text-decoration: none; color: inherit; display: block; border-left: 4px solid var(--disc-color, #0f3460); }
+    .major-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .major-card .code { font-size: 0.72rem; font-weight: 700; color: var(--disc-color, #0f3460); background: #f0f4ff; padding: 2px 8px; border-radius: 6px; display: inline-block; margin-bottom: 6px; }
+    .major-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .major-card p { font-size: 0.82rem; color: #6b7280; line-height: 1.6; margin-bottom: 12px; }
+    .major-card .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .major-card .tag { font-size: 0.72rem; background: #f3f4f6; color: #374151; padding: 2px 8px; border-radius: 10px; }
+    .major-card .count { font-size: 0.75rem; color: #9ca3af; margin-top: 10px; }
+    footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 0.875rem; }
+    footer a { color: #e94560; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📚 所有专业</h1>
+  <p>AI Academy 完整专业目录 · 按学科分类</p>
+</div>
+
+<nav class="nav">
+  <a href="index.html">🏠 首页</a>
+  <a href="majors.html" class="active">📚 所有专业</a>
+  <a href="majors/SM-1-1-xiaohongshu-operation/index.html">📱 小红书专业</a>
+  <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">💻 GitHub</a>
+</nav>
+
+<div class="container">
+
+  <!-- SM 自媒体运营 -->
+  <div class="disc-section" style="--disc-color: #e94560;">
+    <div class="disc-header">
+      <div class="disc-icon">📱</div>
+      <div>
+        <h2>自媒体运营（SM）</h2>
+        <div class="desc">涵盖内容创作、IP打造、商业变现等热门 AI 落地场景 · 3大专业类 · 7个专业 · 52个技能</div>
+      </div>
+    </div>
+    <div class="major-grid">
+      <a href="majors/SM-1-1-xiaohongshu-operation/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-1-1</div>
+        <h3>📱 小红书运营专业</h3>
+        <p>小红书平台全流程运营，从笔记创作到数据分析，打造爆款内容，实现账号持续增长。</p>
+        <div class="tags"><span class="tag">笔记创作</span><span class="tag">爆款选题</span><span class="tag">数据分析</span><span class="tag">合规运营</span></div>
+        <div class="count">📋 7 个技能</div>
+      </a>
+      <a href="majors/SM-1-2-douyin-creation/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-1-2</div>
+        <h3>🎵 抖音创作专业</h3>
+        <p>短视频脚本、拍摄剪辑、流量运营全链路，掌握抖音算法逻辑，高效涨粉变现。</p>
+        <div class="tags"><span class="tag">脚本创作</span><span class="tag">视频剪辑</span><span class="tag">流量运营</span><span class="tag">直播话术</span></div>
+        <div class="count">📋 8 个技能</div>
+      </a>
+      <a href="majors/SM-1-3-wechat-official-account/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-1-3</div>
+        <h3>📰 公众号运营专业</h3>
+        <p>公众号内容创作、排版设计、用户增长，构建稳定私域流量池，实现商业变现。</p>
+        <div class="tags"><span class="tag">文章写作</span><span class="tag">排版设计</span><span class="tag">裂变增长</span><span class="tag">私域运营</span></div>
+        <div class="count">📋 7 个技能</div>
+      </a>
+      <a href="majors/SM-2-1-personal-ip/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-2-1</div>
+        <h3>⭐ 个人IP打造专业</h3>
+        <p>人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力的个人IP。</p>
+        <div class="tags"><span class="tag">人设定位</span><span class="tag">内容矩阵</span><span class="tag">社群运营</span><span class="tag">IP商业化</span></div>
+        <div class="count">📋 7 个技能</div>
+      </a>
+      <a href="majors/SM-2-2-brand-ip/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-2-2</div>
+        <h3>🏆 品牌IP运营专业</h3>
+        <p>品牌IP战略规划、视觉系统设计、KOL合作推广，构建持续影响力的品牌资产。</p>
+        <div class="tags"><span class="tag">品牌战略</span><span class="tag">视觉系统</span><span class="tag">KOL合作</span><span class="tag">舆情监控</span></div>
+        <div class="count">📋 7 个技能</div>
+      </a>
+      <a href="majors/SM-3-1-live-commerce/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-3-1</div>
+        <h3>🛒 直播带货专业</h3>
+        <p>直播话术设计、选品供应链、转化漏斗优化，打造高GMV直播间，实现稳定变现。</p>
+        <div class="tags"><span class="tag">带货话术</span><span class="tag">选品供应链</span><span class="tag">转化优化</span><span class="tag">投流策略</span></div>
+        <div class="count">📋 8 个技能</div>
+      </a>
+      <a href="majors/SM-3-2-knowledge-payment/index.html" class="major-card" style="--disc-color: #e94560;">
+        <div class="code">SM-3-2</div>
+        <h3>🎓 知识付费专业</h3>
+        <p>课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品。</p>
+        <div class="tags"><span class="tag">课程设计</span><span class="tag">定价策略</span><span class="tag">营销文案</span><span class="tag">分销裂变</span></div>
+        <div class="count">📋 8 个技能</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- IT 信息技术 -->
+  <div class="disc-section" style="--disc-color: #0f3460;">
+    <div class="disc-header">
+      <div class="disc-icon">💻</div>
+      <div>
+        <h2>信息技术（IT）</h2>
+        <div class="desc">软件开发、数据科学、人工智能等技术类专业 · 持续建设中</div>
+      </div>
+    </div>
+    <div class="major-grid">
+      <a href="majors/IT-A-1-1-software-engineering/index.html" class="major-card" style="--disc-color: #0f3460;">
+        <div class="code">IT-A-1-1</div>
+        <h3>💻 软件工程专业</h3>
+        <p>需求分析、算法设计、编程开发全套能力，掌握软件工程核心技能。</p>
+        <div class="tags"><span class="tag">需求分析</span><span class="tag">算法设计</span><span class="tag">编程语言</span></div>
+        <div class="count">📋 3 个技能（建设中）</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- BM 商务管理 -->
+  <div class="disc-section" style="--disc-color: #059669;">
+    <div class="disc-header">
+      <div class="disc-icon">💼</div>
+      <div>
+        <h2>商务管理（BM）</h2>
+        <div class="desc">财务管理、市场营销、运营管理等商务类专业 · 持续建设中</div>
+      </div>
+    </div>
+    <div class="major-grid">
+      <a href="majors/BM-B-1-1-accounting/index.html" class="major-card" style="--disc-color: #059669;">
+        <div class="code">BM-B-1-1</div>
+        <h3>📊 会计专业</h3>
+        <p>会计核算、财务报表编制，掌握企业财务管理核心技能。</p>
+        <div class="tags"><span class="tag">会计核算</span><span class="tag">财务报表</span></div>
+        <div class="count">📋 2 个技能（建设中）</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>🏫 AI Academy — <a href="index.html">返回首页</a> · <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub</a></p>
+</footer>
+
+</body>
+</html>

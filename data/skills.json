@@ -1,694 +1,1146 @@
 {
-  "version": "1.0.0",
-  "last_updated": "2025-03-11",
+  "version": "2.0.0",
+  "last_updated": "2026-03-12",
+  "description": "AI Academy 技能数据库 - 每个技能归属明确的专业，小龙虾可按专业代码检索所需技能",
   "skills": [
     {
       "code": "SK-SM-001",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "小红书笔记创作",
         "en": "Xiaohongshu Note Creation"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握小红书平台笔记创作技巧，包括内容策划、图文排版、话题标签等",
-        "en": "Master Xiaohongshu note creation techniques, including content planning, graphic layout, and hashtags"
+        "zh": "掌握小红书图文笔记的结构、排版、配图规范，能独立创作高质量种草笔记",
+        "en": "Master Xiaohongshu note structure, layout, and image standards"
       },
-      "belongs_to_majors": [
-        "SM-1-1"
-      ],
-      "difficulty": 2,
-      "learning_duration": 40,
-      "ai_tools": [
-        {
-          "zh": "ChatGPT 内容生成",
-          "en": "ChatGPT Content Generation"
-        },
-        {
-          "zh": "Midjourney 图像生成",
-          "en": "Midjourney Image Generation"
-        }
-      ],
-      "subskills": [
-        {
-          "zh": "内容选题策划",
-          "en": "Content Topic Planning"
-        },
-        {
-          "zh": "图文排版设计",
-          "en": "Graphic Layout Design"
-        },
-        {
-          "zh": "话题标签优化",
-          "en": "Hashtag Optimization"
-        }
+      "level": "intermediate",
+      "tags": [
+        "内容创作",
+        "小红书",
+        "图文"
       ]
     },
     {
       "code": "SK-SM-002",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "爆款选题挖掘",
         "en": "Viral Topic Mining"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "能够挖掘小红书平台爆款选题，分析热门内容趋势",
-        "en": "Able to mine viral topics on Xiaohongshu platform and analyze popular content trends"
+        "zh": "通过数据分析和趋势洞察，挖掘高流量选题方向，提升笔记曝光率",
+        "en": "Mine high-traffic topics through data analysis and trend insights"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 数据分析工具",
-          "en": "AI Data Analysis Tools"
-        },
-        {
-          "zh": "AI 趋势预测",
-          "en": "AI Trend Prediction"
-        }
+      "level": "intermediate",
+      "tags": [
+        "选题",
+        "数据分析",
+        "流量"
       ]
     },
     {
       "code": "SK-SM-003",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "封面设计优化",
         "en": "Cover Design Optimization"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握小红书封面设计技巧，提升点击率",
-        "en": "Master Xiaohongshu cover design techniques to improve click-through rate"
+        "zh": "设计吸引点击的封面图，掌握构图、色彩、文字排版的视觉法则",
+        "en": "Design click-worthy covers with composition, color, and typography"
       },
-      "belongs_to_majors": [
-        "SM-1-1"
-      ],
-      "difficulty": 2,
-      "learning_duration": 30,
-      "ai_tools": [
-        {
-          "zh": "Canva AI",
-          "en": "Canva AI"
-        },
-        {
-          "zh": "Midjourney",
-          "en": "Midjourney"
-        }
+      "level": "beginner",
+      "tags": [
+        "设计",
+        "视觉",
+        "封面"
       ]
     },
     {
       "code": "SK-SM-004",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "标题优化技巧",
-        "en": "Title Optimization Techniques"
+        "en": "Title Optimization"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握吸引人的标题写作技巧，提高内容曝光",
-        "en": "Master attractive title writing techniques to improve content exposure"
+        "zh": "撰写高点击率标题，掌握关键词植入、情绪触发、悬念设置等技巧",
+        "en": "Write high-CTR titles with keyword placement and emotional triggers"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-3"
-      ],
-      "difficulty": 2,
-      "learning_duration": 30,
-      "ai_tools": [
-        {
-          "zh": "ChatGPT 标题生成",
-          "en": "ChatGPT Title Generation"
-        }
+      "level": "beginner",
+      "tags": [
+        "文案",
+        "SEO",
+        "标题"
       ]
     },
     {
       "code": "SK-SM-005",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "数据分析与优化",
-        "en": "Data Analysis and Optimization"
+        "en": "Data Analysis & Optimization"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "能够分析平台数据，优化内容策略",
-        "en": "Able to analyze platform data and optimize content strategies"
+        "zh": "解读笔记数据指标（曝光、互动、转化），持续优化内容策略",
+        "en": "Interpret note metrics and continuously optimize content strategy"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 数据可视化",
-          "en": "AI Data Visualization"
-        },
-        {
-          "zh": "Tableau AI",
-          "en": "Tableau AI"
-        }
+      "level": "advanced",
+      "tags": [
+        "数据",
+        "分析",
+        "优化"
       ]
     },
     {
       "code": "SK-SM-006",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "用户互动管理",
         "en": "User Interaction Management"
       },
-      "version": "1.0.0",
-      "type": "soft_skill",
       "description": {
-        "zh": "掌握与用户互动的技巧，提升粉丝活跃度",
-        "en": "Master user interaction techniques to improve fan engagement"
+        "zh": "高效回复评论、私信，建立粉丝关系，提升账号活跃度",
+        "en": "Efficiently reply to comments and DMs, build fan relationships"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 2,
-      "learning_duration": 30
+      "level": "beginner",
+      "tags": [
+        "互动",
+        "运营",
+        "粉丝"
+      ]
     },
     {
       "code": "SK-SM-007",
+      "major_code": "SM-1-1",
+      "major_name": "小红书运营专业",
+      "discipline": "SM",
       "name": {
         "zh": "违规规避与合规",
-        "en": "Violation Avoidance and Compliance"
+        "en": "Compliance & Risk Avoidance"
       },
-      "version": "1.0.0",
-      "type": "business_skill",
       "description": {
-        "zh": "了解平台规则，规避违规风险",
-        "en": "Understand platform rules and avoid violation risks"
+        "zh": "了解小红书平台规则，规避违规风险，保障账号安全运营",
+        "en": "Understand platform rules and avoid violations for safe operation"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 2,
-      "learning_duration": 20
+      "level": "beginner",
+      "tags": [
+        "合规",
+        "平台规则",
+        "风控"
+      ]
     },
     {
       "code": "SK-SM-008",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "短视频脚本创作",
-        "en": "Short Video Script Creation"
+        "en": "Short Video Script Writing"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握短视频脚本创作技巧，包括结构设计、对话编写等",
-        "en": "Master short video script creation techniques, including structure design and dialogue writing"
+        "zh": "编写结构完整的短视频脚本，掌握开头钩子、节奏把控、结尾引导",
+        "en": "Write complete short video scripts with hooks and pacing"
       },
-      "belongs_to_majors": [
-        "SM-1-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "ChatGPT 脚本生成",
-          "en": "ChatGPT Script Generation"
-        },
-        {
-          "zh": "AI 剧本优化",
-          "en": "AI Script Optimization"
-        }
+      "level": "intermediate",
+      "tags": [
+        "脚本",
+        "短视频",
+        "创作"
       ]
     },
     {
       "code": "SK-SM-009",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "视频拍摄技巧",
         "en": "Video Shooting Techniques"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握视频拍摄基础技巧，包括构图、光线、运镜等",
-        "en": "Master basic video shooting techniques, including composition, lighting, and camera movement"
+        "zh": "掌握手机拍摄构图、光线运用、稳定拍摄等基础技巧",
+        "en": "Master mobile shooting composition, lighting, and stabilization"
       },
-      "belongs_to_majors": [
-        "SM-1-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 60
+      "level": "beginner",
+      "tags": [
+        "拍摄",
+        "构图",
+        "视频"
+      ]
     },
     {
       "code": "SK-SM-010",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "视频剪辑与特效",
-        "en": "Video Editing and Effects"
+        "en": "Video Editing & Effects"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握视频剪辑和特效制作技巧",
-        "en": "Master video editing and special effects production techniques"
+        "zh": "使用剪映等工具完成视频剪辑、字幕添加、特效制作",
+        "en": "Use CapCut and similar tools for editing, subtitles, and effects"
       },
-      "belongs_to_majors": [
-        "SM-1-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 60,
-      "ai_tools": [
-        {
-          "zh": "CapCut AI",
-          "en": "CapCut AI"
-        },
-        {
-          "zh": "Runway ML",
-          "en": "Runway ML"
-        }
+      "level": "intermediate",
+      "tags": [
+        "剪辑",
+        "特效",
+        "后期"
       ]
     },
     {
       "code": "SK-SM-011",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "BGM与音效运用",
-        "en": "BGM and Sound Effects Application"
+        "en": "BGM & Sound Effects"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握背景音乐和音效的运用技巧",
-        "en": "Master background music and sound effects application techniques"
+        "zh": "选择匹配内容情绪的背景音乐，运用音效增强视频感染力",
+        "en": "Select mood-matching BGM and use sound effects to enhance impact"
       },
-      "belongs_to_majors": [
-        "SM-1-2"
-      ],
-      "difficulty": 2,
-      "learning_duration": 30,
-      "ai_tools": [
-        {
-          "zh": "AI 音乐生成",
-          "en": "AI Music Generation"
-        }
+      "level": "beginner",
+      "tags": [
+        "音效",
+        "BGM",
+        "氛围"
       ]
     },
     {
       "code": "SK-SM-012",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "流量运营策略",
-        "en": "Traffic Operation Strategies"
+        "en": "Traffic Operation Strategy"
       },
-      "version": "1.0.0",
-      "type": "business_skill",
       "description": {
-        "zh": "掌握流量获取和运营策略",
-        "en": "Master traffic acquisition and operation strategies"
+        "zh": "理解抖音推荐算法，制定发布时间、话题标签、互动策略",
+        "en": "Understand TikTok algorithm and optimize posting time and hashtags"
       },
-      "belongs_to_majors": [
-        "SM-1-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50
+      "level": "advanced",
+      "tags": [
+        "算法",
+        "流量",
+        "运营"
+      ]
     },
     {
       "code": "SK-SM-013",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "热点追踪与借势",
-        "en": "Hot Topic Tracking and Trending"
+        "en": "Trending Topic Leverage"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "能够追踪热点并借势创作内容",
-        "en": "Able to track hot topics and create content leveraging trends"
+        "zh": "实时追踪热点话题，快速创作借势内容，提升传播效果",
+        "en": "Track trending topics and quickly create leverage content"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 40,
-      "ai_tools": [
-        {
-          "zh": "AI 热点监测",
-          "en": "AI Hot Topic Monitoring"
-        }
+      "level": "intermediate",
+      "tags": [
+        "热点",
+        "借势",
+        "传播"
       ]
     },
     {
       "code": "SK-SM-014",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "直播话术设计",
         "en": "Live Streaming Script Design"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握直播话术设计和节奏把控",
-        "en": "Master live streaming script design and pacing control"
+        "zh": "设计直播间话术脚本，掌握开播、互动、留人、转化的话术技巧",
+        "en": "Design live streaming scripts for opening, interaction, and conversion"
       },
-      "belongs_to_majors": [
-        "SM-1-2",
-        "SM-3-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 话术生成",
-          "en": "AI Script Generation"
-        }
+      "level": "advanced",
+      "tags": [
+        "直播",
+        "话术",
+        "转化"
       ]
     },
     {
       "code": "SK-SM-015",
+      "major_code": "SM-1-2",
+      "major_name": "抖音创作专业",
+      "discipline": "SM",
       "name": {
         "zh": "粉丝增长与留存",
-        "en": "Fan Growth and Retention"
+        "en": "Fan Growth & Retention"
       },
-      "version": "1.0.0",
-      "type": "business_skill",
       "description": {
-        "zh": "掌握粉丝增长和留存策略",
-        "en": "Master fan growth and retention strategies"
+        "zh": "通过内容矩阵、互动运营、私域引流等方式实现粉丝持续增长",
+        "en": "Achieve continuous fan growth through content matrix and private domain"
       },
-      "belongs_to_majors": [
-        "SM-1-1",
-        "SM-1-2",
-        "SM-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50
+      "level": "advanced",
+      "tags": [
+        "涨粉",
+        "留存",
+        "私域"
+      ]
+    },
+    {
+      "code": "SK-SM-016",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "公众号文章写作",
+        "en": "WeChat Article Writing"
+      },
+      "description": {
+        "zh": "撰写高阅读量公众号文章，掌握选题、结构、排版、推送时机",
+        "en": "Write high-readership WeChat articles with proper structure and timing"
+      },
+      "level": "intermediate",
+      "tags": [
+        "公众号",
+        "写作",
+        "内容"
+      ]
+    },
+    {
+      "code": "SK-SM-017",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "排版与视觉设计",
+        "en": "Layout & Visual Design"
+      },
+      "description": {
+        "zh": "使用秀米、135编辑器等工具制作精美的公众号排版",
+        "en": "Use layout tools to create beautiful WeChat article designs"
+      },
+      "level": "beginner",
+      "tags": [
+        "排版",
+        "设计",
+        "视觉"
+      ]
+    },
+    {
+      "code": "SK-SM-018",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "用户增长裂变",
+        "en": "User Growth & Virality"
+      },
+      "description": {
+        "zh": "设计裂变活动、涨粉策略，实现公众号用户快速增长",
+        "en": "Design viral campaigns and growth strategies for follower increase"
+      },
+      "level": "advanced",
+      "tags": [
+        "裂变",
+        "涨粉",
+        "增长"
+      ]
+    },
+    {
+      "code": "SK-SM-019",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "菜单与自动回复配置",
+        "en": "Menu & Auto-Reply Configuration"
+      },
+      "description": {
+        "zh": "配置公众号菜单、关键词自动回复，提升用户体验",
+        "en": "Configure menus and keyword auto-replies to improve user experience"
+      },
+      "level": "beginner",
+      "tags": [
+        "配置",
+        "自动化",
+        "体验"
+      ]
+    },
+    {
+      "code": "SK-SM-020",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "数据监控与分析",
+        "en": "Data Monitoring & Analysis"
+      },
+      "description": {
+        "zh": "监控阅读量、转发量、取关率等核心指标，优化内容策略",
+        "en": "Monitor key metrics like reads, shares, and unsubscribes to optimize strategy"
+      },
+      "level": "intermediate",
+      "tags": [
+        "数据",
+        "监控",
+        "分析"
+      ]
+    },
+    {
+      "code": "SK-SM-021",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "商业化与广告变现",
+        "en": "Monetization & Ad Revenue"
+      },
+      "description": {
+        "zh": "通过广告投放、付费内容、电商导流等方式实现公众号变现",
+        "en": "Monetize through ads, paid content, and e-commerce traffic"
+      },
+      "level": "advanced",
+      "tags": [
+        "变现",
+        "广告",
+        "商业化"
+      ]
+    },
+    {
+      "code": "SK-SM-022",
+      "major_code": "SM-1-3",
+      "major_name": "公众号运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "私域流量运营",
+        "en": "Private Domain Traffic Operation"
+      },
+      "description": {
+        "zh": "将公众号用户引流到微信群、个人号，建立私域流量池",
+        "en": "Convert followers to WeChat groups and personal accounts for private domain"
+      },
+      "level": "advanced",
+      "tags": [
+        "私域",
+        "社群",
+        "运营"
+      ]
     },
     {
       "code": "SK-SM-023",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
       "name": {
         "zh": "人设定位与包装",
-        "en": "Persona Positioning and Packaging"
+        "en": "Personal Brand Positioning"
       },
-      "version": "1.0.0",
-      "type": "business_skill",
       "description": {
-        "zh": "能够定位和包装个人人设",
-        "en": "Able to position and package personal persona"
+        "zh": "明确个人IP定位，设计人设标签、视觉形象、差异化风格",
+        "en": "Define personal IP positioning with tags, visuals, and differentiated style"
       },
-      "belongs_to_majors": [
-        "SM-2-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 人设分析",
-          "en": "AI Persona Analysis"
-        }
+      "level": "intermediate",
+      "tags": [
+        "人设",
+        "定位",
+        "品牌"
       ]
     },
     {
       "code": "SK-SM-024",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
       "name": {
         "zh": "人格化内容创作",
         "en": "Personalized Content Creation"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "创作符合人设的人格化内容",
-        "en": "Create personalized content that matches the persona"
+        "zh": "创作有温度、有个性的内容，建立与粉丝的情感连接",
+        "en": "Create warm and personalized content to build emotional connections"
       },
-      "belongs_to_majors": [
-        "SM-2-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "ChatGPT 内容生成",
-          "en": "ChatGPT Content Generation"
-        }
+      "level": "intermediate",
+      "tags": [
+        "人格化",
+        "内容",
+        "情感"
+      ]
+    },
+    {
+      "code": "SK-SM-025",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "内容矩阵规划",
+        "en": "Content Matrix Planning"
+      },
+      "description": {
+        "zh": "规划多平台内容矩阵，实现内容复用和流量互导",
+        "en": "Plan multi-platform content matrix for content reuse and traffic cross-pollination"
+      },
+      "level": "advanced",
+      "tags": [
+        "矩阵",
+        "多平台",
+        "规划"
+      ]
+    },
+    {
+      "code": "SK-SM-026",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "粉丝社群运营",
+        "en": "Fan Community Operation"
+      },
+      "description": {
+        "zh": "建立和运营粉丝社群，提升粉丝活跃度和忠诚度",
+        "en": "Build and operate fan communities to increase activity and loyalty"
+      },
+      "level": "intermediate",
+      "tags": [
+        "社群",
+        "粉丝",
+        "运营"
+      ]
+    },
+    {
+      "code": "SK-SM-027",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "IP商业化路径",
+        "en": "IP Commercialization Path"
+      },
+      "description": {
+        "zh": "规划个人IP的商业化路径，包括代言、合作、自有产品等",
+        "en": "Plan IP commercialization including endorsements, partnerships, and products"
+      },
+      "level": "advanced",
+      "tags": [
+        "商业化",
+        "变现",
+        "IP"
+      ]
+    },
+    {
+      "code": "SK-SM-028",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "跨平台影响力扩展",
+        "en": "Cross-Platform Influence Expansion"
+      },
+      "description": {
+        "zh": "将个人IP影响力扩展到多个平台，形成全网影响力",
+        "en": "Expand personal IP influence across multiple platforms for full-network impact"
+      },
+      "level": "advanced",
+      "tags": [
+        "跨平台",
+        "影响力",
+        "扩展"
+      ]
+    },
+    {
+      "code": "SK-SM-029",
+      "major_code": "SM-2-1",
+      "major_name": "个人IP打造专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "危机公关处理",
+        "en": "Crisis PR Management"
+      },
+      "description": {
+        "zh": "应对舆论危机、负面评论，保护个人IP形象",
+        "en": "Handle public opinion crises and negative comments to protect IP image"
+      },
+      "level": "advanced",
+      "tags": [
+        "危机",
+        "公关",
+        "品牌保护"
+      ]
+    },
+    {
+      "code": "SK-SM-030",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌IP战略规划",
+        "en": "Brand IP Strategy Planning"
+      },
+      "description": {
+        "zh": "制定品牌IP的长期战略，包括定位、视觉系统、传播策略",
+        "en": "Develop long-term brand IP strategy including positioning and visual system"
+      },
+      "level": "advanced",
+      "tags": [
+        "品牌",
+        "战略",
+        "IP"
+      ]
+    },
+    {
+      "code": "SK-SM-031",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌视觉系统设计",
+        "en": "Brand Visual System Design"
+      },
+      "description": {
+        "zh": "构建统一的品牌视觉系统，包括Logo、色彩、字体、图形元素",
+        "en": "Build unified brand visual system with logo, colors, fonts, and graphics"
+      },
+      "level": "intermediate",
+      "tags": [
+        "视觉",
+        "设计",
+        "品牌"
+      ]
+    },
+    {
+      "code": "SK-SM-032",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌内容营销",
+        "en": "Brand Content Marketing"
+      },
+      "description": {
+        "zh": "通过内容营销提升品牌知名度和美誉度",
+        "en": "Enhance brand awareness and reputation through content marketing"
+      },
+      "level": "intermediate",
+      "tags": [
+        "内容营销",
+        "品牌",
+        "传播"
+      ]
+    },
+    {
+      "code": "SK-SM-033",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "KOL/KOC合作",
+        "en": "KOL/KOC Collaboration"
+      },
+      "description": {
+        "zh": "策划和执行KOL/KOC合作推广，提升品牌曝光和转化",
+        "en": "Plan and execute KOL/KOC collaborations for brand exposure and conversion"
+      },
+      "level": "advanced",
+      "tags": [
+        "KOL",
+        "合作",
+        "推广"
+      ]
+    },
+    {
+      "code": "SK-SM-034",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌社群建设",
+        "en": "Brand Community Building"
+      },
+      "description": {
+        "zh": "建立品牌官方社群，培育忠实用户，形成品牌生态",
+        "en": "Build brand communities to cultivate loyal users and brand ecosystem"
+      },
+      "level": "intermediate",
+      "tags": [
+        "社群",
+        "品牌",
+        "生态"
+      ]
+    },
+    {
+      "code": "SK-SM-035",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌舆情监控",
+        "en": "Brand Reputation Monitoring"
+      },
+      "description": {
+        "zh": "实时监控品牌相关舆情，及时响应和处理负面信息",
+        "en": "Monitor brand-related public opinion and respond to negative information"
+      },
+      "level": "advanced",
+      "tags": [
+        "舆情",
+        "监控",
+        "品牌保护"
+      ]
+    },
+    {
+      "code": "SK-SM-036",
+      "major_code": "SM-2-2",
+      "major_name": "品牌IP运营专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "品牌联名与跨界",
+        "en": "Brand Co-branding & Cross-border"
+      },
+      "description": {
+        "zh": "策划品牌联名活动，通过跨界合作扩大品牌影响力",
+        "en": "Plan co-branding activities to expand brand influence through cross-border"
+      },
+      "level": "advanced",
+      "tags": [
+        "联名",
+        "跨界",
+        "创意"
       ]
     },
     {
       "code": "SK-SM-037",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
       "name": {
         "zh": "直播带货话术",
-        "en": "Live Streaming E-commerce Script"
+        "en": "Live Commerce Sales Script"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握直播带货的话术技巧",
-        "en": "Master live streaming e-commerce script techniques"
+        "zh": "设计高转化直播带货话术，掌握产品介绍、促单、逼单技巧",
+        "en": "Design high-conversion live commerce scripts with product intro and closing"
       },
-      "belongs_to_majors": [
-        "SM-3-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 话术生成",
-          "en": "AI Script Generation"
-        }
+      "level": "intermediate",
+      "tags": [
+        "直播",
+        "带货",
+        "话术"
       ]
     },
     {
       "code": "SK-SM-038",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
       "name": {
         "zh": "产品讲解技巧",
-        "en": "Product Presentation Techniques"
+        "en": "Product Presentation Skills"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握产品讲解的核心技巧",
-        "en": "Master core product presentation techniques"
+        "zh": "掌握产品卖点提炼、场景化展示、对比演示等讲解技巧",
+        "en": "Master product selling points, scenario demonstration, and comparison"
       },
-      "belongs_to_majors": [
-        "SM-3-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50
+      "level": "intermediate",
+      "tags": [
+        "产品",
+        "讲解",
+        "演示"
+      ]
+    },
+    {
+      "code": "SK-SM-039",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "直播间氛围营造",
+        "en": "Live Room Atmosphere Creation"
+      },
+      "description": {
+        "zh": "通过互动、游戏、抽奖等方式活跃直播间氛围，提升留存",
+        "en": "Create engaging atmosphere through interactions, games, and giveaways"
+      },
+      "level": "intermediate",
+      "tags": [
+        "直播",
+        "氛围",
+        "互动"
+      ]
+    },
+    {
+      "code": "SK-SM-040",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "选品与供应链",
+        "en": "Product Selection & Supply Chain"
+      },
+      "description": {
+        "zh": "选择高性价比、高转化的产品，建立稳定的供应链关系",
+        "en": "Select high-value, high-conversion products and build supply chain relations"
+      },
+      "level": "advanced",
+      "tags": [
+        "选品",
+        "供应链",
+        "运营"
+      ]
     },
     {
       "code": "SK-SM-041",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
       "name": {
         "zh": "转化漏斗优化",
         "en": "Conversion Funnel Optimization"
       },
-      "version": "1.0.0",
-      "type": "business_skill",
       "description": {
-        "zh": "优化直播带货转化漏斗",
-        "en": "Optimize live streaming e-commerce conversion funnel"
+        "zh": "分析直播转化数据，优化各环节转化率，提升GMV",
+        "en": "Analyze conversion data and optimize each stage to increase GMV"
       },
-      "belongs_to_majors": [
-        "SM-3-1"
-      ],
-      "difficulty": 4,
-      "learning_duration": 60,
-      "ai_tools": [
-        {
-          "zh": "AI 漏斗分析",
-          "en": "AI Funnel Analysis"
-        }
+      "level": "advanced",
+      "tags": [
+        "转化",
+        "数据",
+        "优化"
+      ]
+    },
+    {
+      "code": "SK-SM-042",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "直播投流策略",
+        "en": "Live Streaming Ad Strategy"
+      },
+      "description": {
+        "zh": "制定直播间付费投流策略，最大化ROI",
+        "en": "Develop paid traffic strategies for live streaming to maximize ROI"
+      },
+      "level": "advanced",
+      "tags": [
+        "投流",
+        "广告",
+        "ROI"
+      ]
+    },
+    {
+      "code": "SK-SM-043",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "主播培训与管理",
+        "en": "Streamer Training & Management"
+      },
+      "description": {
+        "zh": "培训主播团队，制定绩效考核标准，提升整体带货能力",
+        "en": "Train streaming teams and set performance standards to improve sales"
+      },
+      "level": "advanced",
+      "tags": [
+        "培训",
+        "管理",
+        "团队"
+      ]
+    },
+    {
+      "code": "SK-SM-044",
+      "major_code": "SM-3-1",
+      "major_name": "直播带货专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "售后与客诉处理",
+        "en": "After-sales & Customer Complaint Handling"
+      },
+      "description": {
+        "zh": "处理直播带货售后问题，维护用户口碑和复购率",
+        "en": "Handle after-sales issues to maintain reputation and repeat purchase rate"
+      },
+      "level": "intermediate",
+      "tags": [
+        "售后",
+        "客服",
+        "口碑"
       ]
     },
     {
       "code": "SK-SM-045",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
       "name": {
         "zh": "课程体系设计",
         "en": "Course System Design"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "设计完整的知识付费课程体系",
-        "en": "Design complete knowledge payment course system"
+        "zh": "设计结构完整的知识付费课程体系，明确学习路径和产出",
+        "en": "Design complete knowledge payment course systems with clear learning paths"
       },
-      "belongs_to_majors": [
-        "SM-3-2"
-      ],
-      "difficulty": 4,
-      "learning_duration": 60,
-      "ai_tools": [
-        {
-          "zh": "AI 课程大纲生成",
-          "en": "AI Course Outline Generation"
-        }
+      "level": "advanced",
+      "tags": [
+        "课程",
+        "设计",
+        "知识付费"
+      ]
+    },
+    {
+      "code": "SK-SM-046",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "定价策略与产品矩阵",
+        "en": "Pricing Strategy & Product Matrix"
+      },
+      "description": {
+        "zh": "制定知识产品定价策略，设计免费-低价-高价的产品矩阵",
+        "en": "Develop pricing strategies and design free-low-high product matrix"
+      },
+      "level": "advanced",
+      "tags": [
+        "定价",
+        "产品",
+        "策略"
+      ]
+    },
+    {
+      "code": "SK-SM-047",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "社群运营与留存",
+        "en": "Community Operation & Retention"
+      },
+      "description": {
+        "zh": "运营付费社群，提升用户活跃度、满意度和续费率",
+        "en": "Operate paid communities to improve activity, satisfaction, and renewal"
+      },
+      "level": "intermediate",
+      "tags": [
+        "社群",
+        "留存",
+        "运营"
       ]
     },
     {
       "code": "SK-SM-048",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
       "name": {
         "zh": "营销文案撰写",
         "en": "Marketing Copywriting"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "撰写有效的营销文案",
-        "en": "Write effective marketing copy"
+        "zh": "撰写高转化的知识产品销售文案，包括落地页、朋友圈、公众号",
+        "en": "Write high-conversion sales copy for landing pages, social media, and articles"
       },
-      "belongs_to_majors": [
-        "SM-3-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "ChatGPT 文案生成",
-          "en": "ChatGPT Copywriting Generation"
-        }
+      "level": "intermediate",
+      "tags": [
+        "文案",
+        "营销",
+        "转化"
+      ]
+    },
+    {
+      "code": "SK-SM-049",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "直播分享与转化",
+        "en": "Live Sharing & Conversion"
+      },
+      "description": {
+        "zh": "通过直播分享知识，引导用户付费转化",
+        "en": "Share knowledge through live streaming to guide paid conversion"
+      },
+      "level": "intermediate",
+      "tags": [
+        "直播",
+        "分享",
+        "转化"
+      ]
+    },
+    {
+      "code": "SK-SM-050",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "用户口碑与复购",
+        "en": "User Reviews & Repurchase"
+      },
+      "description": {
+        "zh": "收集用户反馈，打造口碑案例，提升复购率",
+        "en": "Collect feedback, build reputation cases, and improve repurchase rate"
+      },
+      "level": "advanced",
+      "tags": [
+        "口碑",
+        "复购",
+        "用户"
+      ]
+    },
+    {
+      "code": "SK-SM-051",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "分销与裂变机制",
+        "en": "Distribution & Viral Mechanism"
+      },
+      "description": {
+        "zh": "设计知识产品的分销机制和裂变玩法，实现低成本获客",
+        "en": "Design distribution and viral mechanisms for low-cost customer acquisition"
+      },
+      "level": "advanced",
+      "tags": [
+        "分销",
+        "裂变",
+        "获客"
+      ]
+    },
+    {
+      "code": "SK-SM-052",
+      "major_code": "SM-3-2",
+      "major_name": "知识付费专业",
+      "discipline": "SM",
+      "name": {
+        "zh": "平台选择与运营",
+        "en": "Platform Selection & Operation"
+      },
+      "description": {
+        "zh": "选择适合的知识付费平台（小鹅通、千聊等），配置和运营",
+        "en": "Select and operate suitable knowledge payment platforms like Xiaoe-Tech"
+      },
+      "level": "beginner",
+      "tags": [
+        "平台",
+        "运营",
+        "工具"
       ]
     },
     {
       "code": "SK-IT-001",
+      "major_code": "IT-A-1-1",
+      "major_name": "软件工程专业",
+      "discipline": "IT",
       "name": {
         "zh": "需求分析与设计",
-        "en": "Requirements Analysis and Design"
+        "en": "Requirements Analysis & Design"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "能够分析用户需求，进行系统设计，输出需求文档和设计文档",
-        "en": "Analyze user requirements, perform system design, and output requirement and design documents"
+        "zh": "掌握软件需求分析、系统设计、架构规划的核心方法",
+        "en": "Master software requirements analysis, system design, and architecture planning"
       },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-1-2",
-        "IT-A-1-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 40,
-      "ai_tools": [
-        {
-          "zh": "AI 需求分析",
-          "en": "AI Requirements Analysis"
-        }
-      ],
-      "subskills": [
-        {
-          "zh": "需求调研",
-          "en": "Requirements Research"
-        },
-        {
-          "zh": "需求分析",
-          "en": "Requirements Analysis"
-        },
-        {
-          "zh": "系统设计",
-          "en": "System Design"
-        },
-        {
-          "zh": "文档撰写",
-          "en": "Document Writing"
-        }
+      "level": "intermediate",
+      "tags": [
+        "需求",
+        "设计",
+        "架构"
       ]
     },
     {
       "code": "SK-IT-002",
+      "major_code": "IT-A-1-1",
+      "major_name": "软件工程专业",
+      "discipline": "IT",
       "name": {
         "zh": "算法与数据结构",
-        "en": "Algorithms and Data Structures"
+        "en": "Algorithms & Data Structures"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握常用算法和数据结构，能够解决复杂编程问题",
-        "en": "Master common algorithms and data structures, able to solve complex programming problems"
+        "zh": "掌握常用算法和数据结构，能解决复杂编程问题",
+        "en": "Master common algorithms and data structures to solve complex problems"
       },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-2-1"
-      ],
-      "difficulty": 4,
-      "learning_duration": 60
+      "level": "advanced",
+      "tags": [
+        "算法",
+        "数据结构",
+        "编程"
+      ]
     },
     {
       "code": "SK-IT-003",
+      "major_code": "IT-A-1-1",
+      "major_name": "软件工程专业",
+      "discipline": "IT",
       "name": {
         "zh": "编程语言",
         "en": "Programming Languages"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握至少一门主流编程语言（Python/Java/Go）",
-        "en": "Master at least one mainstream programming language (Python/Java/Go)"
+        "zh": "精通至少一门主流编程语言（Python/Java/Go等）",
+        "en": "Master at least one mainstream programming language"
       },
-      "belongs_to_majors": [
-        "IT-A-1-1",
-        "IT-A-1-2",
-        "IT-A-1-3",
-        "IT-A-2-1",
-        "IT-A-2-2",
-        "IT-A-2-3"
-      ],
-      "difficulty": 3,
-      "learning_duration": 80,
-      "ai_tools": [
-        {
-          "zh": "GitHub Copilot",
-          "en": "GitHub Copilot"
-        },
-        {
-          "zh": "AI 代码生成",
-          "en": "AI Code Generation"
-        }
+      "level": "intermediate",
+      "tags": [
+        "编程",
+        "语言",
+        "开发"
       ]
     },
     {
       "code": "SK-BM-001",
+      "major_code": "BM-B-1-1",
+      "major_name": "会计专业",
+      "discipline": "BM",
       "name": {
         "zh": "会计核算",
         "en": "Accounting"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "掌握会计核算方法和流程",
-        "en": "Master accounting methods and processes"
+        "zh": "掌握会计核算的基本原则、借贷记账法、会计科目运用",
+        "en": "Master accounting principles, double-entry bookkeeping, and account categories"
       },
-      "belongs_to_majors": [
-        "BM-B-1-1"
-      ],
-      "difficulty": 3,
-      "learning_duration": 50,
-      "ai_tools": [
-        {
-          "zh": "AI 财务分析",
-          "en": "AI Financial Analysis"
-        }
+      "level": "intermediate",
+      "tags": [
+        "会计",
+        "核算",
+        "财务"
       ]
     },
     {
       "code": "SK-BM-002",
+      "major_code": "BM-B-1-1",
+      "major_name": "会计专业",
+      "discipline": "BM",
       "name": {
         "zh": "财务报表编制",
         "en": "Financial Statement Preparation"
       },
-      "version": "1.0.0",
-      "type": "hard_skill",
       "description": {
-        "zh": "能够编制资产负债表、利润表等财务报表",
-        "en": "Able to prepare financial statements such as balance sheet, income statement"
+        "zh": "编制资产负债表、利润表、现金流量表等核心财务报表",
+        "en": "Prepare balance sheets, income statements, and cash flow statements"
       },
-      "belongs_to_majors": [
-        "BM-B-1-1",
-        "BM-B-1-2"
-      ],
-      "difficulty": 3,
-      "learning_duration": 40,
-      "ai_tools": [
-        {
-          "zh": "AI 报表生成",
-          "en": "AI Report Generation"
-        }
+      "level": "intermediate",
+      "tags": [
+        "报表",
+        "财务",
+        "分析"
       ]
     }
   ]

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识付费专业 — AI Academy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f4ff; color: #1a1a2e; }
+    .header { background: linear-gradient(135deg, #1a1a2e 0%, #e94560 100%); color: white; padding: 48px 24px 40px; }
+    .header .back { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; margin-bottom: 24px; transition: color 0.2s; }
+    .header .back:hover { color: white; }
+    .header .major-icon { font-size: 3rem; margin-bottom: 12px; }
+    .header .code-badge { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; padding: 4px 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; font-family: monospace; }
+    .header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .header p { opacity: 0.85; font-size: 1rem; line-height: 1.7; max-width: 600px; margin-bottom: 24px; }
+    .header .meta { display: flex; gap: 20px; flex-wrap: wrap; }
+    .header .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; opacity: 0.8; }
+    .nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; display: flex; justify-content: center; gap: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .nav a { display: inline-block; padding: 14px 18px; color: #6b7280; text-decoration: none; font-size: 0.875rem; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #e94560; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+    .agent-guide { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: white; border-radius: 16px; padding: 28px; margin-bottom: 36px; }
+    .agent-guide h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .agent-guide .guide-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media(max-width:640px) { .agent-guide .guide-steps { grid-template-columns: 1fr; } }
+    .guide-step { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 16px; }
+    .guide-step .step-num { font-size: 0.75rem; color: #e94560; font-weight: 700; margin-bottom: 6px; }
+    .guide-step h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+    .guide-step p { font-size: 0.8rem; opacity: 0.75; line-height: 1.5; }
+    .guide-step .code-block { background: rgba(0,0,0,0.3); border-radius: 8px; padding: 10px 12px; font-family: monospace; font-size: 0.78rem; margin-top: 8px; word-break: break-all; line-height: 1.6; }
+    .guide-step .code-block a { color: #e94560; text-decoration: none; }
+    .level-section { margin-bottom: 32px; }
+    .level-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid currentColor; }
+    .skill-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .skill-card { background: white; border-radius: 12px; padding: 18px; border: 1px solid #e5e7eb; transition: all 0.2s; }
+    .skill-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .skill-code { font-family: monospace; font-size: 0.75rem; color: #e94560; font-weight: 700; background: #f0f4ff; padding: 2px 8px; border-radius: 6px; }
+    .skill-level { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .skill-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: #1a1a2e; }
+    .skill-card p { font-size: 0.82rem; color: #6b7280; line-height: 1.6; margin-bottom: 10px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .stag { font-size: 0.7rem; background: #f3f4f6; color: #374151; padding: 2px 8px; border-radius: 8px; }
+    footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 0.875rem; }
+    footer a { color: #e94560; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <a href="../../index.html" class="back">← 返回首页</a>
+  <div class="major-icon">🎓</div>
+  <div class="code-badge">SM-3-2</div>
+  <h1>知识付费专业</h1>
+  <p>课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品，实现持续收入。</p>
+  <div class="meta">
+    <div class="meta-item">📋 8 个技能</div>
+    <div class="meta-item">🎓 AI Academy 专业课程</div>
+    <div class="meta-item">🦞 适配 OpenClaw 小龙虾</div>
+  </div>
+</div>
+
+<nav class="nav">
+  <a href="../../index.html">🏠 首页</a>
+  <a href="../../majors.html">📚 所有专业</a>
+  <a href="skills.md" class="active">📄 skills.md</a>
+  <a href="https://github.com/zjc0230-code/AI-Academy/blob/main/majors/SM-3-2-knowledge-payment/skills.md" target="_blank">💻 GitHub</a>
+</nav>
+
+<div class="container">
+
+  <!-- Agent 入学指南 -->
+  <div class="agent-guide">
+    <h2>🦞 小龙虾入学指南 — 知识付费专业</h2>
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="step-num">方法一：直接告知专业代码</div>
+        <h4>让 Agent 读取技能清单</h4>
+        <div class="code-block">我想让你学习 AI Academy 的「知识付费专业」<br>专业代码：SM-3-2<br>请读取技能文件：<br><a href="https://github.com/zjc0230-code/AI-Academy/blob/main/majors/SM-3-2-knowledge-payment/skills.md" target="_blank">https://github.com/zjc0230-code/AI-Academy/blob/main/majors/SM-3-2-knowledge-payment/skills.md</a></div>
+      </div>
+      <div class="guide-step">
+        <div class="step-num">方法二：复制技能代码</div>
+        <h4>直接给 Agent 技能列表</h4>
+        <div class="code-block">SK-SM-045, SK-SM-046, SK-SM-047, SK-SM-048, SK-SM-049, SK-SM-050, SK-SM-051, SK-SM-052</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 技能清单 -->
+  <div class="level-section"><h3 class="level-title" style="color:#10b981">⭐ 入门技能</h3><div class="skill-grid">
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-052</span>
+    <span class="skill-level" style="background:#10b98120;color:#10b981">入门</span>
+  </div>
+  <h4>平台选择与运营</h4>
+  <p>选择适合的知识付费平台（小鹅通、千聊等），配置和运营</p>
+  <div class="skill-tags"><span class="stag">平台</span><span class="stag">运营</span><span class="stag">工具</span></div>
+</div></div></div><div class="level-section"><h3 class="level-title" style="color:#f59e0b">⭐⭐ 进阶技能</h3><div class="skill-grid">
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-047</span>
+    <span class="skill-level" style="background:#f59e0b20;color:#f59e0b">进阶</span>
+  </div>
+  <h4>社群运营与留存</h4>
+  <p>运营付费社群，提升用户活跃度、满意度和续费率</p>
+  <div class="skill-tags"><span class="stag">社群</span><span class="stag">留存</span><span class="stag">运营</span></div>
+</div>
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-048</span>
+    <span class="skill-level" style="background:#f59e0b20;color:#f59e0b">进阶</span>
+  </div>
+  <h4>营销文案撰写</h4>
+  <p>撰写高转化的知识产品销售文案，包括落地页、朋友圈、公众号</p>
+  <div class="skill-tags"><span class="stag">文案</span><span class="stag">营销</span><span class="stag">转化</span></div>
+</div>
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-049</span>
+    <span class="skill-level" style="background:#f59e0b20;color:#f59e0b">进阶</span>
+  </div>
+  <h4>直播分享与转化</h4>
+  <p>通过直播分享知识，引导用户付费转化</p>
+  <div class="skill-tags"><span class="stag">直播</span><span class="stag">分享</span><span class="stag">转化</span></div>
+</div></div></div><div class="level-section"><h3 class="level-title" style="color:#ef4444">⭐⭐⭐ 高级技能</h3><div class="skill-grid">
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-045</span>
+    <span class="skill-level" style="background:#ef444420;color:#ef4444">高级</span>
+  </div>
+  <h4>课程体系设计</h4>
+  <p>设计结构完整的知识付费课程体系，明确学习路径和产出</p>
+  <div class="skill-tags"><span class="stag">课程</span><span class="stag">设计</span><span class="stag">知识付费</span></div>
+</div>
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-046</span>
+    <span class="skill-level" style="background:#ef444420;color:#ef4444">高级</span>
+  </div>
+  <h4>定价策略与产品矩阵</h4>
+  <p>制定知识产品定价策略，设计免费-低价-高价的产品矩阵</p>
+  <div class="skill-tags"><span class="stag">定价</span><span class="stag">产品</span><span class="stag">策略</span></div>
+</div>
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-050</span>
+    <span class="skill-level" style="background:#ef444420;color:#ef4444">高级</span>
+  </div>
+  <h4>用户口碑与复购</h4>
+  <p>收集用户反馈，打造口碑案例，提升复购率</p>
+  <div class="skill-tags"><span class="stag">口碑</span><span class="stag">复购</span><span class="stag">用户</span></div>
+</div>
+<div class="skill-card">
+  <div class="skill-header">
+    <span class="skill-code">SK-SM-051</span>
+    <span class="skill-level" style="background:#ef444420;color:#ef4444">高级</span>
+  </div>
+  <h4>分销与裂变机制</h4>
+  <p>设计知识产品的分销机制和裂变玩法，实现低成本获客</p>
+  <div class="skill-tags"><span class="stag">分销</span><span class="stag">裂变</span><span class="stag">获客</span></div>
+</div></div></div>
+
+</div>
+
+<footer>
+  <p>🏫 AI Academy · 知识付费专业 · 专业代码 SM-3-2</p>
+  <p style="margin-top:6px;"><a href="../../index.html">返回首页</a> · <a href="../../majors.html">所有专业</a> · <a href="https://github.com/zjc0230-code/AI-Academy/blob/main/majors/SM-3-2-knowledge-payment/skills.md" target="_blank">GitHub</a></p>
+</footer>
+
+</body>
+</html>

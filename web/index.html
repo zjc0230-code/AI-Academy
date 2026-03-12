@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏫 AI Academy — 给 AI Agent 的专业学校</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f4ff; color: #1a1a2e; }
+
+    /* Header */
+    .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 48px 24px 40px; text-align: center; }
+    .header .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 14px; font-size: 13px; margin-bottom: 16px; }
+    .header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 12px; }
+    .header h1 span { color: #e94560; }
+    .header p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; }
+    .header .stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 24px; }
+    .header .stat { text-align: center; }
+    .header .stat .num { font-size: 2rem; font-weight: 800; color: #e94560; }
+    .header .stat .label { font-size: 0.85rem; opacity: 0.7; margin-top: 4px; }
+
+    /* Nav */
+    .nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; display: flex; justify-content: center; gap: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .nav a { display: inline-block; padding: 14px 20px; color: #6b7280; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #e94560; }
+
+    /* Main */
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+
+    /* Section Title */
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .section-title p { color: #6b7280; font-size: 1rem; }
+
+    /* Discipline Tabs */
+    .disc-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; justify-content: center; }
+    .disc-tab { padding: 8px 20px; border-radius: 24px; border: 2px solid #e5e7eb; background: white; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: #6b7280; transition: all 0.2s; }
+    .disc-tab:hover { border-color: #0f3460; color: #0f3460; }
+    .disc-tab.active { background: #0f3460; border-color: #0f3460; color: white; }
+
+    /* Major Grid */
+    .major-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .major-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid #e5e7eb; transition: all 0.25s; cursor: pointer; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
+    .major-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent, #0f3460); }
+    .major-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); border-color: transparent; }
+    .major-card .icon { font-size: 2.4rem; margin-bottom: 12px; }
+    .major-card .code { font-size: 0.75rem; font-weight: 700; color: var(--accent, #0f3460); background: var(--accent-bg, #eff6ff); padding: 2px 8px; border-radius: 6px; display: inline-block; margin-bottom: 8px; }
+    .major-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+    .major-card p { font-size: 0.875rem; color: #6b7280; line-height: 1.6; margin-bottom: 16px; }
+    .major-card .skills-preview { display: flex; flex-wrap: wrap; gap: 6px; }
+    .major-card .skill-tag { font-size: 0.75rem; background: #f3f4f6; color: #374151; padding: 3px 10px; border-radius: 12px; }
+    .major-card .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid #f3f4f6; }
+    .major-card .skill-count { font-size: 0.8rem; color: #9ca3af; }
+    .major-card .arrow { color: var(--accent, #0f3460); font-size: 1.2rem; }
+
+    /* Discipline colors */
+    .disc-SM { --accent: #e94560; --accent-bg: #fff1f3; }
+    .disc-IT { --accent: #0f3460; --accent-bg: #eff6ff; }
+    .disc-BM { --accent: #059669; --accent-bg: #ecfdf5; }
+    .disc-AC { --accent: #7c3aed; --accent-bg: #f5f3ff; }
+
+    /* How it works */
+    .how-section { background: white; border-radius: 20px; padding: 40px; margin: 40px 0; border: 1px solid #e5e7eb; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 32px; }
+    .step { text-align: center; padding: 20px; }
+    .step .num { width: 48px; height: 48px; border-radius: 50%; background: #0f3460; color: white; font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .step h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .step p { font-size: 0.85rem; color: #6b7280; line-height: 1.6; }
+    .step-arrow { display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #d1d5db; padding-top: 20px; }
+
+    /* Footer */
+    footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 32px 24px; font-size: 0.875rem; }
+    footer a { color: #e94560; text-decoration: none; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .header h1 { font-size: 2rem; }
+      .header .stats { gap: 20px; }
+      .nav a { padding: 12px 12px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="badge">🎓 OpenClaw 生态 · AI Agent 专业学校</div>
+  <h1>🏫 AI <span>Academy</span></h1>
+  <p>让每一只小龙虾 Agent，都能像人一样<br>入学 → 选专业 → 一站式掌握全套能力 → 直接上岗</p>
+  <div class="stats">
+    <div class="stat"><div class="num">9</div><div class="label">个专业</div></div>
+    <div class="stat"><div class="num">57</div><div class="label">个技能</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">个学科</div></div>
+    <div class="stat"><div class="num">∞</div><div class="label">成长空间</div></div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="index.html" class="active">🏠 首页</a>
+  <a href="majors.html">📚 所有专业</a>
+  <a href="majors/SM-1-1-xiaohongshu-operation/index.html">📱 小红书专业</a>
+  <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">💻 GitHub</a>
+</nav>
+
+<!-- Main -->
+<div class="container">
+
+  <!-- How it works -->
+  <div class="how-section">
+    <div class="section-title">
+      <h2>🚀 Agent 如何入学？</h2>
+      <p>四步完成专业能力装配，彻底告别手动调试</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>表达专业需求</h4>
+        <p>告诉 AI Academy 你想让小龙虾掌握哪个专业能力</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>选择专业</h4>
+        <p>从专业列表中选择对应专业，查看完整技能清单</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>读取 skills.md</h4>
+        <p>小龙虾读取专业的 skills.md 文件，获取完整技能体系</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h4>上岗干活</h4>
+        <p>Agent 习得专业能力，直接开始专业工作</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 专业列表 -->
+  <div class="section-title">
+    <h2>📚 专业目录</h2>
+    <p>选择专业，查看完整技能清单</p>
+  </div>
+
+  <div class="disc-tabs">
+    <button class="disc-tab active" onclick="filterDisc('all')">全部专业</button>
+    <button class="disc-tab" onclick="filterDisc('SM')">📱 自媒体运营</button>
+    <button class="disc-tab" onclick="filterDisc('IT')">💻 信息技术</button>
+    <button class="disc-tab" onclick="filterDisc('BM')">💼 商务管理</button>
+    <button class="disc-tab" onclick="filterDisc('AC')">🎨 AIGC内容</button>
+  </div>
+
+  <div class="major-grid" id="majorGrid">
+
+    <!-- SM-1-1 小红书运营 -->
+    <a href="majors/SM-1-1-xiaohongshu-operation/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">📱</div>
+      <div class="code">SM-1-1</div>
+      <h3>小红书运营专业</h3>
+      <p>掌握小红书平台全流程运营能力，从笔记创作到数据分析，打造爆款内容，实现账号持续增长。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">笔记创作</span>
+        <span class="skill-tag">爆款选题</span>
+        <span class="skill-tag">封面优化</span>
+        <span class="skill-tag">数据分析</span>
+        <span class="skill-tag">+3</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 7 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-1-2 抖音创作 -->
+    <a href="majors/SM-1-2-douyin-creation/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">🎵</div>
+      <div class="code">SM-1-2</div>
+      <h3>抖音创作专业</h3>
+      <p>短视频脚本创作、拍摄剪辑、流量运营全链路能力，掌握抖音算法逻辑，实现高效涨粉变现。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">脚本创作</span>
+        <span class="skill-tag">视频剪辑</span>
+        <span class="skill-tag">流量运营</span>
+        <span class="skill-tag">热点借势</span>
+        <span class="skill-tag">+4</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 8 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-1-3 公众号运营 -->
+    <a href="majors/SM-1-3-wechat-official-account/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">📰</div>
+      <div class="code">SM-1-3</div>
+      <h3>公众号运营专业</h3>
+      <p>公众号内容创作、排版设计、用户增长全套能力，构建稳定私域流量池，实现商业变现。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">文章写作</span>
+        <span class="skill-tag">排版设计</span>
+        <span class="skill-tag">裂变增长</span>
+        <span class="skill-tag">私域运营</span>
+        <span class="skill-tag">+3</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 7 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-2-1 个人IP -->
+    <a href="majors/SM-2-1-personal-ip/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">⭐</div>
+      <div class="code">SM-2-1</div>
+      <h3>个人IP打造专业</h3>
+      <p>人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力的个人IP，实现商业变现。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">人设定位</span>
+        <span class="skill-tag">内容矩阵</span>
+        <span class="skill-tag">社群运营</span>
+        <span class="skill-tag">IP商业化</span>
+        <span class="skill-tag">+3</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 7 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-2-2 品牌IP -->
+    <a href="majors/SM-2-2-brand-ip/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">🏆</div>
+      <div class="code">SM-2-2</div>
+      <h3>品牌IP运营专业</h3>
+      <p>品牌IP战略规划、视觉系统设计、KOL合作推广，构建具有持续影响力的品牌资产。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">品牌战略</span>
+        <span class="skill-tag">视觉系统</span>
+        <span class="skill-tag">KOL合作</span>
+        <span class="skill-tag">舆情监控</span>
+        <span class="skill-tag">+3</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 7 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-3-1 直播带货 -->
+    <a href="majors/SM-3-1-live-commerce/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">🛒</div>
+      <div class="code">SM-3-1</div>
+      <h3>直播带货专业</h3>
+      <p>直播话术设计、选品供应链、转化漏斗优化全套能力，打造高GMV直播间，实现稳定变现。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">带货话术</span>
+        <span class="skill-tag">选品供应链</span>
+        <span class="skill-tag">转化优化</span>
+        <span class="skill-tag">投流策略</span>
+        <span class="skill-tag">+4</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 8 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- SM-3-2 知识付费 -->
+    <a href="majors/SM-3-2-knowledge-payment/index.html" class="major-card disc-SM" data-disc="SM">
+      <div class="icon">🎓</div>
+      <div class="code">SM-3-2</div>
+      <h3>知识付费专业</h3>
+      <p>课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品，实现持续收入。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">课程设计</span>
+        <span class="skill-tag">定价策略</span>
+        <span class="skill-tag">营销文案</span>
+        <span class="skill-tag">分销裂变</span>
+        <span class="skill-tag">+4</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 8 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- IT-A-1-1 软件工程 -->
+    <a href="majors/IT-A-1-1-software-engineering/index.html" class="major-card disc-IT" data-disc="IT">
+      <div class="icon">💻</div>
+      <div class="code">IT-A-1-1</div>
+      <h3>软件工程专业</h3>
+      <p>需求分析、算法设计、编程开发全套能力，掌握软件工程核心技能，独立完成完整项目开发。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">需求分析</span>
+        <span class="skill-tag">算法设计</span>
+        <span class="skill-tag">编程语言</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 3 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- BM-B-1-1 会计 -->
+    <a href="majors/BM-B-1-1-accounting/index.html" class="major-card disc-BM" data-disc="BM">
+      <div class="icon">📊</div>
+      <div class="code">BM-B-1-1</div>
+      <h3>会计专业</h3>
+      <p>会计核算、财务报表编制全套能力，掌握企业财务管理核心技能，独立完成财务工作。</p>
+      <div class="skills-preview">
+        <span class="skill-tag">会计核算</span>
+        <span class="skill-tag">财务报表</span>
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 2 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>🏫 AI Academy — 给 AI Agent 开的专业学校</p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub 仓库</a> · 
+    基于 MIT License 开源 · 
+    适配 OpenClaw 小龙虾生态
+  </p>
+</footer>
+
+<script>
+function filterDisc(disc) {
+  document.querySelectorAll('.disc-tab').forEach(t => t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.major-card').forEach(card => {
+    if (disc === 'all' || card.dataset.disc === disc) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
