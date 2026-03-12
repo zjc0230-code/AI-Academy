@@ -1,275 +1,273 @@
-import { Major, Course, Lesson } from '@/types'
+export interface Course {
+  id: string
+  title: string
+  description: string
+  major: string
+  level: '初级' | '中级' | '高级'
+  duration: string
+  lessons: number
+  image?: string
+  price?: number
+  tags?: string[]
+  chapters?: Chapter[]
+}
 
-/**
- * 专业Mock数据
- */
+export interface Chapter {
+  id: string
+  title: string
+  lessons: Lesson[]
+}
+
+export interface Lesson {
+  id: string
+  title: string
+  duration?: string
+  content?: string
+}
+
+export interface Major {
+  id: string
+  name: string
+  description: string
+  icon: string
+  color: string
+  level: string
+  duration: string
+  coursesCount: number
+  students: number
+  rating: number
+  tags: string[]
+}
+
+// 专业数据
 export const majors: Major[] = [
   {
-    id: '1',
+    id: 'self-media',
     name: '自媒体运营专业',
-    description: '系统学习自媒体运营的完整知识体系，从基础认知到内容创作、用户增长，再到商业变现，打造全能自媒体人。',
-    slug: 'self-media-management',
+    description: '系统学习自媒体运营的核心技巧，从内容创作到商业变现',
     icon: '🤖',
-    tags: ['自媒体', '内容创作', '运营', '变现'],
-    duration: '25小时',
-    level: 'intermediate',
-    courses: [
-      {
-        id: '1-1',
-        majorId: '1',
-        title: '自媒体运营基础认知',
-        description: '全面了解自媒体运营的基本概念、核心价值、生态格局，以及常见误区，建立正确的自媒体运营认知。',
-        slug: 'self-media-basics',
-        duration: '5小时',
-        level: 'beginner',
-        lessons: 6,
-        isFree: true,
-        tags: ['基础', '认知', '入门'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '1-2',
-        majorId: '1',
-        title: '平台选择与定位策略',
-        description: '深入了解主流平台特点，学习如何根据自身优势选择合适的平台，制定精准的定位策略。',
-        slug: 'platform-selection',
-        duration: '4小时',
-        level: 'beginner',
-        lessons: 5,
-        tags: ['平台', '定位', '策略'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '1-3',
-        majorId: '1',
-        title: '内容创作核心技巧',
-        description: '掌握爆款内容创作的方法论，学习标题、开头、结构等核心技巧，提升内容质量和传播效果。',
-        slug: 'content-creation',
-        duration: '6小时',
-        level: 'intermediate',
-        lessons: 8,
-        tags: ['内容', '创作', '技巧'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '1-4',
-        majorId: '1',
-        title: '用户增长与粉丝运营',
-        description: '学习用户增长的核心逻辑和实战策略，搭建粉丝运营体系，实现从0到10万粉的突破。',
-        slug: 'user-growth',
-        duration: '5小时',
-        level: 'intermediate',
-        lessons: 7,
-        tags: ['增长', '粉丝', '运营'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '1-5',
-        majorId: '1',
-        title: '变现模式与商业转化',
-        description: '全面解析自媒体变现的各种模式和路径，从流量到价值的转化，建立可持续的商业化体系。',
-        slug: 'monetization',
-        duration: '5小时',
-        level: 'advanced',
-        lessons: 6,
-        tags: ['变现', '商业', '转化'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-    ],
-    createdAt: '2026-03-12',
-    updatedAt: '2026-03-12',
+    color: 'from-blue-500 to-blue-600',
+    level: '中级',
+    duration: '3个月',
+    coursesCount: 5,
+    students: 1500,
+    rating: 4.8,
+    tags: ['内容创作', '粉丝运营', '变现'],
   },
   {
-    id: '2',
+    id: 'llm-development',
     name: '大模型开发专业',
-    description: '深入学习大模型开发技术，从基础原理到实战应用，掌握提示词工程、微调、部署等核心技能。',
-    slug: 'llm-development',
+    description: '掌握大模型开发技术，从基础到实战应用',
     icon: '🧠',
-    tags: ['大模型', 'AI', '开发', 'LLM'],
-    duration: '40小时',
-    level: 'advanced',
-    courses: [
-      {
-        id: '2-1',
-        majorId: '2',
-        title: '大模型基础原理',
-        description: '了解大模型的基本原理、架构设计、训练方法，建立大模型技术认知。',
-        slug: 'llm-basics',
-        duration: '8小时',
-        level: 'beginner',
-        lessons: 10,
-        tags: ['基础', '原理', '入门'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '2-2',
-        majorId: '2',
-        title: '提示词工程实战',
-        description: '学习提示词工程的核心技巧，掌握各类场景下的提示词设计和优化方法。',
-        slug: 'prompt-engineering',
-        duration: '10小时',
-        level: 'intermediate',
-        lessons: 12,
-        tags: ['提示词', '工程', '实战'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '2-3',
-        majorId: '2',
-        title: '大模型微调技术',
-        description: '深入学习大模型微调技术，掌握数据准备、训练策略、评估优化等方法。',
-        slug: 'llm-finetuning',
-        duration: '12小时',
-        level: 'advanced',
-        lessons: 15,
-        tags: ['微调', '训练', '优化'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '2-4',
-        majorId: '2',
-        title: '大模型部署与优化',
-        description: '学习大模型部署的最佳实践，掌握性能优化、成本控制、安全防护等关键技能。',
-        slug: 'llm-deployment',
-        duration: '10小时',
-        level: 'advanced',
-        lessons: 12,
-        tags: ['部署', '优化', '运维'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-    ],
-    createdAt: '2026-03-12',
-    updatedAt: '2026-03-12',
+    color: 'from-purple-500 to-purple-600',
+    level: '高级',
+    duration: '6个月',
+    coursesCount: 10,
+    students: 800,
+    rating: 4.9,
+    tags: ['大模型', 'AI开发', '实践项目'],
   },
   {
-    id: '3',
+    id: 'ai-creation',
     name: 'AI创作专业',
-    description: '学习如何利用AI工具提升创作效率和质量，涵盖文本、图像、视频等多种内容形式的AI辅助创作。',
-    slug: 'ai-creation',
+    description: '学习AI辅助创作，提升内容生产效率和质量',
     icon: '🎨',
-    tags: ['AI创作', '效率', '工具'],
-    duration: '30小时',
-    level: 'intermediate',
-    courses: [
-      {
-        id: '3-1',
-        majorId: '3',
-        title: 'AI文本创作',
-        description: '掌握AI辅助文本创作的方法，学习如何使用ChatGPT、Claude等工具提升写作效率。',
-        slug: 'ai-text-creation',
-        duration: '8小时',
-        level: 'beginner',
-        lessons: 10,
-        tags: ['文本', '写作', 'ChatGPT'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '3-2',
-        majorId: '3',
-        title: 'AI图像创作',
-        description: '学习使用Midjourney、DALL-E、Stable Diffusion等AI绘画工具，创作高质量图像。',
-        slug: 'ai-image-creation',
-        duration: '10小时',
-        level: 'intermediate',
-        lessons: 12,
-        tags: ['图像', '绘画', 'Midjourney'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '3-3',
-        majorId: '3',
-        title: 'AI视频创作',
-        description: '探索AI视频创作的可能性，学习使用AI工具进行视频剪辑、特效制作等。',
-        slug: 'ai-video-creation',
-        duration: '8小时',
-        level: 'intermediate',
-        lessons: 10,
-        tags: ['视频', '剪辑', '特效'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-      {
-        id: '3-4',
-        majorId: '3',
-        title: 'AI创作工作流',
-        description: '构建高效的AI创作工作流，整合多种AI工具，实现内容生产的全流程自动化。',
-        slug: 'ai-creation-workflow',
-        duration: '4小时',
-        level: 'advanced',
-        lessons: 6,
-        tags: ['工作流', '自动化', '效率'],
-        createdAt: '2026-03-12',
-        updatedAt: '2026-03-12',
-      },
-    ],
-    createdAt: '2026-03-12',
-    updatedAt: '2026-03-12',
+    color: 'from-pink-500 to-pink-600',
+    level: '中级',
+    duration: '4个月',
+    coursesCount: 8,
+    students: 1200,
+    rating: 4.7,
+    tags: ['AI创作', '内容生成', '效率提升'],
+  },
+  {
+    id: 'web-development',
+    name: 'Web开发专业',
+    description: '全栈Web开发技术，从前端到后端完整掌握',
+    icon: '💻',
+    color: 'from-green-500 to-green-600',
+    level: '中级',
+    duration: '5个月',
+    coursesCount: 12,
+    students: 2000,
+    rating: 4.8,
+    tags: ['前端', '后端', '全栈'],
+  },
+  {
+    id: 'data-science',
+    name: '数据科学专业',
+    description: '学习数据分析和机器学习，成为数据科学专家',
+    icon: '📊',
+    color: 'from-orange-500 to-orange-600',
+    level: '高级',
+    duration: '6个月',
+    coursesCount: 15,
+    students: 600,
+    rating: 4.9,
+    tags: ['数据分析', '机器学习', 'Python'],
   },
 ]
 
-/**
- * 课程Mock数据
- */
-export const courses: Course[] = majors.flatMap(major => major.courses)
+// 自媒体运营专业课程
+export const selfMediaCourses: Course[] = [
+  {
+    id: 'sm-01',
+    title: '自媒体运营基础认知',
+    description: '了解自媒体的定义、发展历程、核心要素和常见误区',
+    major: 'self-media',
+    level: '初级',
+    duration: '2小时',
+    lessons: 5,
+    tags: ['基础', '认知', '入门'],
+    chapters: [
+      {
+        id: 'c1',
+        title: '第一章：自媒体认知',
+        lessons: [
+          { id: 'l1-1', title: '1.1 什么是自媒体', duration: '15分钟' },
+          { id: 'l1-2', title: '1.2 自媒体的发展历程', duration: '20分钟' },
+          { id: 'l1-3', title: '1.3 自媒体的核心要素', duration: '25分钟' },
+          { id: 'l1-4', title: '1.4 常见的运营误区', duration: '20分钟' },
+          { id: 'l1-5', title: '1.5 案例分析与总结', duration: '30分钟' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sm-02',
+    title: '平台选择与定位策略',
+    description: '学习各大自媒体平台的特点，掌握精准定位方法',
+    major: 'self-media',
+    level: '初级',
+    duration: '2.5小时',
+    lessons: 6,
+    tags: ['平台', '定位', '策略'],
+    chapters: [
+      {
+        id: 'c2',
+        title: '第二章：平台与定位',
+        lessons: [
+          { id: 'l2-1', title: '2.1 主流平台对比分析', duration: '25分钟' },
+          { id: 'l2-2', title: '2.2 如何选择合适的平台', duration: '20分钟' },
+          { id: 'l2-3', title: '2.3 个人定位策略', duration: '30分钟' },
+          { id: 'l2-4', title: '2.4 差异化定位方法', duration: '25分钟' },
+          { id: 'l2-5', title: '2.5 定位案例分析', duration: '20分钟' },
+          { id: 'l2-6', title: '2.6 定位调整与优化', duration: '20分钟' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sm-03',
+    title: '内容创作核心技巧',
+    description: '掌握内容创作的5W1H方法，打造爆款内容',
+    major: 'self-media',
+    level: '中级',
+    duration: '3小时',
+    lessons: 7,
+    tags: ['内容', '创作', '爆款'],
+    chapters: [
+      {
+        id: 'c3',
+        title: '第三章：内容创作',
+        lessons: [
+          { id: 'l3-1', title: '3.1 5W1H内容创作法', duration: '30分钟' },
+          { id: 'l3-2', title: '3.2 爆款内容的要素', duration: '25分钟' },
+          { id: 'l3-3', title: '3.3 标题优化技巧', duration: '30分钟' },
+          { id: 'l3-4', title: '3.4 内容排版与呈现', duration: '25分钟' },
+          { id: 'l3-5', title: '3.5 视觉设计基础', duration: '25分钟' },
+          { id: 'l3-6', title: '3.6 内容库搭建', duration: '25分钟' },
+          { id: 'l3-7', title: '3.7 内容发布时机', duration: '20分钟' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sm-04',
+    title: '用户增长与粉丝运营',
+    description: '学习用户增长策略，掌握粉丝运营方法',
+    major: 'self-media',
+    level: '中级',
+    duration: '3.5小时',
+    lessons: 8,
+    tags: ['增长', '粉丝', '运营'],
+    chapters: [
+      {
+        id: 'c4',
+        title: '第四章：用户增长',
+        lessons: [
+          { id: 'l4-1', title: '4.1 用户增长策略概述', duration: '20分钟' },
+          { id: 'l4-2', title: '4.2 内容引流方法', duration: '30分钟' },
+          { id: 'l4-3', title: '4.3 粉丝获取技巧', duration: '25分钟' },
+          { id: 'l4-4', title: '4.4 粉丝分层运营', duration: '30分钟' },
+          { id: 'l4-5', title: '4.5 用户留存策略', duration: '25分钟' },
+          { id: 'l4-6', title: '4.6 社群运营方法', duration: '30分钟' },
+          { id: 'l4-7', title: '4.7 互动与粘性提升', duration: '25分钟' },
+          { id: 'l4-8', title: '4.8 数据化运营', duration: '30分钟' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'sm-05',
+    title: '变现模式与商业转化',
+    description: '了解自媒体的多种变现方式，实现商业价值',
+    major: 'self-media',
+    level: '高级',
+    duration: '3小时',
+    lessons: 8,
+    tags: ['变现', '商业', '转化'],
+    chapters: [
+      {
+        id: 'c5',
+        title: '第五章：商业变现',
+        lessons: [
+          { id: 'l5-1', title: '5.1 自媒体变现模式概述', duration: '20分钟' },
+          { id: 'l5-2', title: '5.2 广告变现方法', duration: '25分钟' },
+          { id: 'l5-3', title: '5.3 内容电商变现', duration: '30分钟' },
+          { id: 'l5-4', title: '5.4 知识付费变现', duration: '30分钟' },
+          { id: 'l5-5', title: '5.5 社群变现策略', duration: '25分钟' },
+          { id: 'l5-6', title: '5.6 IP授权与品牌合作', duration: '25分钟' },
+          { id: 'l5-7', title: '5.7 变现路径规划', duration: '25分钟' },
+          { id: 'l5-8', title: '5.8 实战案例分析', duration: '30分钟' },
+        ],
+      },
+    ],
+  },
+]
 
-/**
- * 获取指定ID的专业
- */
+// 所有课程数据
+export const courses: Course[] = [...selfMediaCourses]
+
+// 辅助函数
 export function getMajorById(id: string): Major | undefined {
-  return majors.find(major => major.id === id)
+  return majors.find((major) => major.id === id)
 }
 
-/**
- * 获取指定slug的专业
- */
-export function getMajorBySlug(slug: string): Major | undefined {
-  return majors.find(major => major.slug === slug)
+export function getCoursesByMajor(majorId: string): Course[] {
+  return courses.filter((course) => course.major === majorId)
 }
 
-/**
- * 获取指定ID的课程
- */
 export function getCourseById(id: string): Course | undefined {
-  return courses.find(course => course.id === id)
+  return courses.find((course) => course.id === id)
 }
 
-/**
- * 获取指定slug的课程
- */
-export function getCourseBySlug(slug: string): Course | undefined {
-  return courses.find(course => course.slug === slug)
+export function searchCourses(query: string): Course[] {
+  const lowerQuery = query.toLowerCase()
+  return courses.filter(
+    (course) =>
+      course.title.toLowerCase().includes(lowerQuery) ||
+      course.description.toLowerCase().includes(lowerQuery) ||
+      course.tags?.some((tag) => tag.toLowerCase().includes(lowerQuery))
+  )
 }
 
-/**
- * 获取指定专业的所有课程
- */
-export function getCoursesByMajorId(majorId: string): Course[] {
-  return courses.filter(course => course.majorId === majorId)
-}
-
-/**
- * 获取热门课程
- */
-export function getPopularCourses(limit: number = 6): Course[] {
-  return courses
-    .filter(course => course.isFree)
-    .slice(0, limit)
-}
-
-/**
- * 获取热门专业
- */
-export function getPopularMajors(limit: number = 3): Major[] {
-  return majors.slice(0, limit)
+export function searchMajors(query: string): Major[] {
+  const lowerQuery = query.toLowerCase()
+  return majors.filter(
+    (major) =>
+      major.name.toLowerCase().includes(lowerQuery) ||
+      major.description.toLowerCase().includes(lowerQuery) ||
+      major.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
+  )
 }
