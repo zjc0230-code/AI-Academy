@@ -3,6 +3,7 @@ import SearchBar from '@/components/SearchBar'
 import StatsSection from '@/components/StatsSection'
 import FadeIn from '@/components/FadeIn'
 import HoverCard from '@/components/HoverCard'
+import ResponsiveNav from '@/components/ResponsiveNav'
 
 export default function Home() {
   return (
@@ -13,20 +14,7 @@ export default function Home() {
           <Link href="/" className="text-2xl font-bold text-primary">
             🎓 AI Academy
           </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
-              首页
-            </Link>
-            <Link href="/majors" className="text-gray-700 hover:text-primary transition-colors">
-              专业
-            </Link>
-            <Link href="/courses" className="text-gray-700 hover:text-primary transition-colors">
-              课程
-            </Link>
-          </nav>
-          <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-            开始学习
-          </button>
+          <ResponsiveNav />
         </div>
       </header>
 
