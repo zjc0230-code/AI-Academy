@@ -1,184 +1,127 @@
-import { getPopularCourses } from '@/lib/data'
-import Link from 'next/link'
-import { getDifficultyText, getDifficultyColor } from '@/lib/utils'
+import FadeIn from '@/components/FadeIn'
+import HoverCard from '@/components/HoverCard'
+
+interface Course {
+  id: string
+  title: string
+  description: string
+  icon: string
+  duration: string
+  level: string
+  students: number
+  rating: number
+}
+
+const courses: Course[] = [
+  {
+    id: '1',
+    title: '自媒体运营基础认知',
+    description: '全面了解自媒体运营的核心概念、平台特点和商业模式',
+    icon: '🤖',
+    duration: '2小时',
+    level: '初级',
+    students: 1200,
+    rating: 4.8
+  },
+  {
+    id: '2',
+    title: '平台选择与定位策略',
+    description: '学习如何选择适合自己的平台并进行精准定位',
+    icon: '🎯',
+    duration: '2.5小时',
+    level: '中级',
+    students: 980,
+    rating: 4.9
+  },
+  {
+    id: '3',
+    title: '内容创作核心技巧',
+    description: '掌握高质量内容创作的方法和实用技巧',
+    icon: '✍️',
+    duration: '3小时',
+    level: '中级',
+    students: 1500,
+    rating: 4.7
+  },
+  {
+    id: '4',
+    title: '用户增长与粉丝运营',
+    description: '学习如何有效增长用户并运营粉丝社群',
+    icon: '📈',
+    duration: '2.5小时',
+    level: '高级',
+    students: 850,
+    rating: 4.9
+  },
+  {
+    id: '5',
+    title: '变现模式与商业转化',
+    description: '探索多元化的变现方式和商业转化策略',
+    icon: '💰',
+    duration: '3小时',
+    level: '高级',
+    students: 720,
+    rating: 4.8
+  }
+]
 
 export default function CoursesPage() {
-  const courses = getPopularCourses(10)
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-primary">
-            🎓 AI Academy
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
-              首页
-            </Link>
-            <Link href="/majors" className="text-gray-700 hover:text-primary transition-colors">
-              专业
-            </Link>
-            <Link href="/courses" className="text-primary font-semibold">
-              课程
-            </Link>
-          </nav>
-          <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-            开始学习
-          </button>
-        </div>
-      </header>
-
-      {/* Page Header */}
-      <section className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          全部课程
-        </h1>
-        <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto">
-          系统化的AI课程，从基础到进阶，满足不同阶段的学习需求
-        </p>
-      </section>
-
-      {/* Filters */}
-      <section className="container mx-auto px-4 pb-8">
-        <div className="bg-white rounded-xl shadow-sm p-6">
-          <div className="flex flex-wrap gap-4">
-            <div className="flex-1 min-w-[200px]">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                搜索课程
-              </label>
-              <input
-                type="text"
-                placeholder="输入课程名称..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div className="min-w-[150px]">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                专业类别
-              </label>
-              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                <option value="">全部专业</option>
-                <option value="1">自媒体运营</option>
-                <option value="2">大模型开发</option>
-                <option value="3">AI创作</option>
-              </select>
-            </div>
-            <div className="min-w-[150px]">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                难度等级
-              </label>
-              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                <option value="">全部难度</option>
-                <option value="beginner">入门</option>
-                <option value="intermediate">中级</option>
-                <option value="advanced">高级</option>
-              </select>
-            </div>
-            <div className="min-w-[150px]">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                价格
-              </label>
-              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                <option value="">全部价格</option>
-                <option value="free">免费</option>
-                <option value="paid">付费</option>
-              </select>
-            </div>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12">
+      <div className="container mx-auto px-4">
+        <FadeIn>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              课程中心
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              系统化的AI课程体系，从基础到进阶，助你成为AI领域专家
+            </p>
           </div>
-        </div>
-      </section>
+        </FadeIn>
 
-      {/* Courses Grid */}
-      <section className="container mx-auto px-4 pb-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
-            <Link
-              key={course.id}
-              href={`/courses/${course.slug}`}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group"
-            >
-              {/* Cover Image */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-6xl">📚</span>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {course.tags.slice(0, 2).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {course.isFree && (
-                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
-                      免费
-                    </span>
-                  )}
-                </div>
-
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                  {course.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {course.description}
-                </p>
-
-                {/* Info */}
-                <div className="flex flex-wrap items-center justify-between text-sm text-gray-500 gap-2">
-                  <div className="flex items-center gap-3">
-                    <span className="flex items-center gap-1">
-                      <span>⏱️</span>
-                      {course.duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span>📖</span>
-                      {course.lessons}课时
-                    </span>
-                  </div>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(course.level)}`}>
-                    {getDifficultyText(course.level)}
-                  </span>
-                </div>
-              </div>
-            </Link>
+          {courses.map((course, index) => (
+            <FadeIn key={course.id} delay={index * 100}>
+              <HoverCard
+                icon={course.icon}
+                title={course.title}
+                description={course.description}
+                extraInfo={[
+                  { label: '课程时长', value: course.duration },
+                  { label: '难度等级', value: course.level },
+                  { label: '学员数', value: `${course.students}人` },
+                  { label: '评分', value: `${course.rating}⭐` }
+                ]}
+                link={`/courses/${course.id}`}
+              />
+            </FadeIn>
           ))}
         </div>
 
-        {/* Load More */}
-        <div className="text-center mt-12">
-          <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
-            加载更多课程
-          </button>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">开始你的AI学习之旅</h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            加入AI Academy，系统化学习AI技术，从基础到进阶，成为AI领域的专业人才
-          </p>
-          <button className="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-primary/90 transition-colors">
-            免费注册
-          </button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2026 AI Academy. All rights reserved.</p>
-        </div>
-      </footer>
+        <FadeIn delay={600}>
+          <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-6 text-center">学习路径推荐</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-4">
+                <div className="text-4xl mb-4">🌱</div>
+                <h3 className="text-xl font-semibold mb-2">初级路径</h3>
+                <p className="text-gray-600">从零开始，建立基础认知</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold mb-2">中级路径</h3>
+                <p className="text-gray-600">深入实践，提升专业技能</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="text-4xl mb-4">⭐</div>
+                <h3 className="text-xl font-semibold mb-2">高级路径</h3>
+                <p className="text-gray-600">精通应用，成为行业专家</p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
     </div>
   )
 }
