@@ -27,6 +27,7 @@ export interface Lesson {
 
 export interface Major {
   id: string
+  slug?: string
   name: string
   description: string
   icon: string
@@ -37,6 +38,7 @@ export interface Major {
   students: number
   rating: number
   tags: string[]
+  courses?: Course[]
 }
 
 // 专业数据
@@ -270,4 +272,23 @@ export function searchMajors(query: string): Major[] {
       major.description.toLowerCase().includes(lowerQuery) ||
       major.tags.some((tag) => tag.toLowerCase().includes(lowerQuery))
   )
+}
+
+export function getPopularMajors() {
+  return majors.map(major => ({
+    ...major,
+    slug: major.id,
+    courses: getCoursesByMajor(major.id),
+  }))
+}
+
+export function getMajorBySlug(slug: string) {
+  const major = getMajorById(slug)
+  if (!major) return null
+
+  return {
+    ...major,
+    slug: major.id,
+    courses: getCoursesByMajor(major.id),
+  }
 }
