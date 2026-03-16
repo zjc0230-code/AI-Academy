@@ -25,7 +25,7 @@
     .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #e94560; }
 
     /* Main */
-    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 40px 24px; }
 
     /* Section Title */
     .section-title { text-align: center; margin-bottom: 40px; }
@@ -39,7 +39,7 @@
     .disc-tab.active { background: #0f3460; border-color: #0f3460; color: white; }
 
     /* Major Grid */
-    .major-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .major-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
     .major-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid #e5e7eb; transition: all 0.25s; cursor: pointer; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
     .major-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent, #0f3460); }
     .major-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); border-color: transparent; }
@@ -54,10 +54,15 @@
     .major-card .arrow { color: var(--accent, #0f3460); font-size: 1.2rem; }
 
     /* Discipline colors */
-    .disc-SM { --accent: #e94560; --accent-bg: #fff1f3; }
     .disc-IT { --accent: #0f3460; --accent-bg: #eff6ff; }
     .disc-BM { --accent: #059669; --accent-bg: #ecfdf5; }
-    .disc-AC { --accent: #7c3aed; --accent-bg: #f5f3ff; }
+    .disc-SM { --accent: #e94560; --accent-bg: #fff1f3; }
+    .disc-CC { --accent: #7c3aed; --accent-bg: #f5f3ff; }
+    .disc-CS { --accent: #0ea5e9; --accent-bg: #e0f2fe; }
+    .disc-HC { --accent: #10b981; --accent-bg: #d1fae5; }
+    .disc-ED { --accent: #f59e0b; --accent-bg: #fef3c7; }
+    .disc-LG { --accent: #6366f1; --accent-bg: #eef2ff; }
+    .disc-AD { --accent: #ec4899; --accent-bg: #fce7f3; }
 
     /* How it works */
     .how-section { background: white; border-radius: 20px; padding: 40px; margin: 40px 0; border: 1px solid #e5e7eb; }
@@ -77,6 +82,7 @@
       .header h1 { font-size: 2rem; }
       .header .stats { gap: 20px; }
       .nav a { padding: 12px 12px; font-size: 0.8rem; }
+      .major-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -88,9 +94,9 @@
   <h1>🏫 AI <span>Academy</span></h1>
   <p>让每一只小龙虾 Agent，都能像人一样<br>入学 → 选专业 → 一站式掌握全套能力 → 直接上岗</p>
   <div class="stats">
-    <div class="stat"><div class="num">9</div><div class="label">个专业</div></div>
-    <div class="stat"><div class="num">57</div><div class="label">个技能</div></div>
-    <div class="stat"><div class="num">4</div><div class="label">个学科</div></div>
+    <div class="stat"><div class="num">8</div><div class="label">个学科</div></div>
+    <div class="stat"><div class="num">28</div><div class="label">个专业</div></div>
+    <div class="stat"><div class="num">136</div><div class="label">个技能</div></div>
     <div class="stat"><div class="num">∞</div><div class="label">成长空间</div></div>
   </div>
 </div>
@@ -144,180 +150,19 @@
 
   <div class="disc-tabs">
     <button class="disc-tab active" onclick="filterDisc('all')">全部专业</button>
-    <button class="disc-tab" onclick="filterDisc('SM')">📱 自媒体运营</button>
     <button class="disc-tab" onclick="filterDisc('IT')">💻 信息技术</button>
     <button class="disc-tab" onclick="filterDisc('BM')">💼 商务管理</button>
-    <button class="disc-tab" onclick="filterDisc('AC')">🎨 AIGC内容</button>
+    <button class="disc-tab" onclick="filterDisc('SM')">📱 自媒体运营</button>
+    <button class="disc-tab" onclick="filterDisc('CC')">✍️ 内容创作</button>
+    <button class="disc-tab" onclick="filterDisc('CS')">💬 客户服务</button>
+    <button class="disc-tab" onclick="filterDisc('HC')">🏥 健康医疗</button>
+    <button class="disc-tab" onclick="filterDisc('ED')">📚 教育培训</button>
+    <button class="disc-tab" onclick="filterDisc('LG')">⚖️ 法务合规</button>
+    <button class="disc-tab" onclick="filterDisc('AD')">🎨 艺术设计</button>
   </div>
 
   <div class="major-grid" id="majorGrid">
-
-    <!-- SM-1-1 小红书运营 -->
-    <a href="majors/SM-1-1-xiaohongshu-operation/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">📱</div>
-      <div class="code">SM-1-1</div>
-      <h3>小红书运营专业</h3>
-      <p>掌握小红书平台全流程运营能力，从笔记创作到数据分析，打造爆款内容，实现账号持续增长。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">笔记创作</span>
-        <span class="skill-tag">爆款选题</span>
-        <span class="skill-tag">封面优化</span>
-        <span class="skill-tag">数据分析</span>
-        <span class="skill-tag">+3</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 7 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-1-2 抖音创作 -->
-    <a href="majors/SM-1-2-douyin-creation/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">🎵</div>
-      <div class="code">SM-1-2</div>
-      <h3>抖音创作专业</h3>
-      <p>短视频脚本创作、拍摄剪辑、流量运营全链路能力，掌握抖音算法逻辑，实现高效涨粉变现。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">脚本创作</span>
-        <span class="skill-tag">视频剪辑</span>
-        <span class="skill-tag">流量运营</span>
-        <span class="skill-tag">热点借势</span>
-        <span class="skill-tag">+4</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 8 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-1-3 公众号运营 -->
-    <a href="majors/SM-1-3-wechat-official-account/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">📰</div>
-      <div class="code">SM-1-3</div>
-      <h3>公众号运营专业</h3>
-      <p>公众号内容创作、排版设计、用户增长全套能力，构建稳定私域流量池，实现商业变现。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">文章写作</span>
-        <span class="skill-tag">排版设计</span>
-        <span class="skill-tag">裂变增长</span>
-        <span class="skill-tag">私域运营</span>
-        <span class="skill-tag">+3</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 7 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-2-1 个人IP -->
-    <a href="majors/SM-2-1-personal-ip/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">⭐</div>
-      <div class="code">SM-2-1</div>
-      <h3>个人IP打造专业</h3>
-      <p>人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力的个人IP，实现商业变现。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">人设定位</span>
-        <span class="skill-tag">内容矩阵</span>
-        <span class="skill-tag">社群运营</span>
-        <span class="skill-tag">IP商业化</span>
-        <span class="skill-tag">+3</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 7 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-2-2 品牌IP -->
-    <a href="majors/SM-2-2-brand-ip/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">🏆</div>
-      <div class="code">SM-2-2</div>
-      <h3>品牌IP运营专业</h3>
-      <p>品牌IP战略规划、视觉系统设计、KOL合作推广，构建具有持续影响力的品牌资产。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">品牌战略</span>
-        <span class="skill-tag">视觉系统</span>
-        <span class="skill-tag">KOL合作</span>
-        <span class="skill-tag">舆情监控</span>
-        <span class="skill-tag">+3</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 7 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-3-1 直播带货 -->
-    <a href="majors/SM-3-1-live-commerce/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">🛒</div>
-      <div class="code">SM-3-1</div>
-      <h3>直播带货专业</h3>
-      <p>直播话术设计、选品供应链、转化漏斗优化全套能力，打造高GMV直播间，实现稳定变现。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">带货话术</span>
-        <span class="skill-tag">选品供应链</span>
-        <span class="skill-tag">转化优化</span>
-        <span class="skill-tag">投流策略</span>
-        <span class="skill-tag">+4</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 8 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- SM-3-2 知识付费 -->
-    <a href="majors/SM-3-2-knowledge-payment/index.html" class="major-card disc-SM" data-disc="SM">
-      <div class="icon">🎓</div>
-      <div class="code">SM-3-2</div>
-      <h3>知识付费专业</h3>
-      <p>课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品，实现持续收入。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">课程设计</span>
-        <span class="skill-tag">定价策略</span>
-        <span class="skill-tag">营销文案</span>
-        <span class="skill-tag">分销裂变</span>
-        <span class="skill-tag">+4</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 8 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- IT-A-1-1 软件工程 -->
-    <a href="majors/IT-A-1-1-software-engineering/index.html" class="major-card disc-IT" data-disc="IT">
-      <div class="icon">💻</div>
-      <div class="code">IT-A-1-1</div>
-      <h3>软件工程专业</h3>
-      <p>需求分析、算法设计、编程开发全套能力，掌握软件工程核心技能，独立完成完整项目开发。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">需求分析</span>
-        <span class="skill-tag">算法设计</span>
-        <span class="skill-tag">编程语言</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 3 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <!-- BM-B-1-1 会计 -->
-    <a href="majors/BM-B-1-1-accounting/index.html" class="major-card disc-BM" data-disc="BM">
-      <div class="icon">📊</div>
-      <div class="code">BM-B-1-1</div>
-      <h3>会计专业</h3>
-      <p>会计核算、财务报表编制全套能力，掌握企业财务管理核心技能，独立完成财务工作。</p>
-      <div class="skills-preview">
-        <span class="skill-tag">会计核算</span>
-        <span class="skill-tag">财务报表</span>
-      </div>
-      <div class="footer">
-        <span class="skill-count">📋 2 个技能</span>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
+    <!-- 专业卡片将由 JavaScript 动态生成 -->
   </div>
 
 </div>
@@ -326,13 +171,82 @@
 <footer>
   <p>🏫 AI Academy — 给 AI Agent 开的专业学校</p>
   <p style="margin-top:8px;">
-    <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub 仓库</a> · 
-    基于 MIT License 开源 · 
+    <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub 仓库</a> ·
+    基于 MIT License 开源 ·
     适配 OpenClaw 小龙虾生态
   </p>
 </footer>
 
+<script src="data/majors-data.json"></script>
 <script>
+const majorsData = {
+  "IT-A-1-1": { "icon": "💻", "name": "软件工程专业", "code": "IT-A-1-1", "disc": "IT", "desc": "培养具备软件开发全流程能力的专业人才", "skills": ["需求分析", "算法设计", "编程", "测试", "架构"], "skillCount": 6, "path": "majors/IT-A-1-1-software-engineering/index.html" },
+  "IT-A-1-2": { "icon": "🎨", "name": "前端开发专业", "code": "IT-A-1-2", "disc": "IT", "desc": "专注于Web前端开发，掌握HTML/CSS/JavaScript、前端框架", "skills": ["HTML/CSS", "React/Vue", "响应式", "性能优化", "工程化"], "skillCount": 5, "path": "majors/IT-A-1-2-frontend-development/index.html" },
+  "IT-A-1-3": { "icon": "🔧", "name": "后端开发专业", "code": "IT-A-1-3", "disc": "IT", "desc": "专注于后端服务开发，掌握后端框架、数据库设计、API开发", "skills": ["后端框架", "数据库", "API设计", "微服务", "运维"], "skillCount": 5, "path": "majors/IT-A-1-3-backend-development/index.html" },
+  "IT-A-2-1": { "icon": "📊", "name": "数据科学专业", "code": "IT-A-2-1", "disc": "IT", "desc": "掌握数据采集、清洗、分析、可视化全流程，精通机器学习", "skills": ["数据采集", "统计分析", "机器学习", "可视化", "大数据"], "skillCount": 5, "path": "majors/IT-A-2-1-data-science/index.html" },
+  "IT-A-2-2": { "icon": "📈", "name": "数据分析专业", "code": "IT-A-2-2", "disc": "IT", "desc": "专注于数据分析与可视化，提供业务洞察和决策支持", "skills": ["SQL", "Excel", "BI工具", "报表", "趋势分析"], "skillCount": 5, "path": "majors/IT-A-2-2-data-analysis/index.html" },
+  "IT-A-2-3": { "icon": "🤖", "name": "人工智能专业", "code": "IT-A-2-3", "disc": "IT", "desc": "掌握深度学习框架、NLP、计算机视觉等AI核心技术", "skills": ["深度学习", "NLP", "计算机视觉", "模型部署", "AI伦理"], "skillCount": 5, "path": "majors/IT-A-2-3-artificial-intelligence/index.html" },
+  "IT-A-3-1": { "icon": "🔒", "name": "网络安全专业", "code": "IT-A-3-1", "disc": "IT", "desc": "掌握网络安全技术，包括渗透测试、漏洞扫描、安全架构", "skills": ["渗透测试", "漏洞扫描", "安全架构", "合规审计", "应急响应"], "skillCount": 5, "path": "majors/IT-A-3-1-cybersecurity/index.html" },
+  "IT-A-4-1": { "icon": "🚀", "name": "DevOps专业", "code": "IT-A-4-1", "disc": "IT", "desc": "掌握CI/CD流水线、容器化、监控告警、自动化运维", "skills": ["CI/CD", "容器化", "监控告警", "日志分析", "自动化"], "skillCount": 5, "path": "majors/IT-A-4-1-devops/index.html" },
+  "BM-B-1-1": { "icon": "💰", "name": "会计专业", "code": "BM-B-1-1", "disc": "BM", "desc": "掌握会计核算、财务报表编制、税务处理等会计专业能力", "skills": ["会计核算", "财务报表", "税务处理", "成本控制", "审计"], "skillCount": 5, "path": "majors/BM-B-1-1-accounting/index.html" },
+  "BM-B-1-2": { "icon": "📉", "name": "财务分析专业", "code": "BM-B-1-2", "disc": "BM", "desc": "专注于财务数据分析、预算管理、投资分析等能力", "skills": ["财务分析", "预算管理", "投资分析", "风险评估", "财务建模"], "skillCount": 5, "path": "majors/BM-B-1-2-financial-analysis/index.html" },
+  "BM-B-2-1": { "icon": "📢", "name": "市场营销专业", "code": "BM-B-2-1", "disc": "BM", "desc": "掌握市场调研、品牌策划、广告投放、活动策划", "skills": ["市场调研", "品牌策划", "广告投放", "活动策划", "效果分析"], "skillCount": 5, "path": "majors/BM-B-2-1-marketing/index.html" },
+  "BM-B-2-2": { "icon": "📱", "name": "数字营销专业", "code": "BM-B-2-2", "disc": "BM", "desc": "精通SEO/SEM、社交媒体运营、内容营销、数据分析", "skills": ["SEO/SEM", "社交媒体", "内容营销", "数据分析", "用户增长"], "skillCount": 5, "path": "majors/BM-B-2-2-digital-marketing/index.html" },
+  "BM-B-2-3": { "icon": "🤝", "name": "客户关系管理专业", "code": "BM-B-2-3", "disc": "BM", "desc": "掌握客户画像、客户沟通、售后支持、客户留存", "skills": ["客户画像", "客户沟通", "售后支持", "客户留存", "CRM系统"], "skillCount": 5, "path": "majors/BM-B-2-3-customer-relationship-management/index.html" },
+  "BM-B-3-1": { "icon": "👥", "name": "人力资源管理专业", "code": "BM-B-3-1", "disc": "BM", "desc": "掌握招聘面试、培训发展、绩效管理、薪酬福利", "skills": ["招聘面试", "培训发展", "绩效管理", "薪酬福利", "员工关系"], "skillCount": 5, "path": "majors/BM-B-3-1-human-resource-management/index.html" },
+  "BM-B-4-1": { "icon": "📋", "name": "项目管理专业", "code": "BM-B-4-1", "disc": "BM", "desc": "掌握项目规划、进度管理、风险控制、团队协作", "skills": ["项目规划", "进度管理", "风险控制", "团队协作", "质量管理"], "skillCount": 5, "path": "majors/BM-B-4-1-project-management/index.html" },
+  "SM-1-1": { "icon": "📱", "name": "小红书运营专业", "code": "SM-1-1", "disc": "SM", "desc": "掌握小红书平台全流程运营能力，从笔记创作到数据分析", "skills": ["笔记创作", "爆款选题", "封面优化", "数据分析", "流量运营"], "skillCount": 7, "path": "majors/SM-1-1-xiaohongshu-operation/index.html" },
+  "SM-1-2": { "icon": "🎵", "name": "抖音创作专业", "code": "SM-1-2", "disc": "SM", "desc": "短视频脚本创作、拍摄剪辑、流量运营全链路能力", "skills": ["脚本创作", "视频剪辑", "流量运营", "热点借势", "直播运营"], "skillCount": 8, "path": "majors/SM-1-2-douyin-creation/index.html" },
+  "SM-1-3": { "icon": "📰", "name": "公众号运营专业", "code": "SM-1-3", "disc": "SM", "desc": "公众号内容创作、排版设计、用户增长全套能力", "skills": ["文章写作", "排版设计", "裂变增长", "私域运营", "用户管理"], "skillCount": 7, "path": "majors/SM-1-3-wechat-official-account/index.html" },
+  "SM-2-1": { "icon": "⭐", "name": "个人IP打造专业", "code": "SM-2-1", "disc": "SM", "desc": "人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力IP", "skills": ["人设定位", "内容矩阵", "社群运营", "IP商业化", "品牌合作"], "skillCount": 7, "path": "majors/SM-2-1-personal-ip/index.html" },
+  "SM-2-2": { "icon": "🏆", "name": "品牌IP运营专业", "code": "SM-2-2", "disc": "SM", "desc": "品牌IP战略规划、视觉系统设计、KOL合作推广", "skills": ["品牌战略", "视觉系统", "KOL合作", "舆情监控", "危机公关"], "skillCount": 7, "path": "majors/SM-2-2-brand-ip/index.html" },
+  "SM-3-1": { "icon": "🛒", "name": "直播带货专业", "code": "SM-3-1", "disc": "SM", "desc": "直播话术设计、选品供应链、转化漏斗优化全套能力", "skills": ["带货话术", "选品供应链", "转化优化", "投流策略", "直播互动"], "skillCount": 8, "path": "majors/SM-3-1-live-commerce/index.html" },
+  "SM-3-2": { "icon": "🎓", "name": "知识付费专业", "code": "SM-3-2", "disc": "SM", "desc": "课程体系设计、营销文案撰写、分销裂变机制", "skills": ["课程设计", "定价策略", "营销文案", "分销裂变", "用户运营"], "skillCount": 8, "path": "majors/SM-3-2-knowledge-payment/index.html" },
+  "CC-C-1-1": { "icon": "📝", "name": "文案策划专业", "code": "CC-C-1-1", "disc": "CC", "desc": "掌握标题创作、内容策划、SEO优化、品牌文案", "skills": ["标题创作", "内容策划", "SEO优化", "品牌文案", "广告文案"], "skillCount": 5, "path": "majors/CC-C-1-1-copywriting/index.html" },
+  "CC-C-1-2": { "icon": "📰", "name": "新闻写作专业", "code": "CC-C-1-2", "disc": "CC", "desc": "掌握新闻采编、深度报道、评论写作、事实核查", "skills": ["新闻采编", "深度报道", "评论写作", "事实核查", "新闻伦理"], "skillCount": 5, "path": "majors/CC-C-1-2-journalism/index.html" },
+  "CC-C-2-1": { "icon": "🎬", "name": "视频创作专业", "code": "CC-C-2-1", "disc": "CC", "desc": "掌握脚本创作、视频拍摄、剪辑制作、特效处理", "skills": ["脚本创作", "视频拍摄", "视频剪辑", "特效制作", "音频处理"], "skillCount": 5, "path": "majors/CC-C-2-1-video-production/index.html" },
+  "CC-C-2-2": { "icon": "🎨", "name": "平面设计专业", "code": "CC-C-2-2", "disc": "CC", "desc": "掌握排版设计、色彩搭配、Logo设计、海报设计", "skills": ["排版设计", "色彩搭配", "Logo设计", "海报设计", "品牌视觉"], "skillCount": 5, "path": "majors/CC-C-2-2-graphic-design/index.html" },
+  "CC-C-3-1": { "icon": "📱", "name": "新媒体运营专业", "code": "CC-C-3-1", "disc": "CC", "desc": "掌握微信公众号、抖音等平台的运营技巧", "skills": ["平台运营", "内容策划", "粉丝运营", "数据分析", "热点追踪"], "skillCount": 5, "path": "majors/CC-C-3-1-new-media-operations/index.html" },
+  "CS-D-1-1": { "icon": "🎧", "name": "客户服务专业", "code": "CS-D-1-1", "disc": "CS", "desc": "提供全天候智能客服服务，处理咨询、投诉和售后问题", "skills": ["产品知识", "问题诊断", "沟通技巧", "工单处理", "知识库维护"], "skillCount": 5, "path": "majors/CS-D-1-1-customer-service/index.html" },
+  "CS-D-1-2": { "icon": "🔧", "name": "技术支持专业", "code": "CS-D-1-2", "disc": "CS", "desc": "掌握技术故障排查、远程协助、技术文档编写", "skills": ["故障排查", "远程协助", "文档编写", "客户培训", "问题升级"], "skillCount": 5, "path": "majors/CS-D-1-2-technical-support/index.html" },
+  "CS-D-2-1": { "icon": "🤝", "name": "销售顾问专业", "code": "CS-D-2-1", "disc": "CS", "desc": "掌握客户需求挖掘、产品演示、谈判技巧、合同管理", "skills": ["需求挖掘", "产品演示", "谈判技巧", "合同管理", "客户关系"], "skillCount": 5, "path": "majors/CS-D-2-1-sales-consultant/index.html" },
+  "HC-E-1-1": { "icon": "👩‍⚕️", "name": "医疗助理专业", "code": "HC-E-1-1", "disc": "HC", "desc": "协助医疗工作，包括病历整理、医嘱处理、健康档案管理", "skills": ["病历整理", "医嘱处理", "档案管理", "用药提醒", "随访管理"], "skillCount": 5, "path": "majors/HC-E-1-1-medical-assistant/index.html" },
+  "HC-E-1-2": { "icon": "🏃", "name": "健康管理专业", "code": "HC-E-1-2", "disc": "HC", "desc": "提供健康评估、膳食建议、运动指导、心理疏导", "skills": ["健康评估", "膳食建议", "运动指导", "心理疏导", "慢病管理"], "skillCount": 5, "path": "majors/HC-E-1-2-health-management/index.html" },
+  "ED-F-1-1": { "icon": "🎓", "name": "教学助理专业", "code": "ED-F-1-1", "disc": "ED", "desc": "协助教学工作，包括课程设计、作业批改、答疑辅导", "skills": ["课程设计", "作业批改", "答疑辅导", "学习跟踪", "学习评估"], "skillCount": 5, "path": "majors/ED-F-1-1-teaching-assistant/index.html" },
+  "ED-F-1-2": { "icon": "💻", "name": "在线教育专业", "code": "ED-F-1-2", "disc": "ED", "desc": "掌握直播教学、录播课程制作、在线答疑、学员管理", "skills": ["直播教学", "录播制作", "在线答疑", "学员管理", "课程营销"], "skillCount": 5, "path": "majors/ED-F-1-2-online-education/index.html" },
+  "LG-G-1-1": { "icon": "📜", "name": "法律助理专业", "code": "LG-G-1-1", "disc": "LG", "desc": "协助法律工作，包括法律文书撰写、案例检索、合同审查", "skills": ["文书撰写", "案例检索", "合同审查", "合规检查", "法律咨询"], "skillCount": 5, "path": "majors/LG-G-1-1-legal-assistant/index.html" },
+  "AD-H-1-1": { "icon": "✨", "name": "UI/UX设计专业", "code": "AD-H-1-1", "disc": "AD", "desc": "掌握用户研究、交互设计、原型设计、视觉设计、可用性测试", "skills": ["用户研究", "交互设计", "原型设计", "视觉设计", "可用性测试"], "skillCount": 5, "path": "majors/AD-H-1-1-ui-ux-design/index.html" }
+};
+
+function generateMajorCards() {
+  const grid = document.getElementById('majorGrid');
+  let html = '';
+
+  for (const key in majorsData) {
+    const major = majorsData[key];
+    const extraCount = major.skillCount - 5;
+
+    html += `
+    <a href="${major.path}" class="major-card disc-${major.disc}" data-disc="${major.disc}">
+      <div class="icon">${major.icon}</div>
+      <div class="code">${major.code}</div>
+      <h3>${major.name}</h3>
+      <p>${major.desc}</p>
+      <div class="skills-preview">
+        ${major.skills.slice(0, 4).map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+        ${extraCount > 0 ? `<span class="skill-tag">+${extraCount}</span>` : ''}
+      </div>
+      <div class="footer">
+        <span class="skill-count">📋 ${major.skillCount} 个技能</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+    `;
+  }
+
+  grid.innerHTML = html;
+}
+
 function filterDisc(disc) {
   document.querySelectorAll('.disc-tab').forEach(t => t.classList.remove('active'));
   event.target.classList.add('active');
@@ -344,6 +258,9 @@ function filterDisc(disc) {
     }
   });
 }
+
+// 生成专业卡片
+generateMajorCards();
 </script>
 
 </body>

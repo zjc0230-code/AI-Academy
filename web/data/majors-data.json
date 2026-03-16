@@ -1,0 +1,780 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-03-16",
+  "statistics": {
+    "disciplines": 8,
+    "categories": 19,
+    "majors": 28,
+    "skills": 136
+  },
+  "disciplines": [
+    {
+      "code": "IT",
+      "name": { "zh": "信息技术", "en": "Information Technology" },
+      "icon": "💻",
+      "description": "涵盖软件开发、数据科学、网络安全、运维工程等领域",
+      "color": "#0f3460",
+      "colorBg": "#eff6ff",
+      "categories": [
+        {
+          "code": "A-1",
+          "name": { "zh": "软件开发类", "en": "Software Development" },
+          "majors": [
+            {
+              "code": "IT-A-1-1",
+              "name": { "zh": "软件工程专业", "en": "Software Engineering" },
+              "icon": "💻",
+              "description": "培养具备软件开发全流程能力的专业人才，包括需求分析、系统设计、编码实现、测试部署等完整能力",
+              "skills": [
+                "SK-IT-001: 需求分析与设计",
+                "SK-IT-002: 算法与数据结构",
+                "SK-IT-003: 编程语言（Python/Java/Go）",
+                "SK-IT-004: 软件工程实践（版本控制、CI/CD）",
+                "SK-IT-005: 测试与调试",
+                "SK-IT-006: 系统架构设计"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            },
+            {
+              "code": "IT-A-1-2",
+              "name": { "zh": "前端开发专业", "en": "Frontend Development" },
+              "icon": "🎨",
+              "description": "专注于Web前端开发，掌握HTML/CSS/JavaScript、前端框架、响应式设计等技能",
+              "skills": [
+                "SK-IT-007: HTML/CSS/JavaScript",
+                "SK-IT-008: 前端框架（React/Vue/Angular）",
+                "SK-IT-009: 响应式设计",
+                "SK-IT-010: 性能优化",
+                "SK-IT-011: 前端工程化（Webpack/Vite）"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 3
+            },
+            {
+              "code": "IT-A-1-3",
+              "name": { "zh": "后端开发专业", "en": "Backend Development" },
+              "icon": "🔧",
+              "description": "专注于后端服务开发，掌握后端框架、数据库设计、API开发、微服务架构等技能",
+              "skills": [
+                "SK-IT-012: 后端框架（Django/Spring/Express）",
+                "SK-IT-013: 数据库设计与优化",
+                "SK-IT-014: API 设计与开发",
+                "SK-IT-015: 微服务架构",
+                "SK-IT-016: 服务器运维（Linux/容器化）"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 4
+            }
+          ]
+        },
+        {
+          "code": "A-2",
+          "name": { "zh": "数据科学类", "en": "Data Science" },
+          "majors": [
+            {
+              "code": "IT-A-2-1",
+              "name": { "zh": "数据科学专业", "en": "Data Science" },
+              "icon": "📊",
+              "description": "掌握数据采集、清洗、分析、可视化全流程，精通机器学习算法",
+              "skills": [
+                "SK-IT-017: 数据采集与清洗",
+                "SK-IT-018: 统计分析",
+                "SK-IT-019: 机器学习算法",
+                "SK-IT-020: 数据可视化",
+                "SK-IT-021: 大数据处理（Spark/Hadoop）"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            },
+            {
+              "code": "IT-A-2-2",
+              "name": { "zh": "数据分析专业", "en": "Data Analysis" },
+              "icon": "📈",
+              "description": "专注于数据分析与可视化，提供业务洞察和决策支持",
+              "skills": [
+                "SK-IT-022: SQL 查询",
+                "SK-IT-023: Excel 高级应用",
+                "SK-IT-024: BI 工具（Tableau/Power BI）",
+                "SK-IT-025: 报表生成",
+                "SK-IT-026: 趋势分析"
+              ],
+              "learningDuration": "150-300小时",
+              "difficulty": 3
+            },
+            {
+              "code": "IT-A-2-3",
+              "name": { "zh": "人工智能专业", "en": "Artificial Intelligence" },
+              "icon": "🤖",
+              "description": "掌握深度学习框架、NLP、计算机视觉等AI核心技术",
+              "skills": [
+                "SK-IT-027: 深度学习框架（PyTorch/TensorFlow）",
+                "SK-IT-028: NLP 自然语言处理",
+                "SK-IT-029: 计算机视觉",
+                "SK-IT-030: 模型部署与优化",
+                "SK-IT-031: AI 伦理与合规"
+              ],
+              "learningDuration": "300-500小时",
+              "difficulty": 5
+            }
+          ]
+        },
+        {
+          "code": "A-3",
+          "name": { "zh": "网络安全类", "en": "Cybersecurity" },
+          "majors": [
+            {
+              "code": "IT-A-3-1",
+              "name": { "zh": "网络安全专业", "en": "Cybersecurity" },
+              "icon": "🔒",
+              "description": "掌握网络安全技术，包括渗透测试、漏洞扫描、安全架构设计等",
+              "skills": [
+                "SK-IT-032: 渗透测试",
+                "SK-IT-033: 漏洞扫描与修复",
+                "SK-IT-034: 安全架构设计",
+                "SK-IT-035: 合规与审计",
+                "SK-IT-036: 应急响应"
+              ],
+              "learningDuration": "300-500小时",
+              "difficulty": 5
+            }
+          ]
+        },
+        {
+          "code": "A-4",
+          "name": { "zh": "运维工程类", "en": "DevOps" },
+          "majors": [
+            {
+              "code": "IT-A-4-1",
+              "name": { "zh": "DevOps专业", "en": "DevOps" },
+              "icon": "🚀",
+              "description": "掌握CI/CD流水线、容器化、监控告警、自动化运维等技能",
+              "skills": [
+                "SK-IT-037: CI/CD 流水线",
+                "SK-IT-038: 容器化（Docker/K8s）",
+                "SK-IT-039: 监控与告警",
+                "SK-IT-040: 日志分析",
+                "SK-IT-041: 自动化运维"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BM",
+      "name": { "zh": "商务管理", "en": "Business Management" },
+      "icon": "💼",
+      "description": "涵盖财务管理、市场营销、人力资源、项目管理等领域",
+      "color": "#059669",
+      "colorBg": "#ecfdf5",
+      "categories": [
+        {
+          "code": "B-1",
+          "name": { "zh": "财务管理类", "en": "Financial Management" },
+          "majors": [
+            {
+              "code": "BM-B-1-1",
+              "name": { "zh": "会计专业", "en": "Accounting" },
+              "icon": "💰",
+              "description": "掌握会计核算、财务报表编制、税务处理等会计专业能力",
+              "skills": [
+                "SK-BM-001: 会计核算",
+                "SK-BM-002: 财务报表编制",
+                "SK-BM-003: 税务处理",
+                "SK-BM-004: 成本控制",
+                "SK-BM-005: 审计基础"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            },
+            {
+              "code": "BM-B-1-2",
+              "name": { "zh": "财务分析专业", "en": "Financial Analysis" },
+              "icon": "📉",
+              "description": "专注于财务数据分析、预算管理、投资分析等能力",
+              "skills": [
+                "SK-BM-006: 财务数据分析",
+                "SK-BM-007: 预算管理",
+                "SK-BM-008: 投资分析",
+                "SK-BM-009: 风险评估",
+                "SK-BM-010: 财务建模"
+              ],
+              "learningDuration": "220-420小时",
+              "difficulty": 4
+            }
+          ]
+        },
+        {
+          "code": "B-2",
+          "name": { "zh": "市场营销类", "en": "Marketing" },
+          "majors": [
+            {
+              "code": "BM-B-2-1",
+              "name": { "zh": "市场营销专业", "en": "Marketing" },
+              "icon": "📢",
+              "description": "掌握市场调研、品牌策划、广告投放、活动策划等市场营销技能",
+              "skills": [
+                "SK-BM-011: 市场调研",
+                "SK-BM-012: 品牌策划",
+                "SK-BM-013: 广告投放",
+                "SK-BM-014: 活动策划",
+                "SK-BM-015: 效果分析"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 3
+            },
+            {
+              "code": "BM-B-2-2",
+              "name": { "zh": "数字营销专业", "en": "Digital Marketing" },
+              "icon": "📱",
+              "description": "精通SEO/SEM、社交媒体运营、内容营销、数据分析等数字营销技能",
+              "skills": [
+                "SK-BM-016: SEO/SEM",
+                "SK-BM-017: 社交媒体运营",
+                "SK-BM-018: 内容营销",
+                "SK-BM-019: 数据分析",
+                "SK-BM-020: 用户增长"
+              ],
+              "learningDuration": "200-380小时",
+              "difficulty": 3
+            },
+            {
+              "code": "BM-B-2-3",
+              "name": { "zh": "客户关系管理专业", "en": "Customer Relationship Management" },
+              "icon": "🤝",
+              "description": "掌握客户画像、客户沟通、售后支持、客户留存、CRM系统操作",
+              "skills": [
+                "SK-BM-021: 客户画像",
+                "SK-BM-022: 客户沟通",
+                "SK-BM-023: 售后支持",
+                "SK-BM-024: 客户留存",
+                "SK-BM-025: CRM 系统操作"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "code": "B-3",
+          "name": { "zh": "人力资源类", "en": "Human Resources" },
+          "majors": [
+            {
+              "code": "BM-B-3-1",
+              "name": { "zh": "人力资源管理专业", "en": "Human Resource Management" },
+              "icon": "👥",
+              "description": "掌握招聘面试、培训发展、绩效管理、薪酬福利等人力资源管理技能",
+              "skills": [
+                "SK-BM-026: 招聘与面试",
+                "SK-BM-027: 培训与发展",
+                "SK-BM-028: 绩效管理",
+                "SK-BM-029: 薪酬福利",
+                "SK-BM-030: 员工关系"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "code": "B-4",
+          "name": { "zh": "项目管理类", "en": "Project Management" },
+          "majors": [
+            {
+              "code": "BM-B-4-1",
+              "name": { "zh": "项目管理专业", "en": "Project Management" },
+              "icon": "📋",
+              "description": "掌握项目规划、进度管理、风险控制、团队协作等项目管理能力",
+              "skills": [
+                "SK-BM-031: 项目规划",
+                "SK-BM-032: 进度管理",
+                "SK-BM-033: 风险控制",
+                "SK-BM-034: 团队协作",
+                "SK-BM-035: 质量管理"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "SM",
+      "name": { "zh": "自媒体运营", "en": "Social Media" },
+      "icon": "📱",
+      "description": "涵盖小红书、抖音、公众号等自媒体平台运营",
+      "color": "#e94560",
+      "colorBg": "#fff1f3",
+      "categories": [
+        {
+          "code": "SM-1",
+          "name": { "zh": "平台运营类", "en": "Platform Operations" },
+          "majors": [
+            {
+              "code": "SM-1-1",
+              "name": { "zh": "小红书运营专业", "en": "Xiaohongshu Operations" },
+              "icon": "📱",
+              "description": "掌握小红书平台全流程运营能力，从笔记创作到数据分析，打造爆款内容，实现账号持续增长",
+              "skills": [
+                "SK-SM-001: 笔记创作",
+                "SK-SM-002: 爆款选题",
+                "SK-SM-003: 封面优化",
+                "SK-SM-004: 数据分析",
+                "SK-SM-005: 流量运营",
+                "SK-SM-006: 粉丝互动",
+                "SK-SM-007: 商业变现"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 2
+            },
+            {
+              "code": "SM-1-2",
+              "name": { "zh": "抖音创作专业", "en": "Douyin Creation" },
+              "icon": "🎵",
+              "description": "短视频脚本创作、拍摄剪辑、流量运营全链路能力，掌握抖音算法逻辑，实现高效涨粉变现",
+              "skills": [
+                "SK-SM-008: 脚本创作",
+                "SK-SM-009: 视频剪辑",
+                "SK-SM-010: 流量运营",
+                "SK-SM-011: 热点借势",
+                "SK-SM-012: 直播运营",
+                "SK-SM-013: 投流策略",
+                "SK-SM-014: 变现模式",
+                "SK-SM-015: 数据优化"
+              ],
+              "learningDuration": "200-380小时",
+              "difficulty": 3
+            },
+            {
+              "code": "SM-1-3",
+              "name": { "zh": "公众号运营专业", "en": "WeChat Official Account Operations" },
+              "icon": "📰",
+              "description": "公众号内容创作、排版设计、用户增长全套能力，构建稳定私域流量池，实现商业变现",
+              "skills": [
+                "SK-SM-016: 文章写作",
+                "SK-SM-017: 排版设计",
+                "SK-SM-018: 裂变增长",
+                "SK-SM-019: 私域运营",
+                "SK-SM-020: 用户管理",
+                "SK-SM-021: 广告投放",
+                "SK-SM-022: 数据分析"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 2
+            }
+          ]
+        },
+        {
+          "code": "SM-2",
+          "name": { "zh": "IP打造类", "en": "IP Building" },
+          "majors": [
+            {
+              "code": "SM-2-1",
+              "name": { "zh": "个人IP打造专业", "en": "Personal IP Building" },
+              "icon": "⭐",
+              "description": "人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力的个人IP，实现商业变现",
+              "skills": [
+                "SK-SM-023: 人设定位",
+                "SK-SM-024: 内容矩阵",
+                "SK-SM-025: 社群运营",
+                "SK-SM-026: IP商业化",
+                "SK-SM-027: 品牌合作",
+                "SK-SM-028: 舆情管理",
+                "SK-SM-029: 长期规划"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            },
+            {
+              "code": "SM-2-2",
+              "name": { "zh": "品牌IP运营专业", "en": "Brand IP Operations" },
+              "icon": "🏆",
+              "description": "品牌IP战略规划、视觉系统设计、KOL合作推广，构建具有持续影响力的品牌资产",
+              "skills": [
+                "SK-SM-030: 品牌战略",
+                "SK-SM-031: 视觉系统",
+                "SK-SM-032: KOL合作",
+                "SK-SM-033: 舆情监控",
+                "SK-SM-034: 危机公关",
+                "SK-SM-035: 效果评估",
+                "SK-SM-036: IP延伸"
+              ],
+              "learningDuration": "220-420小时",
+              "difficulty": 4
+            }
+          ]
+        },
+        {
+          "code": "SM-3",
+          "name": { "zh": "变现类", "en": "Monetization" },
+          "majors": [
+            {
+              "code": "SM-3-1",
+              "name": { "zh": "直播带货专业", "en": "Live Commerce" },
+              "icon": "🛒",
+              "description": "直播话术设计、选品供应链、转化漏斗优化全套能力，打造高GMV直播间，实现稳定变现",
+              "skills": [
+                "SK-SM-037: 带货话术",
+                "SK-SM-038: 选品供应链",
+                "SK-SM-039: 转化优化",
+                "SK-SM-040: 投流策略",
+                "SK-SM-041: 直播互动",
+                "SK-SM-042: 团队管理",
+                "SK-SM-043: 数据复盘",
+                "SK-SM-044: 品牌合作"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            },
+            {
+              "code": "SM-3-2",
+              "name": { "zh": "知识付费专业", "en": "Knowledge Payment" },
+              "icon": "🎓",
+              "description": "课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品，实现持续收入",
+              "skills": [
+                "SK-SM-045: 课程设计",
+                "SK-SM-046: 定价策略",
+                "SK-SM-047: 营销文案",
+                "SK-SM-048: 分销裂变",
+                "SK-SM-049: 用户运营",
+                "SK-SM-050: 交付管理",
+                "SK-SM-051: 持续优化",
+                "SK-SM-052: 品牌建设"
+              ],
+              "learningDuration": "220-420小时",
+              "difficulty": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CC",
+      "name": { "zh": "内容创作", "en": "Content Creation" },
+      "icon": "✍️",
+      "description": "涵盖文案写作、多媒体创作、新媒体运营等领域",
+      "color": "#7c3aed",
+      "colorBg": "#f5f3ff",
+      "categories": [
+        {
+          "code": "C-1",
+          "name": { "zh": "文案写作类", "en": "Copywriting" },
+          "majors": [
+            {
+              "code": "CC-C-1-1",
+              "name": { "zh": "文案策划专业", "en": "Copywriting" },
+              "icon": "📝",
+              "description": "掌握标题创作、内容策划、SEO优化、品牌文案等文案策划技能",
+              "skills": [
+                "SK-CC-001: 标题创作",
+                "SK-CC-002: 内容策划",
+                "SK-CC-003: SEO 优化",
+                "SK-CC-004: 品牌文案",
+                "SK-CC-005: 广告文案"
+              ],
+              "learningDuration": "150-300小时",
+              "difficulty": 2
+            },
+            {
+              "code": "CC-C-1-2",
+              "name": { "zh": "新闻写作专业", "en": "Journalism" },
+              "icon": "📰",
+              "description": "掌握新闻采编、深度报道、评论写作、事实核查、新闻伦理",
+              "skills": [
+                "SK-CC-006: 新闻采编",
+                "SK-CC-007: 深度报道",
+                "SK-CC-008: 评论写作",
+                "SK-CC-009: 事实核查",
+                "SK-CC-010: 新闻伦理"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "code": "C-2",
+          "name": { "zh": "多媒体创作类", "en": "Multimedia Creation" },
+          "majors": [
+            {
+              "code": "CC-C-2-1",
+              "name": { "zh": "视频创作专业", "en": "Video Production" },
+              "icon": "🎬",
+              "description": "掌握脚本创作、视频拍摄、剪辑制作、特效处理等视频创作技能",
+              "skills": [
+                "SK-CC-011: 脚本创作",
+                "SK-CC-012: 视频拍摄",
+                "SK-CC-013: 视频剪辑",
+                "SK-CC-014: 特效制作",
+                "SK-CC-015: 音频处理"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            },
+            {
+              "code": "CC-C-2-2",
+              "name": { "zh": "平面设计专业", "en": "Graphic Design" },
+              "icon": "🎨",
+              "description": "掌握排版设计、色彩搭配、Logo设计、海报设计等平面设计技能",
+              "skills": [
+                "SK-CC-016: 排版设计",
+                "SK-CC-017: 色彩搭配",
+                "SK-CC-018: Logo 设计",
+                "SK-CC-019: 海报设计",
+                "SK-CC-020: 品牌视觉"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "code": "C-3",
+          "name": { "zh": "新媒体运营类", "en": "New Media Operations" },
+          "majors": [
+            {
+              "code": "CC-C-3-1",
+              "name": { "zh": "新媒体运营专业", "en": "New Media Operations" },
+              "icon": "📱",
+              "description": "掌握微信公众号、抖音等平台的运营技巧，包括内容策划、粉丝运营、数据分析",
+              "skills": [
+                "SK-CC-021: 平台运营（微信公众号、抖音等）",
+                "SK-CC-022: 内容策划",
+                "SK-CC-023: 粉丝运营",
+                "SK-CC-024: 数据分析",
+                "SK-CC-025: 热点追踪"
+              ],
+              "learningDuration": "200-380小时",
+              "difficulty": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CS",
+      "name": { "zh": "客户服务", "en": "Customer Service" },
+      "icon": "💬",
+      "description": "涵盖客户支持、销售咨询等领域",
+      "color": "#0ea5e9",
+      "colorBg": "#e0f2fe",
+      "categories": [
+        {
+          "code": "D-1",
+          "name": { "zh": "客户支持类", "en": "Customer Support" },
+          "majors": [
+            {
+              "code": "CS-D-1-1",
+              "name": { "zh": "客户服务专业", "en": "Customer Service" },
+              "icon": "🎧",
+              "description": "提供全天候智能客服服务，处理咨询、投诉和售后问题",
+              "skills": [
+                "SK-CS-001: 产品知识",
+                "SK-CS-002: 问题诊断",
+                "SK-CS-003: 沟通技巧",
+                "SK-CS-004: 工单处理",
+                "SK-CS-005: 知识库维护"
+              ],
+              "learningDuration": "150-300小时",
+              "difficulty": 2
+            },
+            {
+              "code": "CS-D-1-2",
+              "name": { "zh": "技术支持专业", "en": "Technical Support" },
+              "icon": "🔧",
+              "description": "掌握技术故障排查、远程协助、技术文档编写等技术支持技能",
+              "skills": [
+                "SK-CS-006: 技术故障排查",
+                "SK-CS-007: 远程协助",
+                "SK-CS-008: 技术文档编写",
+                "SK-CS-009: 客户培训",
+                "SK-CS-010: 问题升级处理"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "code": "D-2",
+          "name": { "zh": "销售咨询类", "en": "Sales Consulting" },
+          "majors": [
+            {
+              "code": "CS-D-2-1",
+              "name": { "zh": "销售顾问专业", "en": "Sales Consultant" },
+              "icon": "🤝",
+              "description": "掌握客户需求挖掘、产品演示、谈判技巧、合同管理等销售咨询技能",
+              "skills": [
+                "SK-CS-011: 客户需求挖掘",
+                "SK-CS-012: 产品演示",
+                "SK-CS-013: 谈判技巧",
+                "SK-CS-014: 合同管理",
+                "SK-CS-015: 客户关系维护"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HC",
+      "name": { "zh": "健康医疗", "en": "Healthcare" },
+      "icon": "🏥",
+      "description": "涵盖医疗辅助、健康管理等健康服务领域",
+      "color": "#10b981",
+      "colorBg": "#d1fae5",
+      "categories": [
+        {
+          "code": "E-1",
+          "name": { "zh": "医疗辅助类", "en": "Medical Assistant" },
+          "majors": [
+            {
+              "code": "HC-E-1-1",
+              "name": { "zh": "医疗助理专业", "en": "Medical Assistant" },
+              "icon": "👩‍⚕️",
+              "description": "协助医疗工作，包括病历整理、医嘱处理、健康档案管理等",
+              "skills": [
+                "SK-HC-001: 病历整理",
+                "SK-HC-002: 医嘱处理",
+                "SK-HC-003: 健康档案管理",
+                "SK-HC-004: 用药提醒",
+                "SK-HC-005: 随访管理"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            },
+            {
+              "code": "HC-E-1-2",
+              "name": { "zh": "健康管理专业", "en": "Health Management" },
+              "icon": "🏃",
+              "description": "提供健康评估、膳食建议、运动指导、心理疏导等健康管理服务",
+              "skills": [
+                "SK-HC-006: 健康评估",
+                "SK-HC-007: 膳食建议",
+                "SK-HC-008: 运动指导",
+                "SK-HC-009: 心理疏导",
+                "SK-HC-010: 慢性病管理"
+              ],
+              "learningDuration": "220-420小时",
+              "difficulty": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ED",
+      "name": { "zh": "教育培训", "en": "Education" },
+      "icon": "📚",
+      "description": "涵盖教学辅导、在线教育等教育领域",
+      "color": "#f59e0b",
+      "colorBg": "#fef3c7",
+      "categories": [
+        {
+          "code": "F-1",
+          "name": { "zh": "教学辅导类", "en": "Teaching" },
+          "majors": [
+            {
+              "code": "ED-F-1-1",
+              "name": { "zh": "教学助理专业", "en": "Teaching Assistant" },
+              "icon": "🎓",
+              "description": "协助教学工作，包括课程设计、作业批改、答疑辅导、学习跟踪",
+              "skills": [
+                "SK-ED-001: 课程设计",
+                "SK-ED-002: 作业批改",
+                "SK-ED-003: 答疑辅导",
+                "SK-ED-004: 学习跟踪",
+                "SK-ED-005: 学习评估"
+              ],
+              "learningDuration": "180-350小时",
+              "difficulty": 2
+            },
+            {
+              "code": "ED-F-1-2",
+              "name": { "zh": "在线教育专业", "en": "Online Education" },
+              "icon": "💻",
+              "description": "掌握直播教学、录播课程制作、在线答疑、学员管理等在线教育技能",
+              "skills": [
+                "SK-ED-006: 直播教学",
+                "SK-ED-007: 录播课程制作",
+                "SK-ED-008: 在线答疑",
+                "SK-ED-009: 学员管理",
+                "SK-ED-010: 课程营销"
+              ],
+              "learningDuration": "200-400小时",
+              "difficulty": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LG",
+      "name": { "zh": "法务合规", "en": "Legal" },
+      "icon": "⚖️",
+      "description": "涵盖法律辅助等法律服务领域",
+      "color": "#6366f1",
+      "colorBg": "#eef2ff",
+      "categories": [
+        {
+          "code": "G-1",
+          "name": { "zh": "法律辅助类", "en": "Legal Assistant" },
+          "majors": [
+            {
+              "code": "LG-G-1-1",
+              "name": { "zh": "法律助理专业", "en": "Legal Assistant" },
+              "icon": "📜",
+              "description": "协助法律工作，包括法律文书撰写、案例检索、合同审查、合规检查",
+              "skills": [
+                "SK-LG-001: 法律文书撰写",
+                "SK-LG-002: 案例检索",
+                "SK-LG-003: 合同审查",
+                "SK-LG-004: 合规检查",
+                "SK-LG-005: 法律咨询"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AD",
+      "name": { "zh": "艺术设计", "en": "Art & Design" },
+      "icon": "🎨",
+      "description": "涵盖视觉设计等艺术领域",
+      "color": "#ec4899",
+      "colorBg": "#fce7f3",
+      "categories": [
+        {
+          "code": "H-1",
+          "name": { "zh": "视觉设计类", "en": "Visual Design" },
+          "majors": [
+            {
+              "code": "AD-H-1-1",
+              "name": { "zh": "UI/UX设计专业", "en": "UI/UX Design" },
+              "icon": "✨",
+              "description": "掌握用户研究、交互设计、原型设计、视觉设计、可用性测试等UI/UX设计技能",
+              "skills": [
+                "SK-AD-001: 用户研究",
+                "SK-AD-002: 交互设计",
+                "SK-AD-003: 原型设计",
+                "SK-AD-004: 视觉设计",
+                "SK-AD-005: 可用性测试"
+              ],
+              "learningDuration": "250-450小时",
+              "difficulty": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
