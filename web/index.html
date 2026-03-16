@@ -188,7 +188,7 @@ const majorsData = {
   "IT-A-2-3": { "icon": "🤖", "name": "人工智能专业", "code": "IT-A-2-3", "disc": "IT", "desc": "掌握深度学习框架、NLP、计算机视觉等AI核心技术", "skills": ["深度学习", "NLP", "计算机视觉", "模型部署", "AI伦理"], "skillCount": 5, "path": "majors/IT-A-2-3-artificial-intelligence/index.html" },
   "IT-A-3-1": { "icon": "🔒", "name": "网络安全专业", "code": "IT-A-3-1", "disc": "IT", "desc": "掌握网络安全技术，包括渗透测试、漏洞扫描、安全架构", "skills": ["渗透测试", "漏洞扫描", "安全架构", "合规审计", "应急响应"], "skillCount": 5, "path": "majors/IT-A-3-1-cybersecurity/index.html" },
   "IT-A-4-1": { "icon": "🚀", "name": "DevOps专业", "code": "IT-A-4-1", "disc": "IT", "desc": "掌握CI/CD流水线、容器化、监控告警、自动化运维", "skills": ["CI/CD", "容器化", "监控告警", "日志分析", "自动化"], "skillCount": 5, "path": "majors/IT-A-4-1-devops/index.html" },
-  "SM-1-1": { "icon": "📱", "name": "小红书运营专业", "code": "SM-1-1", "disc": "SM", "desc": "掌握小红书平台全流程运营能力，从笔记创作到数据分析", "skills": ["笔记创作", "爆款选题", "封面优化", "数据分析", "流量运营"], "skillCount": 7, "path": "majors/SM-1-1-xiaohongshu-operation/index.html" },
+  "SM-1-1": { "icon": "📱", "name": "小红书运营专业", "code": "SM-1-1", "disc": "SM", "desc": "掌握小红书平台全流程运营能力，从笔记创作到数据分析", "skills": ["笔记创作", "爆款选题", "封面优化", "数据分析", "流量运营"], "skillCount": 7, "path": "majors/SM-1-1-xiaohongshu-operation/index.html", "priority": 1, "score": 9.35, "tier": "第一梯队" },
   "SM-1-2": { "icon": "🎵", "name": "抖音创作专业", "code": "SM-1-2", "disc": "SM", "desc": "短视频脚本创作、拍摄剪辑、流量运营全链路能力", "skills": ["脚本创作", "视频剪辑", "流量运营", "热点借势", "直播运营"], "skillCount": 8, "path": "majors/SM-1-2-douyin-creation/index.html" },
   "SM-1-3": { "icon": "📰", "name": "公众号运营专业", "code": "SM-1-3", "disc": "SM", "desc": "公众号内容创作、排版设计、用户增长全套能力", "skills": ["文章写作", "排版设计", "裂变增长", "私域运营", "用户管理"], "skillCount": 7, "path": "majors/SM-1-3-wechat-official-account/index.html" },
   "SM-2-1": { "icon": "⭐", "name": "个人IP打造专业", "code": "SM-2-1", "disc": "SM", "desc": "人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力IP", "skills": ["人设定位", "内容矩阵", "社群运营", "IP商业化", "品牌合作"], "skillCount": 7, "path": "majors/SM-2-1-personal-ip/index.html" },
@@ -227,6 +227,7 @@ function generateMajorCards() {
       </div>
       <div class="footer">
         <span class="skill-count">📋 ${major.skillCount} 个技能</span>
+        ${major.priority ? `<span style="color:${major.priority === 1 ? '#ffd700' : major.priority === 2 ? '#c0c0c0' : '#cd7f32'}">${major.priority === 1 ? '🥇' : major.priority === 2 ? '🥈' : '🥉'} ${major.tier}</span>` : ''}
         <span class="arrow">→</span>
       </div>
     </a>
