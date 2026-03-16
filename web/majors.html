@@ -7,154 +7,278 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f4ff; color: #1a1a2e; }
-    .header { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); color: white; padding: 40px 24px; text-align: center; }
-    .header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-    .header p { opacity: 0.8; }
-    .nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; display: flex; justify-content: center; gap: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .nav a { display: inline-block; padding: 14px 20px; color: #6b7280; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; }
-    .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #e94560; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
-    .disc-section { margin-bottom: 48px; }
-    .disc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--disc-color, #0f3460); }
-    .disc-header .disc-icon { font-size: 2rem; }
-    .disc-header h2 { font-size: 1.4rem; font-weight: 800; color: var(--disc-color, #0f3460); }
-    .disc-header .desc { font-size: 0.875rem; color: #6b7280; margin-top: 2px; }
+    .header { background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); color: white; padding: 48px 24px 40px; text-align: center; }
+    .header .back { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; margin-bottom: 24px; transition: color 0.2s; }
+    .header .back:hover { color: white; }
+    .header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .header p { opacity: 0.85; font-size: 1rem; line-height: 1.7; max-width: 700px; margin: 0 auto 24px; }
+    .header .stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .stat-item { display: flex; flex-direction: column; align-items: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: #0f3460; }
+    .stat-label { font-size: 0.875rem; opacity: 0.7; }
+
+    .search-section { background: white; padding: 24px; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .search-box { max-width: 800px; margin: 0 auto; display: flex; gap: 12px; }
+    .search-input { flex: 1; padding: 14px 18px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; transition: all 0.2s; }
+    .search-input:focus { outline: none; border-color: #0f3460; }
+    .search-btn { padding: 14px 28px; background: #0f3460; color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .search-btn:hover { background: #1a1a2e; }
+
+    .filter-tabs { max-width: 800px; margin: 20px auto 0; display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-tab { padding: 8px 16px; border: 1px solid #e5e7eb; border-radius: 20px; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: all 0.2s; background: white; color: #6b7280; }
+    .filter-tab:hover, .filter-tab.active { background: #0f3460; color: white; border-color: #0f3460; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+
+    .category-section { margin-bottom: 48px; }
+    .category-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid #0f3460; display: flex; align-items: center; gap: 12px; }
+    .category-icon { font-size: 1.8rem; }
+
     .major-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-    .major-card { background: white; border-radius: 14px; padding: 20px; border: 1px solid #e5e7eb; transition: all 0.2s; text-decoration: none; color: inherit; display: block; border-left: 4px solid var(--disc-color, #0f3460); }
-    .major-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-    .major-card .code { font-size: 0.72rem; font-weight: 700; color: var(--disc-color, #0f3460); background: #f0f4ff; padding: 2px 8px; border-radius: 6px; display: inline-block; margin-bottom: 6px; }
-    .major-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-    .major-card p { font-size: 0.82rem; color: #6b7280; line-height: 1.6; margin-bottom: 12px; }
-    .major-card .tags { display: flex; flex-wrap: wrap; gap: 5px; }
-    .major-card .tag { font-size: 0.72rem; background: #f3f4f6; color: #374151; padding: 2px 8px; border-radius: 10px; }
-    .major-card .count { font-size: 0.75rem; color: #9ca3af; margin-top: 10px; }
+    .major-card { background: white; border-radius: 14px; padding: 24px; border: 1px solid #e5e7eb; transition: all 0.25s; cursor: pointer; text-decoration: none; color: inherit; }
+    .major-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.12); transform: translateY(-4px); border-color: #0f3460; }
+    .major-card .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .major-card .major-icon { font-size: 2rem; }
+    .major-card .code-badge { font-family: monospace; font-size: 0.75rem; background: #f0f4ff; color: #0f3460; padding: 4px 10px; border-radius: 6px; font-weight: 700; }
+    .major-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+    .major-card p { font-size: 0.875rem; color: #6b7280; line-height: 1.6; margin-bottom: 14px; }
+    .major-card .skills-preview { display: flex; flex-wrap: wrap; gap: 4px; }
+    .major-card .skill-tag { font-size: 0.7rem; background: #f3f4f6; color: #374151; padding: 2px 8px; border-radius: 6px; }
+    .major-card .meta { display: flex; gap: 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid #f3f4f6; font-size: 0.8rem; color: #6b7280; }
+    .major-card .meta-item { display: flex; align-items: center; gap: 4px; }
+
+    .empty-state { text-align: center; padding: 60px 20px; color: #6b7280; }
+    .empty-state .icon { font-size: 4rem; margin-bottom: 16px; opacity: 0.5; }
+    .empty-state h3 { font-size: 1.5rem; margin-bottom: 8px; }
+    .empty-state p { font-size: 1rem; }
+
     footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 24px; font-size: 0.875rem; }
-    footer a { color: #e94560; text-decoration: none; }
+    footer a { color: #0f3460; text-decoration: none; }
+
+    @media(max-width:640px) {
+      .header h1 { font-size: 1.75rem; }
+      .major-grid { grid-template-columns: 1fr; }
+      .search-box { flex-direction: column; }
+      .search-btn { width: 100%; }
+      .filter-tabs { justify-content: center; }
+    }
   </style>
 </head>
 <body>
 
 <div class="header">
+  <a href="index.html" class="back">← 返回首页</a>
   <h1>📚 所有专业</h1>
-  <p>AI Academy 完整专业目录 · 按学科分类</p>
+  <p>AI Academy 提供 10 个学科门类、28 个专业，共 136 个技能，赋能 AI Agent 的标准化专业能力</p>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">学科门类</div></div>
+    <div class="stat-item"><div class="stat-num">28</div><div class="stat-label">具体专业</div></div>
+    <div class="stat-item"><div class="stat-num">136</div><div class="stat-label">专业技能</div></div>
+  </div>
 </div>
 
-<nav class="nav">
-  <a href="index.html">🏠 首页</a>
-  <a href="majors.html" class="active">📚 所有专业</a>
-  <a href="majors/SM-1-1-xiaohongshu-operation/index.html">📱 小红书专业</a>
-  <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">💻 GitHub</a>
-</nav>
-
-<div class="container">
-
-  <!-- SM 自媒体运营 -->
-  <div class="disc-section" style="--disc-color: #e94560;">
-    <div class="disc-header">
-      <div class="disc-icon">📱</div>
-      <div>
-        <h2>自媒体运营（SM）</h2>
-        <div class="desc">涵盖内容创作、IP打造、商业变现等热门 AI 落地场景 · 3大专业类 · 7个专业 · 52个技能</div>
-      </div>
-    </div>
-    <div class="major-grid">
-      <a href="majors/SM-1-1-xiaohongshu-operation/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-1-1</div>
-        <h3>📱 小红书运营专业</h3>
-        <p>小红书平台全流程运营，从笔记创作到数据分析，打造爆款内容，实现账号持续增长。</p>
-        <div class="tags"><span class="tag">笔记创作</span><span class="tag">爆款选题</span><span class="tag">数据分析</span><span class="tag">合规运营</span></div>
-        <div class="count">📋 7 个技能</div>
-      </a>
-      <a href="majors/SM-1-2-douyin-creation/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-1-2</div>
-        <h3>🎵 抖音创作专业</h3>
-        <p>短视频脚本、拍摄剪辑、流量运营全链路，掌握抖音算法逻辑，高效涨粉变现。</p>
-        <div class="tags"><span class="tag">脚本创作</span><span class="tag">视频剪辑</span><span class="tag">流量运营</span><span class="tag">直播话术</span></div>
-        <div class="count">📋 8 个技能</div>
-      </a>
-      <a href="majors/SM-1-3-wechat-official-account/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-1-3</div>
-        <h3>📰 公众号运营专业</h3>
-        <p>公众号内容创作、排版设计、用户增长，构建稳定私域流量池，实现商业变现。</p>
-        <div class="tags"><span class="tag">文章写作</span><span class="tag">排版设计</span><span class="tag">裂变增长</span><span class="tag">私域运营</span></div>
-        <div class="count">📋 7 个技能</div>
-      </a>
-      <a href="majors/SM-2-1-personal-ip/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-2-1</div>
-        <h3>⭐ 个人IP打造专业</h3>
-        <p>人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力的个人IP。</p>
-        <div class="tags"><span class="tag">人设定位</span><span class="tag">内容矩阵</span><span class="tag">社群运营</span><span class="tag">IP商业化</span></div>
-        <div class="count">📋 7 个技能</div>
-      </a>
-      <a href="majors/SM-2-2-brand-ip/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-2-2</div>
-        <h3>🏆 品牌IP运营专业</h3>
-        <p>品牌IP战略规划、视觉系统设计、KOL合作推广，构建持续影响力的品牌资产。</p>
-        <div class="tags"><span class="tag">品牌战略</span><span class="tag">视觉系统</span><span class="tag">KOL合作</span><span class="tag">舆情监控</span></div>
-        <div class="count">📋 7 个技能</div>
-      </a>
-      <a href="majors/SM-3-1-live-commerce/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-3-1</div>
-        <h3>🛒 直播带货专业</h3>
-        <p>直播话术设计、选品供应链、转化漏斗优化，打造高GMV直播间，实现稳定变现。</p>
-        <div class="tags"><span class="tag">带货话术</span><span class="tag">选品供应链</span><span class="tag">转化优化</span><span class="tag">投流策略</span></div>
-        <div class="count">📋 8 个技能</div>
-      </a>
-      <a href="majors/SM-3-2-knowledge-payment/index.html" class="major-card" style="--disc-color: #e94560;">
-        <div class="code">SM-3-2</div>
-        <h3>🎓 知识付费专业</h3>
-        <p>课程体系设计、营销文案撰写、分销裂变机制，系统构建知识付费产品。</p>
-        <div class="tags"><span class="tag">课程设计</span><span class="tag">定价策略</span><span class="tag">营销文案</span><span class="tag">分销裂变</span></div>
-        <div class="count">📋 8 个技能</div>
-      </a>
-    </div>
+<div class="search-section">
+  <div class="search-box">
+    <input type="text" id="searchInput" class="search-input" placeholder="搜索专业名称、技能或关键词...">
+    <button class="search-btn" onclick="filterMajors()">🔍 搜索</button>
   </div>
-
-  <!-- IT 信息技术 -->
-  <div class="disc-section" style="--disc-color: #0f3460;">
-    <div class="disc-header">
-      <div class="disc-icon">💻</div>
-      <div>
-        <h2>信息技术（IT）</h2>
-        <div class="desc">软件开发、数据科学、人工智能等技术类专业 · 持续建设中</div>
-      </div>
-    </div>
-    <div class="major-grid">
-      <a href="majors/IT-A-1-1-software-engineering/index.html" class="major-card" style="--disc-color: #0f3460;">
-        <div class="code">IT-A-1-1</div>
-        <h3>💻 软件工程专业</h3>
-        <p>需求分析、算法设计、编程开发全套能力，掌握软件工程核心技能。</p>
-        <div class="tags"><span class="tag">需求分析</span><span class="tag">算法设计</span><span class="tag">编程语言</span></div>
-        <div class="count">📋 3 个技能（建设中）</div>
-      </a>
-    </div>
+  <div class="filter-tabs" id="filterTabs">
+    <button class="filter-tab active" onclick="filterByCategory('all')">全部专业</button>
+    <button class="filter-tab" onclick="filterByCategory('IT')">信息技术</button>
+    <button class="filter-tab" onclick="filterByCategory('BM')">商务管理</button>
+    <button class="filter-tab" onclick="filterByCategory('SM')">自媒体运营</button>
+    <button class="filter-tab" onclick="filterByCategory('CC')">内容创作</button>
+    <button class="filter-tab" onclick="filterByCategory('CS')">客户服务</button>
+    <button class="filter-tab" onclick="filterByCategory('HC')">健康医疗</button>
+    <button class="filter-tab" onclick="filterByCategory('ED')">教育培训</button>
+    <button class="filter-tab" onclick="filterByCategory('LG')">法务合规</button>
+    <button class="filter-tab" onclick="filterByCategory('AD')">艺术设计</button>
   </div>
+</div>
 
-  <!-- BM 商务管理 -->
-  <div class="disc-section" style="--disc-color: #059669;">
-    <div class="disc-header">
-      <div class="disc-icon">💼</div>
-      <div>
-        <h2>商务管理（BM）</h2>
-        <div class="desc">财务管理、市场营销、运营管理等商务类专业 · 持续建设中</div>
-      </div>
-    </div>
-    <div class="major-grid">
-      <a href="majors/BM-B-1-1-accounting/index.html" class="major-card" style="--disc-color: #059669;">
-        <div class="code">BM-B-1-1</div>
-        <h3>📊 会计专业</h3>
-        <p>会计核算、财务报表编制，掌握企业财务管理核心技能。</p>
-        <div class="tags"><span class="tag">会计核算</span><span class="tag">财务报表</span></div>
-        <div class="count">📋 2 个技能（建设中）</div>
-      </a>
-    </div>
-  </div>
-
+<div class="container" id="majorsContainer">
+  <!-- 专业列表将通过 JS 动态生成 -->
 </div>
 
 <footer>
-  <p>🏫 AI Academy — <a href="index.html">返回首页</a> · <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub</a></p>
+  <p>🏫 AI Academy · 28 个专业 · 136 个技能</p>
+  <p style="margin-top:6px;"><a href="index.html">返回首页</a> · <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub</a></p>
 </footer>
+
+<script>
+const majorsData = [
+  {
+    category: 'IT',
+    categoryName: '信息技术',
+    categoryIcon: '💻',
+    majors: [
+      { code: 'IT-A-1-1', name: '软件工程', icon: '💻', desc: '需求分析、算法设计、编程开发全套能力', skills: 3, preview: ['需求', '设计', '算法', '数据结构'], path: 'IT-A-1-1-software-engineering' },
+      { code: 'IT-A-1-2', name: '前端开发', icon: '🎨', desc: 'HTML/CSS/JavaScript、前端框架、响应式设计', skills: 5, preview: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React'], path: 'IT-A-1-2-frontend-development' },
+      { code: 'IT-A-1-3', name: '后端开发', icon: '⚙️', desc: '后端框架、数据库、API设计、微服务架构', skills: 5, preview: ['API', '数据库', '微服务', '服务器', '运维'], path: 'IT-A-1-3-backend-development' },
+      { code: 'IT-A-2-1', name: '数据科学', icon: '📊', desc: '数据采集、统计分析、机器学习、数据可视化', skills: 5, preview: ['数据采集', '统计分析', '机器学习', '可视化'], path: 'IT-A-2-1-data-science' },
+      { code: 'IT-A-2-2', name: '数据分析', icon: '📈', desc: '数据查询、统计分析、业务洞察、数据报告', skills: 5, preview: ['数据查询', '统计分析', '业务洞察', '数据报告'], path: 'IT-A-2-2-data-analysis' },
+      { code: 'IT-A-2-3', name: '人工智能', icon: '🤖', desc: '机器学习、深度学习、NLP、计算机视觉', skills: 5, preview: ['机器学习', '深度学习', 'NLP', '计算机视觉'], path: 'IT-A-2-3-artificial-intelligence' },
+      { code: 'IT-A-3-1', name: '网络安全', icon: '🔒', desc: '安全基础、渗透测试、漏洞挖掘、安全加固', skills: 5, preview: ['渗透测试', '漏洞挖掘', '安全加固', '威胁情报'], path: 'IT-A-3-1-cybersecurity' },
+      { code: 'IT-A-4-1', name: 'DevOps', icon: '🚀', desc: '版本控制、CI/CD、容器化、监控告警', skills: 5, preview: ['版本控制', 'CI/CD', '容器', '监控', 'IaC'], path: 'IT-A-4-1-devops' }
+    ]
+  },
+  {
+    category: 'BM',
+    categoryName: '商务管理',
+    categoryIcon: '👔',
+    majors: [
+      { code: 'BM-A-1-1', name: '会计', icon: '📊', desc: '财务核算、报表编制、税务筹划、成本控制', skills: 5, preview: ['财务核算', '报表', '税务', '成本', '审计'], path: 'BM-A-1-1-accounting' },
+      { code: 'BM-A-1-2', name: '市场营销', icon: '📢', desc: '市场分析、品牌管理、数字营销、用户运营', skills: 5, preview: ['市场分析', '品牌', '数字营销', '用户运营'], path: 'BM-A-1-2-marketing' },
+      { code: 'BM-A-1-3', name: '项目管理', icon: '📋', desc: '项目规划、进度管理、资源协调、风险管理', skills: 5, preview: ['项目规划', '进度管理', '资源', '风险'], path: 'BM-A-1-3-project-management' }
+    ]
+  },
+  {
+    category: 'SM',
+    categoryName: '自媒体运营',
+    categoryIcon: '🎥',
+    majors: [
+      { code: 'SM-A-1-1', name: '小红书运营', icon: '📱', desc: '平台认知、账号搭建、内容创作、流量获取、粉丝运营、数据分析、变现技巧、品牌营销、爆款打造、矩阵运营、危机公关', skills: 11, preview: ['账号搭建', '内容创作', '流量', '粉丝运营', '数据分析', '变现', '爆款', '矩阵运营'], path: 'SM-A-1-1-xiaohongshu' }
+    ]
+  },
+  {
+    category: 'CC',
+    categoryName: '内容创作',
+    categoryIcon: '✍️',
+    majors: [
+      { code: 'CC-A-1-1', name: '文案写作', icon: '📝', desc: '标题创作、产品文案、广告文案、新媒体文案、品牌故事', skills: 5, preview: ['标题创作', '产品文案', '广告', '新媒体', '品牌故事'], path: 'CC-A-1-1-copywriting' }
+    ]
+  },
+  {
+    category: 'CS',
+    categoryName: '客户服务',
+    categoryIcon: '💬',
+    majors: [
+      { code: 'CS-A-1-1', name: '客户服务', icon: '🤝', desc: '客户沟通、问题解决、服务流程、客户关系管理', skills: 5, preview: ['客户沟通', '问题解决', '服务流程', 'CRM'], path: 'CS-A-1-1-customer-service' }
+    ]
+  },
+  {
+    category: 'HC',
+    categoryName: '健康医疗',
+    categoryIcon: '💪',
+    majors: [
+      { code: 'HC-A-1-1', name: '健康管理', icon: '💪', desc: '健康评估、运动指导、营养膳食、心理调适、慢性病管理', skills: 5, preview: ['健康评估', '运动指导', '营养', '心理调适', '慢性病'], path: 'HC-A-1-1-health-management' }
+    ]
+  },
+  {
+    category: 'ED',
+    categoryName: '教育培训',
+    categoryIcon: '📖',
+    majors: [
+      { code: 'ED-A-1-1', name: '在线教学', icon: '📖', desc: '课程设计、教学实施、学生管理、课程运营、效果评估', skills: 5, preview: ['课程设计', '教学实施', '学生管理', '课程运营'], path: 'ED-A-1-1-online-teaching' }
+    ]
+  },
+  {
+    category: 'LG',
+    categoryName: '法务合规',
+    categoryIcon: '⚖️',
+    majors: [
+      { code: 'LG-A-1-1', name: '合同审查', icon: '⚖️', desc: '合同条款审查、风险识别、法律合规、合同起草', skills: 5, preview: ['条款审查', '风险识别', '合规', '合同起草'], path: 'LG-A-1-1-contract-review' }
+    ]
+  },
+  {
+    category: 'AD',
+    categoryName: '艺术设计',
+    categoryIcon: '🎨',
+    majors: [
+      { code: 'AD-A-1-1', name: '平面设计', icon: '🎨', desc: '视觉设计原理、排版设计、色彩搭配、品牌视觉、设计软件', skills: 5, preview: ['视觉设计', '排版', '色彩', '品牌VI', '设计软件'], path: 'AD-A-1-1-graphic-design' }
+    ]
+  }
+];
+
+let currentCategory = 'all';
+let currentSearch = '';
+
+function renderMajors() {
+  const container = document.getElementById('majorsContainer');
+  let html = '';
+
+  majorsData.forEach(category => {
+    if (currentCategory !== 'all' && category.category !== currentCategory) return;
+
+    const filteredMajors = category.majors.filter(major => {
+      if (!currentSearch) return true;
+      const searchLower = currentSearch.toLowerCase();
+      return major.name.toLowerCase().includes(searchLower) ||
+             major.code.toLowerCase().includes(searchLower) ||
+             major.desc.toLowerCase().includes(searchLower) ||
+             major.preview.some(skill => skill.toLowerCase().includes(searchLower));
+    });
+
+    if (filteredMajors.length === 0) return;
+
+    html += `<div class="category-section">`;
+    html += `<h2 class="category-title"><span class="category-icon">${category.categoryIcon}</span>${category.categoryName}</h2>`;
+    html += `<div class="major-grid">`;
+
+    filteredMajors.forEach(major => {
+      html += `
+        <a href="majors/${major.path}/index.html" class="major-card">
+          <div class="card-header">
+            <span class="major-icon">${major.icon}</span>
+            <span class="code-badge">${major.code}</span>
+          </div>
+          <h3>${major.name}</h3>
+          <p>${major.desc}</p>
+          <div class="skills-preview">
+            ${major.preview.slice(0, 4).map(s => `<span class="skill-tag">${s}</span>`).join('')}
+            ${major.preview.length > 4 ? `<span class="skill-tag">+${major.preview.length - 4}</span>` : ''}
+          </div>
+          <div class="meta">
+            <span class="meta-item">📋 ${major.skills} 个技能</span>
+            <span class="meta-item">🦞 小龙虾</span>
+          </div>
+        </a>
+      `;
+    });
+
+    html += `</div></div>`;
+  });
+
+  if (!html) {
+    html = `
+      <div class="empty-state">
+        <div class="icon">🔍</div>
+        <h3>未找到相关专业</h3>
+        <p>请尝试其他搜索关键词或筛选条件</p>
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+}
+
+function filterByCategory(category) {
+  currentCategory = category;
+
+  // 更新标签状态
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+  event.target.classList.add('active');
+
+  renderMajors();
+}
+
+function filterMajors() {
+  currentSearch = document.getElementById('searchInput').value.trim();
+  renderMajors();
+}
+
+// 监听回车键
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    filterMajors();
+  }
+});
+
+// 初始渲染
+renderMajors();
+</script>
 
 </body>
 </html>
