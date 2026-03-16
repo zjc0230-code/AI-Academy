@@ -69,10 +69,10 @@
 <div class="header">
   <a href="index.html" class="back">← 返回首页</a>
   <h1>📚 所有专业</h1>
-  <p>AI Academy 提供 10 个学科门类、28 个专业，共 136 个技能，赋能 AI Agent 的标准化专业能力</p>
+  <p>AI Academy 提供 9 个学科门类、26 个专业，共 136 个技能，赋能 AI Agent 的标准化专业能力</p>
   <div class="stats">
-    <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">学科门类</div></div>
-    <div class="stat-item"><div class="stat-num">28</div><div class="stat-label">具体专业</div></div>
+    <div class="stat-item"><div class="stat-num">9</div><div class="stat-label">学科门类</div></div>
+    <div class="stat-item"><div class="stat-num">26</div><div class="stat-label">具体专业</div></div>
     <div class="stat-item"><div class="stat-num">136</div><div class="stat-label">专业技能</div></div>
   </div>
 </div>
@@ -101,7 +101,7 @@
 </div>
 
 <footer>
-  <p>🏫 AI Academy · 28 个专业 · 136 个技能</p>
+  <p>🏫 AI Academy · 26 个专业 · 136 个技能</p>
   <p style="margin-top:6px;"><a href="index.html">返回首页</a> · <a href="https://github.com/zjc0230-code/AI-Academy" target="_blank">GitHub</a></p>
 </footer>
 
@@ -129,7 +129,8 @@ const majorsData = [
     majors: [
       { code: 'BM-A-1-1', name: '会计', icon: '📊', desc: '财务核算、报表编制、税务筹划、成本控制', skills: 5, preview: ['财务核算', '报表', '税务', '成本', '审计'], path: 'BM-A-1-1-accounting' },
       { code: 'BM-A-1-2', name: '市场营销', icon: '📢', desc: '市场分析、品牌管理、数字营销、用户运营', skills: 5, preview: ['市场分析', '品牌', '数字营销', '用户运营'], path: 'BM-A-1-2-marketing' },
-      { code: 'BM-A-1-3', name: '项目管理', icon: '📋', desc: '项目规划、进度管理、资源协调、风险管理', skills: 5, preview: ['项目规划', '进度管理', '资源', '风险'], path: 'BM-A-1-3-project-management' }
+      { code: 'BM-A-1-3', name: '项目管理', icon: '📋', desc: '项目规划、进度管理、资源协调、风险管理', skills: 5, preview: ['项目规划', '进度管理', '资源', '风险'], path: 'BM-A-1-3-project-management' },
+      { code: 'BM-B-1-1', name: '会计', icon: '💰', desc: '掌握会计核算、财务报表编制、税务处理等会计专业能力', skills: 5, preview: ['会计核算', '财务报表', '税务处理', '成本控制', '审计'], path: 'BM-B-1-1-accounting' }
     ]
   },
   {
@@ -137,7 +138,13 @@ const majorsData = [
     categoryName: '自媒体运营',
     categoryIcon: '🎥',
     majors: [
-      { code: 'SM-A-1-1', name: '小红书运营', icon: '📱', desc: '平台认知、账号搭建、内容创作、流量获取、粉丝运营、数据分析、变现技巧、品牌营销、爆款打造、矩阵运营、危机公关', skills: 11, preview: ['账号搭建', '内容创作', '流量', '粉丝运营', '数据分析', '变现', '爆款', '矩阵运营'], path: 'SM-A-1-1-xiaohongshu' }
+      { code: 'SM-1-1', name: '小红书运营', icon: '📱', desc: '平台认知、账号搭建、内容创作、流量获取、粉丝运营、数据分析、变现技巧', skills: 7, preview: ['账号搭建', '内容创作', '流量', '粉丝运营', '数据分析', '变现'], path: 'SM-1-1-xiaohongshu-operation' },
+      { code: 'SM-1-2', name: '抖音创作', icon: '🎵', desc: '短视频脚本创作、拍摄剪辑、流量运营全链路能力', skills: 8, preview: ['脚本创作', '视频剪辑', '流量运营', '热点借势', '直播运营'], path: 'SM-1-2-douyin-creation' },
+      { code: 'SM-1-3', name: '公众号运营', icon: '📰', desc: '公众号内容创作、排版设计、用户增长全套能力', skills: 7, preview: ['文章写作', '排版设计', '裂变增长', '私域运营', '用户管理'], path: 'SM-1-3-wechat-official-account' },
+      { code: 'SM-2-1', name: '个人IP打造', icon: '⭐', desc: '人设定位、内容矩阵规划、粉丝社群运营，系统打造有影响力IP', skills: 7, preview: ['人设定位', '内容矩阵', '社群运营', 'IP商业化', '品牌合作'], path: 'SM-2-1-personal-ip' },
+      { code: 'SM-2-2', name: '品牌IP运营', icon: '🏆', desc: '品牌IP战略规划、视觉系统设计、KOL合作推广', skills: 7, preview: ['品牌战略', '视觉系统', 'KOL合作', '舆情监控', '危机公关'], path: 'SM-2-2-brand-ip' },
+      { code: 'SM-3-1', name: '直播带货', icon: '🛒', desc: '直播话术设计、选品供应链、转化漏斗优化全套能力', skills: 8, preview: ['带货话术', '选品供应链', '转化优化', '投流策略', '直播互动'], path: 'SM-3-1-live-commerce' },
+      { code: 'SM-3-2', name: '知识付费', icon: '🎓', desc: '课程体系设计、营销文案撰写、分销裂变机制', skills: 8, preview: ['课程设计', '定价策略', '营销文案', '分销裂变', '用户运营'], path: 'SM-3-2-knowledge-payment' }
     ]
   },
   {
