@@ -12,10 +12,16 @@
     .header .back:hover { color: white; }
     .header .major-icon { font-size: 3rem; margin-bottom: 12px; }
     .header .code-badge { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; padding: 4px 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; font-family: monospace; }
+    .header .rank-badge { display: inline-block; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 4px 12px; font-size: 0.8rem; font-weight: 700; margin-bottom: 12px; }
+    .header .rank-badge.first { background: rgba(255,215,0,0.25); border: 1px solid rgba(255,215,0,0.5); }
+    .header .rank-badge.second { background: rgba(192,192,192,0.25); border: 1px solid rgba(192,192,192,0.5); }
+    .header .rank-badge.third { background: rgba(205,127,50,0.25); border: 1px solid rgba(205,127,50,0.5); }
+    .header .rank-badge.fourth { background: rgba(128,128,128,0.25); border: 1px solid rgba(128,128,128,0.5); }
     .header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
     .header p { opacity: 0.85; font-size: 1rem; line-height: 1.7; max-width: 600px; margin-bottom: 24px; }
     .header .meta { display: flex; gap: 20px; flex-wrap: wrap; }
     .header .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; opacity: 0.8; }
+    .header .meta-item.score { font-weight: 700; color: #ffd700; }
     .nav { background: white; border-bottom: 1px solid #e5e7eb; padding: 0 24px; display: flex; justify-content: center; gap: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
     .nav a { display: inline-block; padding: 14px 18px; color: #6b7280; text-decoration: none; font-size: 0.875rem; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; }
     .nav a:hover, .nav a.active { color: #0f3460; border-bottom-color: #0f3460; }
@@ -52,10 +58,12 @@
   <a href="../../index.html" class="back">← 返回首页</a>
   <div class="major-icon">🔒</div>
   <div class="code-badge">IT-A-3-1</div>
+  <div class="rank-badge fourth">第四梯队 · 7.45分</div>
   <h1>网络安全专业</h1>
   <p>掌握网络安全核心技术，包括渗透测试、漏洞挖掘、安全加固、威胁情报、安全合规等实战能力</p>
   <div class="meta">
     <div class="meta-item">📋 5 个技能</div>
+    <div class="meta-item score">⭐ 综合评分 7.45</div>
     <div class="meta-item">🎓 AI Academy 专业课程</div>
     <div class="meta-item">🦞 适配 OpenClaw 小龙虾</div>
   </div>
